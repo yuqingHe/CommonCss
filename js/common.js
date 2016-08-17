@@ -47,8 +47,6 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
     // Triggered on a button click, or some other target
     $scope.showPopup = function () {
         $scope.data = {}
-
-        // 自定义弹窗
         var myPopup = $ionicPopup.show({
             template: '<div class="font-popbody"> aaaaa</div>',
             title: 'Enter Wi-Fi Password',
@@ -65,10 +63,6 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
                 }
             ]
         });
-        myPopup.then(function (res) {
-            console.log('Tapped!', res);
-        });
-
     };
     //  confirm 对话框
     $scope.showConfirm = function () {
@@ -84,13 +78,6 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
                     type: 'button-save'
                 }
             ]
-        });
-        confirmPopup.then(function (res) {
-            if (res) {
-                console.log('You are sure');
-            } else {
-                console.log('You are not sure');
-            }
         });
     };
 
@@ -117,9 +104,6 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
                     type: 'button-save'
                 }
             ]
-        });
-        alertPopup.then(function (res) {
-            console.log('Thank you for not eating my delicious ice cream cone');
         });
     };
 

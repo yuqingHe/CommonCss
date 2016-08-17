@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>test</title>
+    <link href="../js/mobiscrolldatetime/css/mobiscroll.custom-2.17.0.min.css" rel="stylesheet">
+    <link href="../css/ionic.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/angular/angular.js"></script>
+    <script src="../js/angular/angular-animate.min.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/ionic.bundle.js"></script>
+    <script src="../js/ionic.min.js"></script>
+    <script src="../js/ionic.bundle.min.js"></script>
+
+    <script src="../js/mobiscrolldatetime/js/mobiscroll.custom-2.17.0.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body ng-controller="exam" >
+<ion-content scroll="true">
+    <h3>双按钮</h3>
+    <button class="button button-small3 button-theme" ng-click="showPopup()">
+        带标题
+    </button>
+    <button class="button button-small3 button-theme" ng-click="showConfirm()">
+        不带标题
+    </button>
+    <h3>单按钮</h3>
+    <button class="button button-small3 button-theme" ng-click="showAlert1()">
+        带标题
+    </button>
+    <button class="button button-small3 button-theme" ng-click="showAlert2()">
+        不带标题
+    </button>
+</ion-content>
+</body>
+</html>

@@ -396,7 +396,7 @@
             </div>
             <div ng-if="navActive==6">
                 <div class="introduce">
-                    <h2>Tabs导航条</h2>
+                    <h1>Tabs导航条</h1>
                     <h2>说明</h2>
                     <div class="text1">为了确保可读性，每项文字字数建议为2-4个汉字。字号为24px，色值 #333。</div>
                     <h2>用法</h2>
@@ -426,9 +426,8 @@
                 </div>
             </div>
             <div ng-if="navActive==7">
-                <h2>Controls控件</h2>
                 <div class="introduce">
-                    <h2>Tabs导航条</h2>
+                    <h2>Controls控件</h2>
                     <h2>说明</h2>
                     <div class="text1">为了确保可读性，每项文字字数建议为2-4个汉字。字号为24px，色值 #333。</div>
                     <h2>用法</h2>
@@ -486,19 +485,200 @@ $scope.mydate = new Date();
                 </div>
             </div>
             <div ng-if="navActive==8">
-                <h2>List列表</h2>
+                <div class="introduce">
+                    <h1>List列表</h1>
+                    <h2>说明</h2>
+                    <div class="text1">1px的边还没添加。</div>
+                    <h2>用法</h2>
+                    <h3>·空白列表</h3>
+                    <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        a.空白列表
+    &lt;/ion-item&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;item-100 text-center&quot;&gt;
+        b.width=100px
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;item-120 text-center&quot;&gt;
+        c.width=120px
+    &lt;/div&gt;
+&lt;/ion-list&gt;</code></pre>
+                    <h3>·带说明文案的分割</h3>
+                    <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        d.带说明文案的分割
+    &lt;/ion-item&gt;
+    &lt;ion-item class=&quot; item-divider&quot;&gt;
+        d.Hello
+    &lt;/ion-item&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+    &lt;ion-item class=&quot; item-divider&quot;&gt;
+        d.Hello
+    &lt;/ion-item&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
+                    <h3>·无文案分割</h3>
+                    <pre class="text1"><code>&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        e.Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;
+&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        e.Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
+                    <h3>·列表按钮</h3>
+                    <pre class="text1"><code>&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        f.列表按钮
+    &lt;/ion-item&gt;
+    &lt;ion-item class=&quot;item-button-right&quot;&gt;
+        f.Hello
+        &lt;button class=&quot;button button-small1 button-theme&quot;&gt;aaa&lt;/button&gt;
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
+                    <h3>·头像列表</h3>
+                    <pre class="text1"><code>&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        e.头像列表
+    &lt;/ion-item&gt;
+    &lt;div class=&quot;item-100 item-photo&quot;&gt;
+        &lt;span class=&quot;photo&quot;&gt;校&lt;/span&gt;
+        &lt;div class=&quot;item-photo-text&quot;&gt;校宝秀&lt;/div&gt;
+        &lt;span class=&quot;item-star&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/ion-list&gt;</code></pre>
+
+                </div>
+                <div class="phone">
+                    <iframe src="html/list.html" ></iframe>
+                </div>
             </div>
             <div ng-if="navActive==9">
-                <h2>Cards卡片</h2>
+                <div class="introduce">
+                    <h1>Cards卡片</h1>
+                    <h2>说明</h2>
+                    <div class="text1">1px的边还没添加。</div>
+                    <h2>用法</h2>
+                    <h3>·空白列表</h3>
+                    <pre class="text1"><code></code></pre>
+
+
+                </div>
+                <div class="phone">
+                    <iframe src="html/cards.html" ></iframe>
+                </div>
             </div>
             <div ng-if="navActive==10">
-                <h2>Forms表单</h2>
+                <div class="introduce">
+                    <h1>Forms表单</h1>
+                    <h2>说明</h2>
+                    <div class="text1">1px的边还没添加。</div>
+                    <h2>用法</h2>
+                    <h3>·空白列表</h3>
+                    <pre class="text1"><code></code></pre>
+
+
+                </div>
+                <div class="phone">
+                    <iframe src="html/forms.html" ></iframe>
+                </div>
             </div>
             <div ng-if="navActive==11">
-                <h2>Dialogs模拟框</h2>
+                <div class="introduce">
+                    <h1>Dialogs模拟框</h1>
+                    <h2>说明</h2>
+                    <div class="text1">使用ionic弹框，双按钮使用show、confirm，单按钮使用alert；按钮type类型确定button-save，取消button-cancel；内容垂直居中的话直接在template添加内容，其他样式需求，自己添加标签;1px的边还没添加。</div>
+                    <h2>用法</h2>
+                    <h3>·双按钮带标题</h3>
+                    <pre class="text1"><code> $scope.showPopup = function () {
+        $scope.data = {}
+        var myPopup = $ionicPopup.show({
+            template: &#x27;&lt;div class=&quot;font-popbody&quot;&gt; aaaaa&lt;/div&gt;&#x27;,
+            title: &#x27;Enter Wi-Fi Password&#x27;,
+
+            scope: $scope,
+            buttons: [
+                {
+                    text: &#x27;取消&#x27;,
+                    type: &#x27;button-cancel&#x27;
+                },
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        });
+    };</code></pre>
+                    <h3>·双按钮不带标题</h3>
+                    <pre class="text1"><code>$scope.showConfirm = function () {
+        var confirmPopup = $ionicPopup.confirm({
+            template: &#x27;Are you sure you want to eat this ice cream?&#x27;,
+            buttons: [
+                {
+                    text: &#x27;取消&#x27;,
+                    type: &#x27;button-cancel&#x27;
+                },
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        });
+    };</code></pre>
+                    <h3>·单按钮表带标题</h3>
+                    <pre class="text1"><code>$scope.showAlert1 = function () {
+        var alertPopup = $ionicPopup.alert({
+            title: &#x27;Don\&#x27;t eat that!&#x27;,
+            template: &#x27;&lt;div class=&quot;font-poplink&quot;&gt; aaaaa&lt;/div&gt;&#x27;,
+            buttons: [
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        })
+    };</code></pre>
+                    <h3>·单按钮不带标题</h3>
+                    <pre class="text1"><code>$scope.showAlert2 = function () {
+        var alertPopup = $ionicPopup.alert({
+
+            template: &#x27;&lt;div class=&quot;poplink&quot;&gt; http://dev.xbx100.cn/GameViewShare?p=activity/oldandnewview?Id=1278&lt;/div&gt;&#x27;,
+            buttons: [
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        });
+    };</code></pre>
+
+
+                </div>
+                <div class="phone">
+                    <iframe src="html/dialogs.html" ></iframe>
+                </div>
             </div>
             <div ng-if="navActive==12">
-                <h2>Others其他一些组件</h2>
+                <div class="introduce">
+                    <h1>Others其他一些组件</h1>
+                    <h2>说明</h2>
+                    <div class="text1">1px的边还没添加。</div>
+                    <h2>用法</h2>
+                    <h3>·空白列表</h3>
+                    <pre class="text1"><code></code></pre>
+
+
+                </div>
+                <div class="phone">
+                    <iframe src="html/others.html" ></iframe>
+                </div>
             </div>
 
         </div>

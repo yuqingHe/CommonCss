@@ -242,7 +242,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 .radio-content{padding-right: temSize(60); height: temSize(40);line-height: temSize(40);}
 /*列表*/
 //覆盖ionic
-.item{ padding: temSize(20) temSize(40); height: temSize(80);}
+.item{ padding: temSize(20) temSize(40); height: temSize(80);color: #333;}
 .item-checkbox{ padding-left: temSize(120) !important;}
 .item-radio .item-content{padding: 0;}
 
@@ -450,17 +450,17 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 
 
 /*list列表*/
-.item{padding: temSize(20)  temSize(40); color: #333;}
-.item-divider{ background-color: #dfe3ed; height: temSize(50); font-size: temSize(20); color: #aaa;}
+
+.item-divider{ background-color: #dfe3ed; height: temSize(50);line-height: temSize(50); font-size: temSize(20); color: #aaa; padding: 0 temSize(40);}
 .item-100{position: relative;height: temSize(100);width: 100%;margin: -1px; border-color: #ddd; background-color: #fff; padding: temSize(20)  temSize(40);}
 .item-120{position: relative;height: temSize(120);width: 100%;margin: -1px; border-color: #ddd; background-color: #fff; padding: temSize(20)  temSize(40);}
 .item-t20 .list{margin-top: temSize(20);}
-.item-button-right{padding-right: temSize(160);height: temSize(100);
+.item-button-right{padding-right: temSize(160);height: temSize(100);line-height: temSize(60);
   .button{display: block;right: temSize(20);top: temSize(20);;font-size: temSize(20);height: temSize(60);min-height: temSize(60);line-height: temSize(60); width: temSize(120);}
 }
-.item-photo{padding-right: temSize(76);
+.item-photo{padding-right: temSize(76);display: flex;
   .photo{display: inline-block;width: temSize(60);height: temSize(60);line-height: temSize(60);border-radius: temSize(60); margin-right: temSize(20); background-color: rgb(73, 197, 216);color: #fff; font-size: temSize(24); text-align: center;}
-  .item-photo-text{display: inline-block;width: temSize(444);}
+  .item-photo-text{width: temSize(444); line-height: temSize(60);}
   .item-star{position: absolute;right: temSize(20);top: 50%;margin-top: temSize(-18);width:temSize(38); height: temSize(36);  background: url("../img/book_icon.png") no-repeat center center;    background-size: temSize(38) temSize(36);}
   .item-star.current{ background-image: url("../img/book_icon_current.png"); }
 }
