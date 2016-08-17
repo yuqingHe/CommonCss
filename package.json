@@ -1,0 +1,11 @@
+{
+  "name": "shinningStar",
+  "private": true,
+  "version": "0.0.1",
+  "description": "shinningStar",
+  "repository": "",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-sass": "^1.0.0"
+  }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>test</title>
+    <link href="../js/mobiscrolldatetime/css/mobiscroll.custom-2.17.0.min.css" rel="stylesheet">
+    <link href="../css/ionic.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/angular/angular.js"></script>
+    <script src="../js/angular/angular-animate.min.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/ionic.bundle.js"></script>
+    <script src="../js/ionic.min.js"></script>
+    <script src="../js/ionic.bundle.min.js"></script>
+
+    <script src="../js/mobiscrolldatetime/js/mobiscroll.custom-2.17.0.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body ng-controller="exam" style="background-color: #dfe3ed;">
+<ion-content scroll="true">
+    <ion-list>
+        <ion-item class="text-center">
+            a.空白列表
+        </ion-item>
+        <br>
+        <div class="item-100 text-center">
+            b.width=100px
+        </div>
+        <br>
+        <div class="item-120 text-center">
+            c.width=120px
+        </div>
+        <br>
+        <ion-item class="text-center">
+            d.带说明文案的分割
+        </ion-item>
+        <ion-item class=" item-divider">
+            d.Hello
+        </ion-item>
+        <ion-item ng-repeat="item in items">
+            Hello, {{item.id}}!
+        </ion-item>
+        <ion-item class=" item-divider">
+            d.Hello
+        </ion-item>
+        <ion-item ng-repeat="item in items">
+            Hello, {{item.id}}!
+        </ion-item>
+        <br>
+
+    </ion-list>
+    <ion-item class="text-center">
+        e.无文案分割
+    </ion-item>
+    <ion-list class="item-t20">
+        <ion-item ng-repeat="item in items">
+            e.Hello, {{item.id}}!
+        </ion-item>
+    </ion-list>
+    <ion-list class="item-t20">
+        <ion-item ng-repeat="item in items">
+            e.Hello, {{item.id}}!
+        </ion-item>
+    </ion-list>
+
+    <ion-list class="item-t20">
+        <ion-item class="text-center">
+            f.列表按钮
+        </ion-item>
+        <ion-item class="item-button-right">
+            f.Hello
+            <button class="button button-small1 button-theme">aaa</button>
+        </ion-item>
+    </ion-list>
+    <ion-list class="item-t20">
+        <ion-item class="text-center">
+            e.头像列表
+        </ion-item>
+        <div class="item-100 item-photo">
+            <span class="photo">校</span>
+            <div class="item-photo-text">校宝秀</div>
+            <span class="item-star"></span>
+        </div>
+
+
+
+
+    </ion-list>
+
+
+    <br>
+</ion-content>
+</body>
+</html>

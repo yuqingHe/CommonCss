@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>common css</title>
+    <link href="js/mobiscrolldatetime/css/mobiscroll.custom-2.17.0.min.css" rel="stylesheet">
+    <link media="screen and (max-width:900px)" href="css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-animate.min.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/ionic.min.js"></script>
+    <script src="js/ionic.bundle.min.js"></script>
+
+    <script src="js/mobiscrolldatetime/js/mobiscroll.custom-2.17.0.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body ng-controller="exam">
+<div>
+    <div class="pc-head">
+        <div class="head-content">
+            <span class="logo"></span>
+            <div class="edition">1.0</div>
+        </div>
+    </div>
+    <div class="pc-body">
+        <div class="nav">
+            <h1>Components</h1>
+            <ul ng-repeat="list in nav">
+                <li ng-click="showTab(list.id)" ng-class="list.id == navActive?'active':''">
+                    {{list.en}}<span>{{list.ch}}</span></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div ng-show="navActive==1">
+                <div class="introduce">
+                    <h1>Font文字</h1>
+                    <h2>用法</h2>
+                    <div>
+                        <table cellspacing="0" cellpadding="0">
+                            <thead>
+                            <tr>
+                                <th>类名</th>
+                                <th>样式</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>font-title</td>
+                                <td>font-size: temSize(28); color: #333;</td>
+                            </tr>
+                            <tr>
+                                <td>font-body</td>
+                                <td>font-size: temSize(24); color: #333;</td>
+                            </tr>
+                            <tr>
+                                <td>font-sub</td>
+                                <td>font-size: temSize(28); color: #aaa;</td>
+                            </tr>
+                            <tr>
+                                <td>font-help</td>
+                                <td>font-size: temSize(20); color: #81a2cd;</td>
+                            </tr>
+                            <tr>
+                                <td>text-shadow</td>
+                                <td>text-shadow: 0px 1px 4px #ddd;</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="phone">
+                    <iframe src="html/font.html"></iframe>
+                </div>
+            </div>
+            <div ng-show="navActive==2">
+                <h1>Icons图标</h1>
+                <h2>用法</h2>
+                <div class="text1">自制的图标目前是图片形式，尺寸为40*40</div>
+                <pre class="text1"><code>&lt;i class=&quot;icon-size-40 icon-invite&quot;&gt;&lt;/i&gt;</code></pre>
+                <h2>图标列表</h2>
+                <div>
+                    <div class="preview-icon">
+                        <div class="icon-row content" style="display: flex;flex-wrap:wrap;">
+                            <div>
+                                <i class="icon-size-40 icon-invite"></i>
+                                <p>icon-invite</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-vip"></i>
+                                <p>icon-vip</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-info"></i>
+                                <p>icon-info</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-help"></i>
+                                <p>icon-help</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-terms"></i>
+                                <p>icon-terms</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-ip"></i>
+                                <p>icon-ip</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-bind"></i>
+                                <p>icon-bind</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-erp"></i>
+                                <p>icon-erp</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-login"></i>
+                                <p>icon-login</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-set"></i>
+                                <p>icon-set</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-organization"></i>
+                                <p>icon-organization</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-user"></i>
+                                <p>icon-user</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-psd"></i>
+                                <p>icon-psd</p>
+                            </div>
+
+                            <div>
+                                <i class="icon-size-40 icon-suggest"></i>
+                                <p>icon-suggest</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-logout"></i>
+                                <p>icon-logout</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-myscene"></i>
+                                <p>icon-myscene</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-rbook"></i>
+                                <p>icon-rbook</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-usercenter"></i>
+                                <p>icon-usercenter</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-edit"></i>
+                                <p>icon-edit</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-nextpage"></i>
+                                <p>icon-nextpage</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-backpage"></i>
+                                <p>icon-backpage</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-project"></i>
+                                <p>icon-project</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-save"></i>
+                                <p>icon-save</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-preview"></i>
+                                <p>icon-preview</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-music"></i>
+                                <p>icon-music</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-bg"></i>
+                                <p>icon-bg</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-statistics"></i>
+                                <p>icon-statistics</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-lbook"></i>
+                                <p>icon-lbook</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-share"></i>
+                                <p>icon-share</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-other"></i>
+                                <p>icon-other</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-ydiamond"></i>
+                                <p>icon-ydiamond</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-bdiamond"></i>
+                                <p>icon-bdiamond</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_write"></i>
+                                <p>icon_write</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_bshare"></i>
+                                <p>icon_bshare</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_reflash"></i>
+                                <p>icon_reflash</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_download"></i>
+                                <p>icon_download</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_more"></i>
+                                <p>icon_more</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_pdown"></i>
+                                <p>icon_pdown</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_phone"></i>
+                                <p>icon_phone</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_shield"></i>
+                                <p>icon_shield</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_lock"></i>
+                                <p>icon_lock</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div ng-show="navActive==3">
+                <h1>Color颜色</h1>
+                <h2>常用样式颜色</h2>
+                <div class="text1">1.1px灰色边：1px solid #ddd;在手机上显示1px，利用transform: scale(0.5)缩放，父元素需要添加position: relative，该方法兼容性有待验证，目前使用的方法class如下：</div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>类型</th>
+                        <th>类名</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>上边</td>
+                        <td>border-top-1</td>
+                    </tr>
+                    <tr>
+                        <td>右边</td>
+                        <td>border-right-1</td>
+                    </tr>
+                    <tr>
+                        <td>下边</td>
+                        <td>border-bottom-1</td>
+                    </tr>
+                    <tr>
+                        <td>左边</td>
+                        <td>border-left-1</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="text1">2.遮罩背景色：rgba(0,0,0,0.7)</div>
+                <h2>推荐使用颜色：</h2>
+                <div class="color-body bg-gray">
+                    <div class="text1"><span class="color color-theme"></span>theme #ff6622</div>
+                    <div class="text1"><span class="color color-white"></span>white #ffffff</div>
+                    <div class="text1"><span class="color color-light"></span>light #dddddd</div>
+                    <div class="text1"><span class="color color-stable"></span>stable #cccccc</div>
+                    <div class="text1"><span class="color color-positive"></span>positive #2a97ec</div>
+                    <div class="text1"><span class="color color-alert"></span>alert #f7424f</div>
+                    <div class="text1"><span class="color color-energized"></span>energized #f7424f</div>
+                    <div class="text1"><span class="color color-dark"></span>dark #333333</div>
+                </div>
+                <h2>头像默认背景色</h2>
+                <div class="bg-gray">
+                    <div><span class="photo-color-1"></span><p></p></div>
+                    <div><span class="photo-color-2"></span><p></p></div>
+                    <div><span class="photo-color-3"></span><p></p></div>
+                    <div><span class="photo-color-4"></span><p></p></div>
+                    <div><span class="photo-color-5"></span><p></p></div>
+                    <div><span class="photo-color-6"></span><p></p></div> 
+                </div>
+            </div>
+
+            <div ng-show="navActive==4">
+                <h2>Layout布局</h2>
+            </div>
+            <div ng-show="navActive==5">
+                <div class="introduce">
+                    <h1>Buttons按钮</h1>
+                    <h2>用法</h2>
+                    <div>
+                        <table cellspacing="0" cellpadding="0">
+                            <thead>
+                            <tr>
+                                <th>类名</th>
+                                <th>样式</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>font-title</td>
+                                <td>font-size: temSize(28); color: #333;</td>
+                            </tr>
+                            <tr>
+                                <td>font-body</td>
+                                <td>font-size: temSize(24); color: #333;</td>
+                            </tr>
+                            <tr>
+                                <td>font-sub</td>
+                                <td>font-size: temSize(28); color: #aaa;</td>
+                            </tr>
+                            <tr>
+                                <td>font-help</td>
+                                <td>font-size: temSize(20); color: #81a2cd;</td>
+                            </tr>
+                            <tr>
+                                <td>text-shadow</td>
+                                <td>text-shadow: 0px 1px 4px #ddd;</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="phone">
+                    <iframe src="html/button.html"></iframe>
+                </div>
+            </div>
+            <div ng-show="navActive==6">
+                <h2>Tabs导轨条</h2>
+            </div>
+            <div ng-show="navActive==7">
+                <h2>Controls控件</h2>
+            </div>
+            <div ng-show="navActive==8">
+                <h2>List列表</h2>
+            </div>
+            <div ng-show="navActive==9">
+                <h2>Cards卡片</h2>
+            </div>
+            <div ng-show="navActive==10">
+                <h2>Forms表单</h2>
+            </div>
+            <div ng-show="navActive==11">
+                <h2>Dialogs模拟框</h2>
+            </div>
+            <div ng-show="navActive==12">
+                <h2>Others其他一些组件</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<ion-content scroll="true" style="display: none">
+    <div class="content show-mobile">
+        <h2>Fonts-字体</h2>
+        <div class="row">
+            <div class="col col-33">
+                <p class="font-title">校宝秀</p>
+                <p>.font-title{font-size: temSize(28); color: #333;}</p>
+            </div>
+            <div class="col col-33">
+                <p class="font-body">校宝秀</p>
+                <p>.font-body{font-size: temSize(24); color: #333;}</p>
+            </div>
+            <div class="col col-33">
+                <p class="font-sub">校宝秀</p>
+                <p>.font-sub{font-size: temSize(28); color: #aaa;}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <p class="font-help">校宝秀</p>
+                <p>.font-help{font-size: temSize(20); color: #81a2cd;}</p>
+            </div>
+            <div class="col col-33">
+                <p class="text-shadow">校宝秀</p>
+                <p>.text-shadow{text-shadow: 0px 1px 4px #ddd;}</p>
+            </div>
+        </div>
+        <h2>Icon-图标</h2>
+        <div class="preview-icon">
+            <div class="icon-row content" style="display: flex;flex-wrap:wrap;">
+                <div>
+                    <i class="icon-size-40 icon-invite"></i>
+                    <p>icon-invite</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-vip"></i>
+                    <p>icon-vip</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-info"></i>
+                    <p>icon-info</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-help"></i>
+                    <p>icon-help</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-terms"></i>
+                    <p>icon-terms</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-ip"></i>
+                    <p>icon-ip</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-bind"></i>
+                    <p>icon-bind</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-erp"></i>
+                    <p>icon-erp</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-login"></i>
+                    <p>icon-login</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-set"></i>
+                    <p>icon-set</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-organization"></i>
+                    <p>icon-organization</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-user"></i>
+                    <p>icon-user</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-psd"></i>
+                    <p>icon-psd</p>
+                </div>
+
+                <div>
+                    <i class="icon-size-40 icon-suggest"></i>
+                    <p>icon-suggest</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-logout"></i>
+                    <p>icon-logout</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-myscene"></i>
+                    <p>icon-myscene</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-rbook"></i>
+                    <p>icon-rbook</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-usercenter"></i>
+                    <p>icon-usercenter</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-edit"></i>
+                    <p>icon-edit</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-nextpage"></i>
+                    <p>icon-nextpage</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-backpage"></i>
+                    <p>icon-backpage</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-project"></i>
+                    <p>icon-project</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-save"></i>
+                    <p>icon-save</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-preview"></i>
+                    <p>icon-preview</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-music"></i>
+                    <p>icon-music</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-bg"></i>
+                    <p>icon-bg</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-statistics"></i>
+                    <p>icon-statistics</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-lbook"></i>
+                    <p>icon-lbook</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-share"></i>
+                    <p>icon-share</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-other"></i>
+                    <p>icon-other</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-ydiamond"></i>
+                    <p>icon-ydiamond</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon-bdiamond"></i>
+                    <p>icon-bdiamond</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon_write"></i>
+                    <p>icon_write</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon_bshare"></i>
+                    <p>icon_bshare</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon_reflash"></i>
+                    <p>icon_reflash</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon_download"></i>
+                    <p>icon_download</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon_more"></i>
+                    <p>icon_more</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon_pdown"></i>
+                    <p>icon_pdown</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon_phone"></i>
+                    <p>icon_phone</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon_shield"></i>
+                    <p>icon_shield</p>
+                </div>
+                <div>
+                    <i class="icon-size-40 icon_lock"></i>
+                    <p>icon_lock</p>
+                </div>
+            </div>
+        </div>
+        <h2>Block Buttons - 实心按钮</h2>
+        <h3>小按钮</h3>
+        <div class="row">
+            <div class="col col-33">
+                <p class="font-help">height:60px</p>
+                <p class="font-help">width:120px</p>
+                <p class="font-help">font-size:20px</p>
+            </div>
+            <div class="col col-33">
+                <button class="button button-small1 button-theme">主题色</button>
+                <p>class="button button-small1 button-theme"</p>
+            </div>
+            <div class="col col-33">
+                <div class="button button-small1 button-themeGray">主题色-置灰</div>
+                <p>class="button button-small1 button-themeGray"</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+            </div>
+            <div class="col col-33">
+                <i class="button button-small1 button-white">白色</i>
+                <p>class="button button-small1 button-white"</p>
+            </div>
+            <div class="col col-33">
+                <a class="button button-small1 button-whiteGray">白色-置灰</a>
+                <p>class="button button-small1 button-whiteGray"</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <p class="font-help">height:60px</p>
+                <p class="font-help">width:140px</p>
+                <p class="font-help">font-size:20px</p>
+            </div>
+            <div class="col col-33">
+                <button class="button button-small2 button-theme">主题色</button>
+                <p>class="button button-small2 button-theme"</p>
+            </div>
+            <div class="col col-33">
+                <div class="button button-small2 button-themeGray">主题色-置灰</div>
+                <p>class="button button-small2 button-themeGray"</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+            </div>
+            <div class="col col-33">
+                <i class="button button-small2 button-white">白色</i>
+                <p>class="button button-small2 button-white"</p>
+            </div>
+            <div class="col col-33">
+                <a class="button button-small2 button-whiteGray">白色-置灰</a>
+                <p>class="button button-small2 button-whiteGray"</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <p class="font-help">height:60px</p>
+                <p class="font-help">width:160px</p>
+                <p class="font-help">font-size:24px</p>
+            </div>
+            <div class="col col-33">
+                <button class="button button-small3 button-theme">主题色</button>
+                <p>class="button button-small3 button-theme"</p>
+            </div>
+            <div class="col col-33">
+                <div class="button button-small3 button-themeGray">主题色-置灰</div>
+                <p>class="button button-small3 button-themeGray"</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col col-33">
+            </div>
+            <div class="col col-33">
+                <i class="button button-small3 button-white">白色</i>
+                <p>class="button button-small3 button-white"</p>
+            </div>
+            <div class="col col-33">
+                <a class="button button-small3 button-whiteGray">白色-置灰</a>
+                <p>class="button button-small3 button-whiteGray"</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <p class="font-help">height:60px</p>
+                <p class="font-help">width:200px</p>
+                <p class="font-help">font-size:24px</p>
+            </div>
+            <div class="col col-33">
+                <button class="button button-small4 button-theme">主题色</button>
+                <p>class="button button-small4 button-theme"</p>
+            </div>
+            <div class="col col-33">
+                <div class="button button-small4 button-themeGray">主题色-置灰</div>
+                <p>class="button button-small4 button-themeGray"</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col col-33">
+            </div>
+            <div class="col col-33">
+                <i class="button button-small4 button-white">白色</i>
+                <p>class="button button-small4 button-white"</p>
+            </div>
+            <div class="col col-33">
+                <a class="button button-small4 button-whiteGray">白色-置灰</a>
+                <p>class="button button-small4 button-whiteGray"</p>
+            </div>
+        </div>
+
+        <h3>大按钮</h3>
+        <button class="button button-large button-theme ">主题色</button>
+        <p>class="button button-large button-theme"</p>
+        <div class="button button-large button-themeGray ">主题色-置灰</div>
+        <p>class="button button-large button-theme"</p>
+        <i class="button button-large button-white ">白色</i>
+        <p>class="button button-large button-theme"</p>
+
+        <a class="button button-large button-whiteGray ">白色-置灰</a>
+        <p>class="button button-large button-theme"</p>
+
+
+        <h2>Outlined Buttons - 线框按钮</h2>
+        <h3>小按钮</h3>
+        <div class="row">
+            <div class="col col-50">
+                <button class="button button-small1 button-theme button-outline">主题色</button>
+                <p>class="button button-small1 button-theme button-outline"</p>
+            </div>
+            <div class="col col-50">
+                <button class="button button-small2 button-theme button-outline">主题色</button>
+                <p>class="button button-small2 button-theme button-outline"</p>
+            </div>
+
+
+        </div>
+        <div class="row">
+
+            <div class="col col-50">
+                <div class="button button-small3 button-themeGray button-outline">主题色-置灰</div>
+                <p>class="button button-small3 button-themeGray button-outline"</p>
+            </div>
+
+            <div class="col col-50">
+                <i class="button button-small4 button-white button-outline">白色</i>
+                <p>class="button button-small4 button-white button-outline"</p>
+            </div>
+        </div>
+
+
+        <h2>Full Width Block Buttons - 全宽按钮</h2>
+        <button class="button  button-theme button-full">主题色</button>
+        <p>class="button button-theme button-full"</p>
+        <div class="button  button-themeGray button-full">主题色-置灰</div>
+        <p>class="button button-themeGray button-full"</p>
+        <button class="button  button-white button-block button-full">主题色</button>
+        <p>class="button button-white button-block button-full"</p>
+        <div class="button  button-whiteGray button-block button-full">主题色-置灰</div>
+        <p>class="button button-whiteGray button-block button-full"</p>
+        <h2>Clear Buttons - 纯文字按钮</h2>
+        <h3>待补充</h3>
+        <button class="button button-theme button-clear">主题色</button>
+        <p>class="button button-theme button-clear"</p>
+        <h2>Toggle - 开关</h2>
+        <p>使用ionic的样式，替换了尺寸和颜色</p>
+        <label class="toggle"><input type="checkbox">
+            <div class="track">
+                <div class="handle"></div>
+            </div>
+        </label>
+
+        <h2>Checkbox - 多选框</h2>
+        <p>使用ionic的样式，替换了尺寸和颜色</p>
+        <ion-checkbox ng-model="emailNotification"
+                      ng-true-value="'Subscribed'"
+                      ng-false-value="'Unubscribed'">
+            Newsletter
+        </ion-checkbox>
+        <h2>Radio Button - 单选框</h2>
+        <p>使用ionic的样式，替换了尺寸和颜色</p>
+        <ion-radio ng-value="item.value"
+                   ng-model="data.serverSide"
+                   ng-change="serverSideChange(item)"
+                   name="server-side">
+            aaa
+        </ion-radio>
+        <ion-radio ng-value="item.value"
+                   ng-model="data.serverSide"
+                   ng-change="serverSideChange(item)"
+                   name="server-side">
+            bbb
+        </ion-radio>
+        <h2 ng-click="showVisitDateTime()">Time Select - 时间选择</h2>
+        <p>使用mobiscroll，替换了尺寸和颜色</p>
+        <input ng-model="mydate" type="text" mobiscroll-datetime="setVisitDateTime" readonly="readonly"
+               mobiscroll-instance="myInstance"/>
+        <h3>Input Dialogs - 文字输入框</h3>
+        <iframe src="html/inputDialogs.html" width="320" height="416"></iframe>
+
+        <h2>Dialogs - 模态框</h2>
+        <p>
+            使用ionic弹框，双按钮使用show、confirm，单按钮使用alert；按钮type类型确定button-save，取消button-cancel；内容垂直居中的话直接在template添加内容，其他样式需求，自己添加标签</p>
+        <h3>双按钮</h3>
+        <button class="button button-small3 button-theme" ng-click="showPopup()">
+            带标题
+        </button>
+        <button class="button button-small3 button-theme" ng-click="showConfirm()">
+            不带标题
+        </button>
+        <h3>单按钮</h3>
+        <button class="button button-small3 button-theme" ng-click="showAlert1()">
+            带标题
+        </button>
+        <button class="button button-small3 button-theme" ng-click="showAlert2()">
+            不带标题
+        </button>
+        <h3>成功提示</h3>
+        <p>最多显示两行文字</p>
+        <iframe src="html/successalert1.html" width="320" height="416"></iframe>
+        <iframe src="html/successalert2.html" width="320" height="416"></iframe>
+        <h3>加载状态</h3>
+        <p>loading还待完善</p>
+        <iframe src="html/loading.html" width="320" height="416"></iframe>
+        <iframe src="html/datamove.html" width="320" height="416"></iframe>
+
+        <h2>场景提示样式</h2>
+        <p>以项目中的为准，暂时不动</p>
+        <h3>场景冻结</h3>
+        <div class="sencesize">
+            <div class="new_sence_lock">
+                <div class="active_refreze_btn"></div>
+            </div>
+        </div>
+        <h3>场景已截止</h3>
+        <div class="sencesize">
+            <div class="sence_timeout">
+
+            </div>
+        </div>
+        <h2>遮罩提示</h2>
+        <p>以项目中的为准，暂时不动</p>
+        <iframe src="html/iknow.html" width="320" height="416"></iframe>
+        <h2>错误页面</h2>
+        <p>以项目中的为准，暂时不动</p>
+        <iframe src="html/error.html" width="320" height="416"></iframe>
+        <h2>顶部提示</h2>
+        <h3>中性提示</h3>
+        <div class="top-alert-warn">
+            你的网络环境不佳，请在wifi下打开
+        </div>
+        <br>
+        <div class="top-alert-warn">
+            <div class="alert-close">你的网络环境不佳，请在wifi下打开</div>
+        </div>
+        <h3>错误提示</h3>
+        <div class="top-alert-error">
+            您的微官网包含敏感词汇，请重新修改！
+        </div>
+        <br>
+        <div class="top-alert-error">
+            <div class="alert-close">您的微官网包含敏感词汇，请重新修改！</div>
+        </div>
+        <h3>成功提示</h3>
+        <div class="top-alert-success">
+            操作成功！
+        </div>
+        <br>
+        <div class="top-alert-success">
+            <div class="alert-close">操作成功！</div>
+        </div>
+
+        <h3>音乐播放图标</h3>
+        <p>以项目中的为准，暂时不动</p>
+        <iframe src="html/musicicon.html" width="320" height="416"></iframe>
+
+        <h2>List - 列表</h2>
+        <iframe src="html/list.html" width="320" height="416"></iframe>
+
+        <h2>Forms-表单</h2>
+        <iframe src="html/forms.html" width="320" height="416"></iframe>
+
+        <h2>Cards - 卡片</h2>
+        <iframe src="html/cards.html" width="320" height="416"></iframe>
+
+        <h2>Tabs - 导航条</h2>
+        <p>以项目中的实际情况为准，首页的不变</p>
+        <h3>Header Tab - 顶部导航</h3>
+        <div class="nav-top-tabs">
+            <div class="nav-tab margin-lr20 active">咨询跟进</div>
+            <div class="nav-tab margin-lr20">全部咨询</div>
+        </div>
+        <br>
+        <div class="nav-top-tabs">
+            <div class="nav-tab margin-lr40 active">全部</div>
+            <div class="nav-tab margin-lr40">邀请用户</div>
+            <div class="nav-tab margin-lr40">VIP码</div>
+        </div>
+        <br>
+        <div class="nav-top-tabs display-flex">
+            <div class="nav-tab margin-lr20 active">全部</div>
+            <div class="nav-tab margin-lr20">微官网</div>
+            <div class="nav-tab margin-lr20">微海报</div>
+            <div class="nav-tab margin-lr20">微助力</div>
+        </div>
+
+        <h3>Footer Tab - 底部导航</h3>
+
+        <div class="nav-footer-tabs">
+            <div class="nav-tab margin-lr20">
+                <i class="icon-size-40 icon-myscene"></i>
+                <span class="nav-text">我的场景</span>
+            </div>
+            <div class="nav-tab margin-lr20">
+                <i class="icon-size-40 icon-usercenter"></i>
+                <span class="nav-text">用户中心</span>
+
+            </div>
+        </div>
+        <br>
+        <div class="nav-footer-tabs">
+            <div class="nav-tab margin-lr40 ">
+                <i class="icon-size-40 icon-myscene"></i>
+                <span class="nav-text">我的场景</span>
+            </div>
+            <div class="nav-tab margin-lr40">
+                <i class="icon-size-40 icon-rbook"></i>
+                <span class="nav-text">咨询本</span>
+            </div>
+            <div class="nav-tab margin-lr40">
+                <i class="icon-size-40 icon-usercenter"></i>
+                <span class="nav-text">用户中心</span>
+            </div>
+        </div>
+        <br>
+        <div class="nav-footer-tabs display-flex">
+            <div class="nav-tab margin-lr20 ">
+                <i class="icon-size-40 icon-edit"></i>
+                <span class="nav-text">编辑</span>
+            </div>
+            <div class="nav-tab margin-lr20">
+                <i class="icon-size-40 icon-nextpage"></i>
+                <span class="nav-text">加页</span>
+            </div>
+            <div class="nav-tab margin-lr20">
+                <i class="icon-size-40 icon-save"></i>
+                <span class="nav-text">暂存</span>
+            </div>
+            <div class="nav-tab margin-lr20">
+                <i class="icon-size-40 icon-preview"></i>
+                <span class="nav-text">预览</span>
+            </div>
+        </div>
+
+        <h3>Footer Select List - 底部选择列表</h3>
+        <button class="button button-small3 button-theme" ng-model="selectList" ng-click="showSelectList()">
+            {{selectList}}
+        </button>
+
+        <br>
+
+    </div>
+    <div class="main show-pc">
+        <div class="row">
+            <div class=" col col-25">
+                <div class="nav">
+
+                    <h1>导航</h1>
+                    <ul>
+                        <Li>Font文字</Li>
+                        <li>Icons图标</li>
+                        <li>Color颜色</li>
+                        <li>Layout布局</li>
+                        <li>Buttons按钮</li>
+                        <li>Tabs导航条</li>
+                        <li>Controls控件</li>
+                        <li>List列表</li>
+                        <li>Cards卡片</li>
+                        <li>Forms表单</li>
+                        <li>Dialogs模拟框</li>
+                        <li>Others其他一些组件</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content col col-75">
+                <div class="content">
+                    <h2>Fonts-字体</h2>
+                    <div class="row">
+                        <div class="col col-20">
+                            <p class="font-title">校宝秀</p>
+                            <p>.font-title{font-size: temSize(28); color: #333;}</p>
+                        </div>
+                        <div class="col col-20">
+                            <p class="font-body">校宝秀</p>
+                            <p>.font-body{font-size: temSize(24); color: #333;}</p>
+                        </div>
+                        <div class="col col-20">
+                            <p class="font-sub">校宝秀</p>
+                            <p>.font-sub{font-size: temSize(28); color: #aaa;}</p>
+                        </div>
+                        <div class="col col-20">
+                            <p class="font-help">校宝秀</p>
+                            <p>.font-help{font-size: temSize(20); color: #81a2cd;}</p>
+                        </div>
+                        <div class="col col-20">
+                            <p class="text-shadow">校宝秀</p>
+                            <p>.text-shadow{text-shadow: 0px 1px 4px #ddd;}</p>
+                        </div>
+                    </div>
+                    <h2>Block Buttons - 实心按钮</h2>
+                    <h3>小按钮</h3>
+                    <div class="row">
+                        <div class="col col-20">
+                            <p class="font-help">height:60px</p>
+                            <p class="font-help">width:120px</p>
+                            <p class="font-help">font-size:20px</p>
+                        </div>
+                        <div class="col col-20">
+                            <button class="button button-small1 button-theme">主题色</button>
+                            <p>class="button button-small1 button-theme"</p>
+                        </div>
+                        <div class="col col-20">
+                            <div class="button button-small1 button-themeGray">主题色-置灰</div>
+                            <p>class="button button-small1 button-themeGray"</p>
+                        </div>
+                        <div class="col col-20">
+                            <i class="button button-small1 button-white">白色</i>
+                            <p>class="button button-small1 button-white"</p>
+                        </div>
+                        <div class="col col-20">
+                            <a class="button button-small1 button-whiteGray">白色-置灰</a>
+                            <p>class="button button-small1 button-whiteGray"</p>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col col-20">
+                            <p class="font-help">height:60px</p>
+                            <p class="font-help">width:140px</p>
+                            <p class="font-help">font-size:20px</p>
+                        </div>
+                        <div class="col col-20">
+                            <button class="button button-small2 button-theme">主题色</button>
+                            <p>class="button button-small2 button-theme"</p>
+                        </div>
+                        <div class="col col-20">
+                            <div class="button button-small2 button-themeGray">主题色-置灰</div>
+                            <p>class="button button-small2 button-themeGray"</p>
+                        </div>
+                        <div class="col col-20">
+                            <i class="button button-small2 button-white">白色</i>
+                            <p>class="button button-small2 button-white"</p>
+                        </div>
+                        <div class="col col-20">
+                            <a class="button button-small2 button-whiteGray">白色-置灰</a>
+                            <p>class="button button-small2 button-whiteGray"</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-20">
+                            <p class="font-help">height:60px</p>
+                            <p class="font-help">width:160px</p>
+                            <p class="font-help">font-size:24px</p>
+                        </div>
+                        <div class="col col-20">
+                            <button class="button button-small3 button-theme">主题色</button>
+                            <p>class="button button-small3 button-theme"</p>
+                        </div>
+                        <div class="col col-20">
+                            <div class="button button-small3 button-themeGray">主题色-置灰</div>
+                            <p>class="button button-small3 button-themeGray"</p>
+                        </div>
+                        <div class="col col-20">
+                            <i class="button button-small3 button-white">白色</i>
+                            <p>class="button button-small3 button-white"</p>
+                        </div>
+                        <div class="col col-20">
+                            <a class="button button-small3 button-whiteGray">白色-置灰</a>
+                            <p>class="button button-small3 button-whiteGray"</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-20">
+                            <p class="font-help">height:60px</p>
+                            <p class="font-help">width:200px</p>
+                            <p class="font-help">font-size:24px</p>
+                        </div>
+                        <div class="col col-20">
+                            <button class="button button-small4 button-theme">主题色</button>
+                            <p>class="button button-small4 button-theme"</p>
+                        </div>
+                        <div class="col col-20">
+                            <div class="button button-small4 button-themeGray">主题色-置灰</div>
+                            <p>class="button button-small4 button-themeGray"</p>
+                        </div>
+                        <div class="col col-20">
+                            <i class="button button-small4 button-white">白色</i>
+                            <p>class="button button-small4 button-white"</p>
+                        </div>
+                        <div class="col col-20">
+                            <a class="button button-small4 button-whiteGray">白色-置灰</a>
+                            <p>class="button button-small4 button-whiteGray"</p>
+                        </div>
+                    </div>
+
+                    <h3>大按钮</h3>
+                    <div class="row">
+                        <div class="col col-50">
+                            <button class="button button-large button-theme ">主题色</button>
+                            <p>class="button button-large button-theme"</p>
+                        </div>
+                        <div class="col col-50">
+                            <div class="button button-large button-themeGray ">主题色-置灰</div>
+                            <p>class="button button-large button-theme"</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col col-50">
+                            <i class="button button-large button-white ">白色</i>
+                            <p>class="button button-large button-theme"</p>
+                        </div>
+                        <div class="col col-50">
+                            <a class="button button-large button-whiteGray ">白色-置灰</a>
+                            <p>class="button button-large button-theme"</p>
+                        </div>
+
+                    </div>
+
+                    <h2>Outlined Buttons - 线框按钮</h2>
+                    <h3>小按钮</h3>
+                    <div class="row">
+                        <div class="col col-25">
+                            <button class="button button-small1 button-theme button-outline">主题色</button>
+                            <p>class="button button-small1 button-theme button-outline"</p>
+                        </div>
+                        <div class="col col-25">
+                            <button class="button button-small2 button-theme button-outline">主题色</button>
+                            <p>class="button button-small2 button-theme button-outline"</p>
+                        </div>
+
+                        <div class="col col-25">
+                            <div class="button button-small3 button-themeGray button-outline">主题色-置灰</div>
+                            <p>class="button button-small3 button-themeGray button-outline"</p>
+                        </div>
+
+                        <div class="col col-25">
+                            <i class="button button-small4 button-white button-outline">白色</i>
+                            <p>class="button button-small4 button-white button-outline"</p>
+                        </div>
+                    </div>
+
+                    <h2>Full Width Block Buttons - 全宽按钮</h2>
+                    <button class="button  button-theme button-full">主题色</button>
+                    <p>class="button button-theme button-full"</p>
+                    <div class="button  button-themeGray button-full">主题色-置灰</div>
+                    <p>class="button button-themeGray button-full"</p>
+                    <button class="button  button-white button-block button-full">主题色</button>
+                    <p>class="button button-white button-block button-full"</p>
+                    <div class="button  button-whiteGray button-block button-full">主题色-置灰</div>
+                    <p>class="button button-whiteGray button-block button-full"</p>
+                    <h2>Clear Buttons - 纯文字按钮</h2>
+                    <h3>待补充</h3>
+                    <button class="button button-theme button-clear">主题色</button>
+                    <p>class="button button-theme button-clear"</p>
+                    <h2>Toggle - 开关</h2>
+                    <p>使用ionic的样式，替换了尺寸和颜色</p>
+                    <label class="toggle"><input type="checkbox">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+
+                    <h2>Checkbox - 多选框</h2>
+                    <p>使用ionic的样式，替换了尺寸和颜色</p>
+                    <ion-checkbox ng-model="emailNotification"
+                                  ng-true-value="'Subscribed'"
+                                  ng-false-value="'Unubscribed'">
+                        Newsletter
+                    </ion-checkbox>
+                    <h2>Radio Button - 单选框</h2>
+                    <p>使用ionic的样式，替换了尺寸和颜色</p>
+                    <ion-radio ng-value="item.value"
+                               ng-model="data.serverSide"
+                               ng-change="serverSideChange(item)"
+                               name="server-side">
+                        aaa
+                    </ion-radio>
+                    <ion-radio ng-value="item.value"
+                               ng-model="data.serverSide"
+                               ng-change="serverSideChange(item)"
+                               name="server-side">
+                        bbb
+                    </ion-radio>
+                    <h2 ng-click="showVisitDateTime()">Time Select - 时间选择</h2>
+                    <p>使用mobiscroll，替换了尺寸和颜色</p>
+                    <input ng-model="mydate" type="text" mobiscroll-datetime="setVisitDateTime" readonly="readonly"
+                           mobiscroll-instance="myInstance"/>
+
+                    <h2>Dialogs - 模态框</h2>
+                    <p>
+                        使用ionic弹框，双按钮使用show、confirm，单按钮使用alert；按钮type类型确定button-save，取消button-cancel；内容垂直居中的话直接在template添加内容，其他样式需求，自己添加标签</p>
+                    <h3>双按钮</h3>
+                    <button class="button button-small3 button-theme" ng-click="showPopup()">
+                        带标题
+                    </button>
+                    <button class="button button-small3 button-theme" ng-click="showConfirm()">
+                        不带标题
+                    </button>
+                    <h3>单按钮</h3>
+                    <button class="button button-small3 button-theme" ng-click="showAlert1()">
+                        带标题
+                    </button>
+                    <button class="button button-small3 button-theme" ng-click="showAlert2()">
+                        不带标题
+                    </button>
+                    <h3>成功提示</h3>
+                    <p>最多显示两行文字</p>
+                    <iframe src="html/successalert1.html" width="320" height="416"></iframe>
+                    <iframe src="html/successalert2.html" width="320" height="416"></iframe>
+                    <h3>加载状态</h3>
+                    <p>loading还待完善</p>
+                    <iframe src="html/loading.html" width="320" height="416"></iframe>
+                    <iframe src="html/datamove.html" width="320" height="416"></iframe>
+
+                    <h2>场景提示样式</h2>
+                    <p>以项目中的为准，暂时不动</p>
+                    <h3>场景冻结</h3>
+                    <div class="sencesize">
+                        <div class="new_sence_lock">
+                            <div class="active_refreze_btn"></div>
+                        </div>
+                    </div>
+                    <h3>场景已截止</h3>
+                    <div class="sencesize">
+                        <div class="sence_timeout">
+
+                        </div>
+                    </div>
+                    <h2>遮罩提示</h2>
+                    <iframe src="html/iknow.html" width="320" height="416"></iframe>
+
+                    <h2>错误页面</h2>
+                    <p>以项目中的为准，暂时不动</p>
+                    <iframe src="html/error.html" width="320" height="416"></iframe>
+                    <h2>顶部提示</h2>
+                    <h3>中性提示</h3>
+                    <div class="top-alert-warn">
+                        你的网络环境不佳，请在wifi下打开
+                    </div>
+                    <br>
+                    <div class="top-alert-warn">
+                        <div class="alert-close">你的网络环境不佳，请在wifi下打开</div>
+                    </div>
+                    <h3>错误提示</h3>
+                    <div class="top-alert-error">
+                        您的微官网包含敏感词汇，请重新修改！
+                    </div>
+                    <br>
+                    <div class="top-alert-error">
+                        <div class="alert-close">您的微官网包含敏感词汇，请重新修改！</div>
+                    </div>
+                    <h3>成功提示</h3>
+                    <div class="top-alert-success">
+                        操作成功！
+                    </div>
+                    <br>
+                    <div class="top-alert-success">
+                        <div class="alert-close">操作成功！</div>
+                    </div>
+
+                    <h3>音乐播放图标</h3>
+                    <p>以项目中的为准，暂时不动</p>
+                    <iframe src="html/musicicon.html" width="320" height="416"></iframe>
+
+                    <h2>List - 列表</h2>
+                    <iframe src="html/list.html" width="320" height="416"></iframe>
+
+                    <h2>Forms-表单</h2>
+                    <iframe src="html/forms.html" width="320" height="416"></iframe>
+
+                    <h2>Cards - 卡片</h2>
+                    <iframe src="html/cards.html" width="320" height="416"></iframe>
+
+                    <h2>Tabs - 导航条</h2>
+                    <p>以项目中的实际情况为准，首页的不变</p>
+                    <h3>Header Tab - 顶部导航</h3>
+                    <div class="nav-top-tabs">
+                        <div class="nav-tab margin-lr20 active">咨询跟进</div>
+                        <div class="nav-tab margin-lr20">全部咨询</div>
+                    </div>
+                    <br>
+                    <div class="nav-top-tabs">
+                        <div class="nav-tab margin-lr40 active">全部</div>
+                        <div class="nav-tab margin-lr40">邀请用户</div>
+                        <div class="nav-tab margin-lr40">VIP码</div>
+                    </div>
+                    <br>
+                    <div class="nav-top-tabs display-flex">
+                        <div class="nav-tab margin-lr20 active">全部</div>
+                        <div class="nav-tab margin-lr20">微官网</div>
+                        <div class="nav-tab margin-lr20">微海报</div>
+                        <div class="nav-tab margin-lr20">微助力</div>
+                    </div>
+
+                    <h3>Footer Tab - 底部导航</h3>
+
+                    <div class="nav-footer-tabs">
+                        <div class="nav-tab margin-lr20">
+                            <i class="icon-size-40 icon-myscene"></i>
+                            <span class="nav-text">我的场景</span>
+                        </div>
+                        <div class="nav-tab margin-lr20">
+                            <i class="icon-size-40 icon-usercenter"></i>
+                            <span class="nav-text">用户中心</span>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="nav-footer-tabs">
+                        <div class="nav-tab margin-lr40 ">
+                            <i class="icon-size-40 icon-myscene"></i>
+                            <span class="nav-text">我的场景</span>
+                        </div>
+                        <div class="nav-tab margin-lr40">
+                            <i class="icon-size-40 icon-rbook"></i>
+                            <span class="nav-text">咨询本</span>
+                        </div>
+                        <div class="nav-tab margin-lr40">
+                            <i class="icon-size-40 icon-usercenter"></i>
+                            <span class="nav-text">用户中心</span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="nav-footer-tabs display-flex">
+                        <div class="nav-tab margin-lr20 ">
+                            <i class="icon-size-40 icon-edit"></i>
+                            <span class="nav-text">编辑</span>
+                        </div>
+                        <div class="nav-tab margin-lr20">
+                            <i class="icon-size-40 icon-nextpage"></i>
+                            <span class="nav-text">加页</span>
+                        </div>
+                        <div class="nav-tab margin-lr20">
+                            <i class="icon-size-40 icon-save"></i>
+                            <span class="nav-text">暂存</span>
+                        </div>
+                        <div class="nav-tab margin-lr20">
+                            <i class="icon-size-40 icon-preview"></i>
+                            <span class="nav-text">预览</span>
+                        </div>
+                    </div>
+
+                    <h3>Footer Select List - 底部选择列表</h3>
+                    <button class="button button-small3 button-theme" ng-model="selectList" ng-click="showSelectList()">
+                        {{selectList}}
+                    </button>
+
+                    <br>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</ion-content>
+
+
+</body>
+</html>
