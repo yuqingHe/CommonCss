@@ -22,7 +22,7 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
 
     $scope.mydate = new Date();
     var now = new Date();
-    var aa = "<p >一旦有人助力/报名，截止时间不能再改了哦！</p>"
+    var dateTitle = "<p>一旦有人助力/报名，截止时间不能再改了哦！</p>"
     $scope.setVisitDateTime = {
         animate: 'fade',
         theme: 'material',      // 样式
@@ -33,11 +33,10 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
             'clear',
             'set',
             'cancel'
-
         ],
         clearText: '删除回访提醒',
         minWidth: 50,
-        headerText: aa,
+        headerText: dateTitle,
         rows: 3
     };
 

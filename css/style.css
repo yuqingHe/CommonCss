@@ -1,8 +1,13 @@
+@charset "UTF-8";
 /* px to rem */
 * {
   padding: 0;
   margin: 0;
   list-style: none; }
+
+/*通用*/
+.bg-gray {
+  background-color: #f5f5f5; }
 
 .pc-head {
   background-image: url("../img/head-bg.png");
@@ -40,6 +45,7 @@
   height: auto;
   margin: 0 auto;
   margin-top: 60px;
+  padding-bottom: 30px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,11 +61,17 @@
     margin: 10px 0;
     color: #666;
     margin-left: 20px; }
+  .pc-body h3 {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #666; }
   .pc-body pre {
     background-color: #f5f5f5;
     border-left: 5px solid #D7DBE4;
     padding: 0 10px;
     margin-top: 10px; }
+    .pc-body pre code {
+      white-space: pre-wrap; }
   .pc-body .nav {
     display: inline-block;
     width: 162px;
@@ -125,8 +137,8 @@
         text-align: center; }
       .pc-body .content .preview-icon p {
         font-size: 14px; }
-    .pc-body .content .bg-gray {
-      background-color: #f5f5f5; }
+    .pc-body .content .color-body {
+      padding: 10px; }
     .pc-body .content .color-body > div {
       height: 40px;
       line-height: 40px;
@@ -136,7 +148,8 @@
       height: 40px;
       border-radius: 5px;
       display: inline-block;
-      margin-right: 10px; }
+      margin-right: 10px;
+      float: left; }
     .pc-body .content .color-theme {
       background-color: #ff6622; }
     .pc-body .content .color-white {
@@ -153,6 +166,33 @@
       background-color: #feda13; }
     .pc-body .content .color-dark {
       background-color: #333; }
+    .pc-body .content .photobg {
+      margin: 10px 0;
+      padding: 10px; }
+    .pc-body .content .photobg > div {
+      display: inline-block;
+      margin: 0 10px; }
+    .pc-body .content .photobg > div span {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      border-radius: 5px; }
+    .pc-body .content .photo-color-1 {
+      background-color: #ff6e48; }
+    .pc-body .content .photo-color-2 {
+      background-color: #e3547f; }
+    .pc-body .content .photo-color-3 {
+      background-color: #6090cd; }
+    .pc-body .content .photo-color-4 {
+      background-color: #fec42c; }
+    .pc-body .content .photo-color-5 {
+      background-color: #49c5d8; }
+    .pc-body .content .photo-color-6 {
+      background-color: #90d355; }
+
+/*iframe引入页面内的样式*/
+.i-buttons .button {
+  margin: 5px 10px; }
 
 .icon-row div {
   margin: 0.5rem; }

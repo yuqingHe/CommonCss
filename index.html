@@ -35,7 +35,7 @@
             </ul>
         </div>
         <div class="content">
-            <div ng-show="navActive==1">
+            <div ng-if="navActive==1">
                 <div class="introduce">
                     <h1>Font文字</h1>
                     <h2>用法</h2>
@@ -77,7 +77,7 @@
                     <iframe src="html/font.html"></iframe>
                 </div>
             </div>
-            <div ng-show="navActive==2">
+            <div ng-if="navActive==2">
                 <h1>Icons图标</h1>
                 <h2>用法</h2>
                 <div class="text1">自制的图标目前是图片形式，尺寸为40*40</div>
@@ -257,7 +257,7 @@
 
             </div>
 
-            <div ng-show="navActive==3">
+            <div ng-if="navActive==3">
                 <h1>Color颜色</h1>
                 <h2>常用样式颜色</h2>
                 <div class="text1">1.1px灰色边：1px solid #ddd;在手机上显示1px，利用transform: scale(0.5)缩放，父元素需要添加position: relative，该方法兼容性有待验证，目前使用的方法class如下：</div>
@@ -301,80 +301,202 @@
                     <div class="text1"><span class="color color-dark"></span>dark #333333</div>
                 </div>
                 <h2>头像默认背景色</h2>
-                <div class="bg-gray">
-                    <div><span class="photo-color-1"></span><p></p></div>
-                    <div><span class="photo-color-2"></span><p></p></div>
-                    <div><span class="photo-color-3"></span><p></p></div>
-                    <div><span class="photo-color-4"></span><p></p></div>
-                    <div><span class="photo-color-5"></span><p></p></div>
-                    <div><span class="photo-color-6"></span><p></p></div> 
+                <div class="photobg bg-gray">
+                    <div class="text1"><span class="photo-color-1"></span><p>#ff6e48</p></div>
+                    <div class="text1"><span class="photo-color-2"></span><p>#e3547f</p></div>
+                    <div class="text1"><span class="photo-color-3"></span><p>#6090cd</p></div>
+                    <div class="text1"><span class="photo-color-4"></span><p>#fec42c</p></div>
+                    <div class="text1"><span class="photo-color-5"></span><p>#49c5d8</p></div>
+                    <div class="text1"><span class="photo-color-6"></span><p>#90d355</p></div>
                 </div>
             </div>
 
-            <div ng-show="navActive==4">
+            <div ng-if="navActive==4">
                 <h2>Layout布局</h2>
             </div>
-            <div ng-show="navActive==5">
+            <div ng-if="navActive==5">
                 <div class="introduce">
                     <h1>Buttons按钮</h1>
                     <h2>用法</h2>
+                    <h3>·实心按钮</h3>
+                    <div class="text1">颜色尺寸参考下表</div>
+                    <pre class="text1"><code>&lt;button class=&quot;button button-small1 button-theme&quot;&gt;主题色&lt;/button&gt;</code></pre>
+
+                    <h3>·线框按钮</h3>
+                    <div class="text1">颜色尺寸参考下表</div>
+                    <pre class="text1"><code>&lt;button class=&quot;button button-small1 button-theme button-outline&quot;&gt;主题色&lt;/button&gt;</code></pre>
+
+                    <h3>·全宽按钮</h3>
+                    <div class="text1">颜色参考下表</div>
+                    <pre class="text1"><code>&lt;button class=&quot;button  button-theme button-full&quot;&gt;主题色&lt;/button&gt;</code></pre>
+
+                    <h3>·纯文字按钮</h3>
+                    <div class="text1">颜色参考下表</div>
+                    <pre class="text1"><code>&lt;button class=&quot;button button-theme button-clear&quot;&gt;主题色&lt;/button&gt;</code></pre>
                     <div>
                         <table cellspacing="0" cellpadding="0">
                             <thead>
                             <tr>
+                                <th></th>
                                 <th>类名</th>
                                 <th>样式</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>font-title</td>
-                                <td>font-size: temSize(28); color: #333;</td>
+                                <td rowspan="5">尺寸</td>
+                                <td>button-small1</td>
+                                <td>font-size: 20px; width: 120; height:60;</td>
                             </tr>
                             <tr>
-                                <td>font-body</td>
-                                <td>font-size: temSize(24); color: #333;</td>
+                                <td>button-small2</td>
+                                <td>font-size: 20px; width: 140; height:60;</td>
                             </tr>
                             <tr>
-                                <td>font-sub</td>
-                                <td>font-size: temSize(28); color: #aaa;</td>
+                                <td>button-small3</td>
+                                <td>font-size: 24px; width: 160; height:60;</td>
                             </tr>
                             <tr>
-                                <td>font-help</td>
-                                <td>font-size: temSize(20); color: #81a2cd;</td>
+                                <td>button-small4</td>
+                                <td>font-size: 24px; width: 200; height:60;</td>
                             </tr>
                             <tr>
-                                <td>text-shadow</td>
-                                <td>text-shadow: 0px 1px 4px #ddd;</td>
+                                <td>button-large</td>
+                                <td>font-size: 28px; width: 480; height:90;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">颜色</td>
+                                <td>button-theme</td>
+                                <td>background-color: #ff6622; color: #fff;</td>
+                            </tr>
+                            <tr>
+                                <td>button-themeGray</td>
+                                <td>background-color: #ddd; color: #fff;</td>
+                            </tr>
+                            <tr>
+                                <td>button-white</td>
+                                <td>background-color: #fff; color: #ff6622;</td>
+                            </tr>
+                            <tr>
+                                <td>button-whiteGray</td>
+                                <td>background-color: #fff; color: #ccc;</td>
                             </tr>
 
                             </tbody>
                         </table>
                     </div>
+
+
+
                 </div>
                 <div class="phone">
-                    <iframe src="html/button.html"></iframe>
+                    <iframe src="html/button.html" ></iframe>
                 </div>
             </div>
-            <div ng-show="navActive==6">
-                <h2>Tabs导轨条</h2>
+            <div ng-if="navActive==6">
+                <div class="introduce">
+                    <h2>Tabs导航条</h2>
+                    <h2>说明</h2>
+                    <div class="text1">为了确保可读性，每项文字字数建议为2-4个汉字。字号为24px，色值 #333。</div>
+                    <h2>用法</h2>
+                    <h3>·2项内容</h3>
+                    <pre class="text1"><code>&lt;div class=&quot;nav-top-tabs&quot;&gt;
+    &lt;div class=&quot;nav-tab margin-lr20 active&quot;&gt;咨询跟进&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;全部咨询&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h3>·3项内容</h3>
+                    <pre class="text1"><code>&lt;div class=&quot;nav-top-tabs&quot;&gt;
+    &lt;div class=&quot;nav-tab margin-lr40 active&quot;&gt;全部&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr40&quot;&gt;邀请用户&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr40&quot;&gt;VIP码&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h3>·4项内容</h3>
+                    <pre class="text1"><code>&lt;div class=&quot;nav-top-tabs display-flex&quot;&gt;
+    &lt;div class=&quot;nav-tab margin-lr20 active&quot;&gt;全部&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;微官网&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;微海报&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;微助力&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+                </div>
+                <div class="phone">
+                    <iframe src="html/nav.html" ></iframe>
+                </div>
             </div>
-            <div ng-show="navActive==7">
+            <div ng-if="navActive==7">
                 <h2>Controls控件</h2>
+                <div class="introduce">
+                    <h2>Tabs导航条</h2>
+                    <h2>说明</h2>
+                    <div class="text1">为了确保可读性，每项文字字数建议为2-4个汉字。字号为24px，色值 #333。</div>
+                    <h2>用法</h2>
+                    <h3>·Toggle - 开关</h3>
+                    <pre class="text1"><code>&lt;label class=&quot;toggle&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;
+    &lt;div class=&quot;track&quot;&gt;
+        &lt;div class=&quot;handle&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/label&gt;</code></pre>
+                    <h3>Checkbox - 多选框</h3>
+                    <pre class="text1"><code>&lt;ion-checkbox ng-model=&quot;emailNotification&quot;
+              ng-true-value=&quot;&#x27;Subscribed&#x27;&quot;
+              ng-false-value=&quot;&#x27;Unubscribed&#x27;&quot;&gt;
+    Newsletter
+&lt;/ion-checkbox&gt;</code></pre>
+                    <h3>·Radio Button - 单选框</h3>
+                    <pre class="text1"><code>&lt;ion-radio ng-value=&quot;item.value&quot;
+           ng-model=&quot;data.serverSide&quot;
+           ng-change=&quot;serverSideChange(item)&quot;
+           name=&quot;server-side&quot;&gt;
+    aaa
+&lt;/ion-radio&gt;</code></pre>
+                    <h3>·Time Select - 时间选择</h3>
+                    <pre class="text1"><code>&lt;input ng-model=&quot;mydate&quot; type=&quot;text&quot; mobiscroll-datetime=&quot;setVisitDateTime&quot; readonly=&quot;readonly&quot; mobiscroll-instance=&quot;myInstance&quot;/&gt;</code></pre>
+                    <pre class="text1"><code>//配置项
+$scope.mydate = new Date();
+    var now = new Date();
+    var dateTitle = &quot;&lt;p&gt;一旦有人助力/报名，截止时间不能再改了哦！&lt;/p&gt;&quot;
+    $scope.setVisitDateTime = {
+        animate: &#x27;fade&#x27;,
+        theme: &#x27;material&#x27;,      // 样式
+        lang: &#x27;zh&#x27;,    // 语言
+        mode: &#x27;mixed&#x27;,
+        display: &#x27;bottom&#x27;,  // 显示位置
+        buttons: [
+            &#x27;clear&#x27;,
+            &#x27;set&#x27;,
+            &#x27;cancel&#x27;
+        ],
+        clearText: &#x27;删除回访提醒&#x27;,
+        minWidth: 50,
+        headerText: dateTitle,
+        rows: 3
+    };</code></pre>
+
+                    <h3>·Input Dialogs - 文字输入框</h3>
+                    <pre class="text1"><code></code></pre>
+                    <h3>·Footer Select List - 底部选择列表</h3>
+                    <pre class="text1"><code></code></pre>
+
+
+                </div>
+                <div class="phone">
+                    <iframe src="html/controls.html" ></iframe>
+                </div>
             </div>
-            <div ng-show="navActive==8">
+            <div ng-if="navActive==8">
                 <h2>List列表</h2>
             </div>
-            <div ng-show="navActive==9">
+            <div ng-if="navActive==9">
                 <h2>Cards卡片</h2>
             </div>
-            <div ng-show="navActive==10">
+            <div ng-if="navActive==10">
                 <h2>Forms表单</h2>
             </div>
-            <div ng-show="navActive==11">
+            <div ng-if="navActive==11">
                 <h2>Dialogs模拟框</h2>
             </div>
-            <div ng-show="navActive==12">
+            <div ng-if="navActive==12">
                 <h2>Others其他一些组件</h2>
             </div>
 
