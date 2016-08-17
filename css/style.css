@@ -45,6 +45,7 @@
   height: auto;
   margin: 0 auto;
   margin-top: 60px;
+  padding-bottom: 30px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -60,11 +61,17 @@
     margin: 10px 0;
     color: #666;
     margin-left: 20px; }
+  .pc-body h3 {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #666; }
   .pc-body pre {
     background-color: #f5f5f5;
     border-left: 5px solid #D7DBE4;
     padding: 0 10px;
     margin-top: 10px; }
+    .pc-body pre code {
+      white-space: pre-wrap; }
   .pc-body .nav {
     display: inline-block;
     width: 162px;
