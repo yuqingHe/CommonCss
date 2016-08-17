@@ -1,11 +1,13 @@
 {
-  "name": "shinningStar",
+  "name": "CommonCss",
   "private": true,
   "version": "0.0.1",
-  "description": "shinningStar",
+  "description": "前端静态规范",
   "repository": "",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^1.0.0"
   }
 }

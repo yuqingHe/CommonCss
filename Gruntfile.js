@@ -6,16 +6,36 @@ module.exports = function(grunt) {
         //Read the package.json (optional)
         pkg: grunt.file.readJSON('package.json'),
 
-
+         watch: {
+            scss: {
+                files: 'scss/**/*.scss',
+                tasks: ['sass']
+            }
+        },
         // Task configuration.
         sass: {
             dist: {
                 files: {
-                    'css/style.css': 'css/style.scss',
-                    'css/common.css': 'css/common.scss'
+                    'css/style.css': 'scss/style.scss',
+                    'css/common.css': 'scss/common.scss'
                 },
                 options: {
                     sourcemap: 'true'
+                }
+            }
+        },
+         browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        'css/*.css',
+                        'html/*.html',
+                        'js/*.js'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    server: './'
                 }
             }
         }
@@ -23,7 +43,8 @@ module.exports = function(grunt) {
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-sass');
-
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-browser-sync');
     // Default task.
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('default', ['browserSync','watch']);
 };
