@@ -19,7 +19,7 @@
     <script src="../js/mobiscrolldatetime/js/mobiscroll.custom-2.17.0.min.js"></script>
     <script src="../js/common.js"></script>
 </head>
-<body ng-controller="exam" >
+<body ng-controller="exam">
 <ion-content scroll="true">
     <h3>双按钮</h3>
     <button class="button button-small3 button-theme" ng-click="showPopup()">
@@ -35,6 +35,64 @@
     <button class="button button-small3 button-theme" ng-click="showAlert2()">
         不带标题
     </button>
+    <h3>成功提示</h3>
+    <button class="button button-small3 button-theme" ng-click="successAlert1()">
+        迁移成功（一行文案）
+    </button>
+    <button class="button button-small3 button-theme" ng-click="successAlert2()">
+        迁移成功（两行文案）
+    </button>
+    <h3>加载状态</h3>
+    <button class="button button-small3 button-theme" ng-click="showLoading()">
+        loading
+    </button>
+    <button class="button button-small3 button-theme" ng-click="showDataMove()">
+        数据迁移
+    </button>
+
 </ion-content>
+<div class="data_migrationing" ng-show="successAlert1Box"  style="height: 100%">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="migration_success"></div>
+            <div class="load_reminds2">
+                迁移成功
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="data_migrationing" ng-show="successAlert2Box">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="migration_success"></div>
+            <div class="load_reminds2">
+                迁移成功<br>迁移成功迁移成功
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data_migrationing" ng-show="loading">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="short_loading"></div>
+
+        </div>
+    </div>
+</div>
+<div class="data_migrationing" ng-show="dataMove">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="data_migrationline"></div>
+            <div class="load_reminds2">
+                正在迁移
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

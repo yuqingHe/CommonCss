@@ -14,9 +14,9 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
         {id: 11, en: 'Dialogs', ch: '模拟框'},
         {id: 12, en: 'Others', ch: '其他一些组件'}
     ]
-    $scope.navActive=1;
-    $scope.showTab=function (id) {
-        $scope.navActive=id;
+    $scope.navActive = 1;
+    $scope.showTab = function (id) {
+        $scope.navActive = id;
     }
 
 
@@ -134,17 +134,41 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
     };
 
     //遮罩显示
-
-    $scope.showLockMask_btn1=function () {
-        $scope.lockMask_btn1=true;
+    $scope.successAlert1 = function () {
+        $scope.successAlert1Box = true;
+        $timeout(function () {
+            $scope.successAlert1Box= false;
+        }, 3000);
     }
-    $scope.hideMask=function () {
-        $scope.lockMask_btn1=false;
+    $scope.successAlert2 = function () {
+        $scope.successAlert2Box = true;
+        $timeout(function () {
+            $scope.successAlert2Box= false;
+        }, 3000);
+    }
+    $scope.showLoading = function () {
+        $scope.loading = true;
+        $timeout(function () {
+            $scope.loading= false;
+        }, 3000);
+    }
+    $scope.showDataMove = function () {
+        $scope.dataMove = true;
+        $timeout(function () {
+            $scope.dataMove= false;
+        }, 3000);
     }
 
     //初始化
-    $scope.init=function () {
-        $scope.lockMask_btn1=false;
+    $scope.init = function () {
+        $scope.lockMask_btn1 = false;
+
+        //dialogs
+        $scope.successAlert1Box = false;
+        $scope.successAlert2Box = false;
+        $scope.loading = false;
+        $scope.dataMove = false;
+
     }
     $scope.init();
 
