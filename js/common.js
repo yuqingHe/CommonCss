@@ -133,6 +133,20 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
 
     };
 
+    //遮罩显示
+
+    $scope.showLockMask_btn1=function () {
+        $scope.lockMask_btn1=true;
+    }
+    $scope.hideMask=function () {
+        $scope.lockMask_btn1=false;
+    }
+
+    //初始化
+    $scope.init=function () {
+        $scope.lockMask_btn1=false;
+    }
+    $scope.init();
 
 }])
 

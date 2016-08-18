@@ -285,7 +285,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 .button.button-save{@include theme-color;background:transparent;border:none;}
 .button.button-cancel{@include theme-color; background:transparent;border:none;border-right:1px solid #ddd;}
 .button.button-cancel.active,.button.button-cancel.activated{border-right:1px solid #ddd;}
-
+.backdrop{ background-color: rgba(0, 0, 0, 0.7);}//覆盖ionic
 
 // 数据迁移中遮罩
 .data_migrationing{padding: 0;border: 0;vertical-align: baseline;font: inherit;font-size: 100%;
@@ -344,6 +344,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 //}
 //.active_refreze_btn{width: temSize(160);height: temSize(84);margin: 0 auto;margin-top: temSize(83);
 //  background:url("../img/feedback-form-refreze.png");background-size: 100% 100%;}
+.sencesize{height: temSize(220);width: temSize(600);margin: auto;}
 .new_sence_lock{
    padding-top: temSize(83); width:100%; height:100%;background:url("../img/lock.png");background-size: 100% 100%;
 }

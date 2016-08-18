@@ -22,7 +22,6 @@
 <body ng-controller="exam" style="background-color: #dfe3ed;">
 
 <ion-tabs class="tabs-icon-only tabs-positive">
-
     <ion-tab title="场景提示样式" ng-controller="exam">
         <ion-header-bar class="bar-positive">
             <h1 class="title">场景提示样式</h1>
@@ -48,7 +47,9 @@
             <h1 class="title">遮罩提示</h1>
         </ion-header-bar>
         <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
-            <div>
+            <!--<button class="button button-large button-theme" ng-click="showLockMask_btn1()">显示遮罩</button>-->
+            <!--{{lockMask_btn1}}-->
+            <div style="width: 640px;height: 500px;">
                 <div class="lockMask"></div>
                 <button type="button" class="lockMask_btn1" ng-click="hideMask()"></button>
             </div>
@@ -60,16 +61,11 @@
             <h1 class="title">错误页面</h1>
         </ion-header-bar>
         <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
-            <ion-list class="item-t20">
-                <ion-item ng-repeat="item in items">
-                    e.Hello, {{item.id}}!
-                </ion-item>
-            </ion-list>
-            <ion-list class="item-t20">
-                <ion-item ng-repeat="item in items">
-                    e.Hello, {{item.id}}!
-                </ion-item>
-            </ion-list>
+            <div class="error_page2" style="width: 320px; height: 524px;">
+                <div class="error_page_text2">你好像来到了未知的星球</div>
+                <div class="error_page_text3">非常抱歉<br/>您查看的场景已经下架啦~</div>
+                <button class="back_to_homepage">点我返回</button>
+            </div>
         </ion-content>
     </ion-tab>
 
@@ -78,15 +74,20 @@
             <h1 class="title">音乐播放图标</h1>
         </ion-header-bar>
         <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
-            <ion-list class="item-t20">
-                <ion-item class="text-center">
-                    f.列表按钮
-                </ion-item>
-                <ion-item class="item-button-right">
-                    f.Hello
-                    <button class="button button-small1 button-theme">aaa</button>
-                </ion-item>
-            </ion-list>
+            <div style="width: 320px; height: 490px;">
+                <div ng-class="audioPosClass" class="audio_pos audio_upper_left">
+                    <button type="button" class="btnG3_music"></button>
+                </div>
+                <div ng-class="audioPosClass" class="audio_pos audio_upper_right">
+                    <button type="button" class="btnG3_musicon"></button>
+                </div>
+                <div ng-class="audioPosClass" class="audio_pos audio_bottom_left">
+                    <button type="button" class="btnG3_musicon"></button>
+                </div>
+                <div ng-class="audioPosClass" class="audio_pos audio_bottom_right">
+                    <button type="button" class="btnG3_music"></button>
+                </div>
+            </div>
         </ion-content>
     </ion-tab>
 
@@ -95,16 +96,30 @@
             <h1 class="title">顶部提示</h1>
         </ion-header-bar>
         <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
-            <ion-list class="item-t20">
-                <ion-item class="text-center">
-                    e.头像列表
-                </ion-item>
-                <div class="item-100 item-photo">
-                    <span class="photo">校</span>
-                    <div class="item-photo-text">校宝秀</div>
-                    <span class="item-star"></span>
-                </div>
-            </ion-list>
+            <h3>中性提示</h3>
+            <div class="top-alert-warn">
+                你的网络环境不佳，请在wifi下打开
+            </div>
+            <br>
+            <div class="top-alert-warn">
+                <div class="alert-close">你的网络环境不佳，请在wifi下打开</div>
+            </div>
+            <h3>错误提示</h3>
+            <div class="top-alert-error">
+                您的微官网包含敏感词汇，请重新修改！
+            </div>
+            <br>
+            <div class="top-alert-error">
+                <div class="alert-close">您的微官网包含敏感词汇，请重新修改！</div>
+            </div>
+            <h3>成功提示</h3>
+            <div class="top-alert-success">
+                操作成功！
+            </div>
+            <br>
+            <div class="top-alert-success">
+                <div class="alert-close">操作成功！</div>
+            </div>
         </ion-content>
     </ion-tab>
 
