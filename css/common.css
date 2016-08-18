@@ -471,7 +471,8 @@
 /*列表*/
 .item {
   padding: 0.5rem 1rem;
-  height: 2rem; }
+  height: 2rem;
+  color: #333; }
 
 .item-checkbox {
   padding-left: 3rem !important; }
@@ -990,15 +991,13 @@
     -webkit-transform: rotate(360deg); } }
 
 /*list列表*/
-.item {
-  padding: 0.5rem 1rem;
-  color: #333; }
-
 .item-divider {
   background-color: #dfe3ed;
   height: 1.25rem;
+  line-height: 1.25rem;
   font-size: 0.5rem;
-  color: #aaa; }
+  color: #aaa;
+  padding: 0 1rem; }
 
 .item-100 {
   position: relative;
@@ -1023,7 +1022,8 @@
 
 .item-button-right {
   padding-right: 4rem;
-  height: 2.5rem; }
+  height: 2.5rem;
+  line-height: 1.5rem; }
   .item-button-right .button {
     display: block;
     right: 0.5rem;
@@ -1035,7 +1035,8 @@
     width: 3rem; }
 
 .item-photo {
-  padding-right: 1.9rem; }
+  padding-right: 1.9rem;
+  display: flex; }
   .item-photo .photo {
     display: inline-block;
     width: 1.5rem;
@@ -1048,8 +1049,8 @@
     font-size: 0.6rem;
     text-align: center; }
   .item-photo .item-photo-text {
-    display: inline-block;
-    width: 11.1rem; }
+    width: 11.1rem;
+    line-height: 1.5rem; }
   .item-photo .item-star {
     position: absolute;
     right: 0.5rem;

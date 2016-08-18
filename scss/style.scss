@@ -23,6 +23,14 @@
 /*通用*/
 .bg-gray{background-color: #f5f5f5;}
 
+@media screen and (min-width: 900px) {
+  /*iframe引入页面内的样式*/
+
+}
+@media screen and (max-width: 900px) {
+  .i-buttons.button{margin: 5px 10px;}
+}
+
 .pc-head{ background-image: url("../img/head-bg.png") ; background-size: 100% auto; height: 160px;
   .head-content{width: 1000px; height: 100%;margin: auto; position: relative;}
   .logo{ background-image: url("../img/xbx-logo.png");  margin-top: 50px;width: 219px;height: 69px;background-size: 100% auto;display: inline-block;}
@@ -84,8 +92,7 @@
   }
 
 }
-/*iframe引入页面内的样式*/
-.i-buttons .button{margin: 5px 10px;}
+
 
 
 
