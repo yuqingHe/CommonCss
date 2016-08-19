@@ -448,7 +448,7 @@
                 <div class="text1">为了确保可读性，每项文字字数建议为2-4个汉字。字号为24px，色值 #333。</div>
                 <h2>用法</h2>
                 <h3>·2项内容</h3>
-                <div class="nav-top-tabs margin-lr-20">
+                <div class="nav-top-tabs margin-lr-21">
                     <div class="nav-tab margin-lr20 active">咨询跟进</div>
                     <div class="nav-tab margin-lr20">全部咨询</div>
                 </div>
@@ -457,7 +457,7 @@
     &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;全部咨询&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <h3>·3项内容</h3>
-                <div class="nav-top-tabs margin-lr-20">
+                <div class="nav-top-tabs margin-lr-21">
                     <div class="nav-tab margin-lr40 active">全部</div>
                     <div class="nav-tab margin-lr40">邀请用户</div>
                     <div class="nav-tab margin-lr40">VIP码</div>
@@ -468,7 +468,7 @@
     &lt;div class=&quot;nav-tab margin-lr40&quot;&gt;VIP码&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <h3>·4项内容</h3>
-                <div class="nav-top-tabs display-flex margin-lr-20">
+                <div class="nav-top-tabs display-flex margin-lr-21">
                     <div class="nav-tab margin-lr20 active">全部</div>
                     <div class="nav-tab margin-lr20">微官网</div>
                     <div class="nav-tab margin-lr20">微海报</div>
@@ -482,7 +482,70 @@
 &lt;/div&gt;</code></pre>
 
             </div>
-            <div ng-show="navActive==7">7</div>
+            <div ng-show="navActive==7">
+                <h1>Controls控件</h1>
+                <h2>说明</h2>
+                <div class="text1">为了确保可读性，每项文字字数建议为2-4个汉字。字号为24px，色值 #333。</div>
+                <h2>用法</h2>
+                <h3>·Toggle - 开关</h3>
+                <ion-list class="item-t20 ">
+                    <ion-item class="item-button-right margin-lr-21">
+                        Hello
+                        <label class="toggle"><input type="checkbox">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+                    </ion-item>
+                </ion-list>
+                    <pre class="text1"><code>&lt;label class=&quot;toggle&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;
+    &lt;div class=&quot;track&quot;&gt;
+        &lt;div class=&quot;handle&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/label&gt;</code></pre>
+                <h3>Checkbox - 多选框</h3>
+                    <pre class="text1"><code>&lt;ion-checkbox ng-model=&quot;emailNotification&quot;
+              ng-true-value=&quot;&#x27;Subscribed&#x27;&quot;
+              ng-false-value=&quot;&#x27;Unubscribed&#x27;&quot;&gt;
+    Newsletter
+&lt;/ion-checkbox&gt;</code></pre>
+                <h3>·Radio Button - 单选框</h3>
+                    <pre class="text1"><code>&lt;ion-radio ng-value=&quot;item.value&quot;
+           ng-model=&quot;data.serverSide&quot;
+           ng-change=&quot;serverSideChange(item)&quot;
+           name=&quot;server-side&quot;&gt;
+    aaa
+&lt;/ion-radio&gt;</code></pre>
+                <h3>·Time Select - 时间选择</h3>
+                <pre class="text1"><code>&lt;input ng-model=&quot;mydate&quot; type=&quot;text&quot; mobiscroll-datetime=&quot;setVisitDateTime&quot; readonly=&quot;readonly&quot; mobiscroll-instance=&quot;myInstance&quot;/&gt;</code></pre>
+                    <pre class="text1"><code>//配置项
+$scope.mydate = new Date();
+    var now = new Date();
+    var dateTitle = &quot;&lt;p&gt;一旦有人助力/报名，截止时间不能再改了哦！&lt;/p&gt;&quot;
+    $scope.setVisitDateTime = {
+        animate: &#x27;fade&#x27;,
+        theme: &#x27;material&#x27;,      // 样式
+        lang: &#x27;zh&#x27;,    // 语言
+        mode: &#x27;mixed&#x27;,
+        display: &#x27;bottom&#x27;,  // 显示位置
+        buttons: [
+            &#x27;clear&#x27;,
+            &#x27;set&#x27;,
+            &#x27;cancel&#x27;
+        ],
+        clearText: &#x27;删除回访提醒&#x27;,
+        minWidth: 50,
+        headerText: dateTitle,
+        rows: 3
+    };</code></pre>
+
+                <h3>·Input Dialogs - 文字输入框</h3>
+                    <pre class="text1"><code>
+                        使用的是项目组件multi_textinput，by吕立
+                    </code></pre>
+                <h3>·Footer Select List - 底部选择列表</h3>
+                    <pre class="text1"><code>使用的是项目组件combobox，by周慧娟</code></pre>
+            </div>
             <div ng-show="navActive==8">8</div>
             <div ng-show="navActive==9">9</div>
             <div ng-show="navActive==10">10</div>
