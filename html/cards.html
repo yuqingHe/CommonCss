@@ -20,34 +20,54 @@
     <script src="../js/common.js"></script>
 </head>
 <body ng-controller="exam" style="background-color: #dfe3ed;">
-<ion-content scroll="true">
-    <div class="cards margin-20 " >
-        <div class="title text-center">Card Header</div>
-        <div class="body">Card Content</div>
-        <div class="footer text-center">Card Footer</div>
-    </div>
+<ion-tabs class="tabs-icon-only tabs-positive">
+    <ion-tab title="直角" ng-controller="exam">
+        <ion-header-bar class="bar-positive">
+            <h1 class="title">直角</h1>
+        </ion-header-bar>
+        <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
+            <div class="cards margin-20 ">
+                <div class="header text-center">Card Header</div>
+                <div class="body">Card Content</div>
+                <div class="footer text-center">Card Footer</div>
+            </div>
+            <div class="cards margin-20 ">
+                <div class="header text-center">Card Header</div>
+                <div class="body">Card Content</div>
+            </div>
+            <div class="cards margin-20 ">
+                <div class="body">Card Content</div>
+                <div class="footer text-center">Card Footer</div>
+            </div>
+            <div class="cards margin-20 ">
+                <div class="body">Card Content</div>
+            </div>
+        </ion-content>
+    </ion-tab>
+    <ion-tab title="圆角" ng-controller="exam">
+        <ion-header-bar class="bar-positive">
+            <h1 class="title">圆角</h1>
+        </ion-header-bar>
+        <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
+            <div class="cards margin-20 border-radius-20">
+                <div class="header text-center">Card Header</div>
+                <div class="body">Card Content</div>
+                <div class="footer text-center">Card Footer</div>
+            </div>
+            <div class="cards margin-20 border-radius-20">
+                <div class="header text-center">Card Header</div>
+                <div class="body">Card Content</div>
+            </div>
+            <div class="cards border-radius-20 margin-20">
+                <div class="body">Card Content</div>
+                <div class="footer text-center">Card Footer</div>
+            </div>
+            <div class="cards margin-20 border-radius-20">
+                <div class="body">Card Content</div>
+            </div>
+        </ion-content>
+    </ion-tab>
 
-    <div class="cards margin-20 " >
-        <div class="body">Card Content</div>
-        <div class="footer text-center">Card Footer</div>
-    </div>
-
-    <div class="cards margin-20 border-radius-20" >
-        <div class="title text-center">Card Header</div>
-        <div class="body">Card Content</div>
-        <div class="footer text-center">Card Footer</div>
-    </div>
-    <div class="cards margin-20 border-radius-20" >
-        <div class="body">Card Content</div>
-    </div>
-
-    <div class="cards border-radius-20 margin-20">
-        <div class="body">Card Content</div>
-        <div class="footer text-center">Card Footer</div>
-    </div>
-
-
-
-</ion-content>
+</ion-tabs>
 </body>
 </html>

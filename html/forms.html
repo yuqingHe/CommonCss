@@ -20,69 +20,67 @@
     <script src="../js/common.js"></script>
 </head>
 <body ng-controller="exam" style="background-color: #dfe3ed;">
-<ion-content scroll="true">
-    <div class="bar bar-header item-input-inset">
-        <label class="item-input-wrapper">
-            <i class="icon ion-ios-search placeholder-icon"></i>
-            <input type="search" placeholder="Search" class="cloned-text-input">
-            <input type="search" placeholder="Search" class="previous-input-focus">
-        </label>
-        <button class="button button-theme button-clear">
-            Cancel
-        </button>
-    </div>
-    <ion-list>
-        <ion-item class="text-center">
-            Placeholder Labels
-        </ion-item>
-        <!--<ion-item class=" item-input">-->
-        <!--<input type="text" placeholder="Your Username" class="text-center">-->
-        <!--</ion-item>-->
-        <!--<ion-item class=" item-input">-->
-        <!--<input type="text" placeholder="Your Password" class="text-center">-->
-        <!--</ion-item>-->
-        <div class="list">
-            <label class="item item-input">
-                <input type="text" placeholder="Your Username" class="text-center">
-            </label>
-            <label class="item item-input">
-                <input type="text" placeholder="Your Password" class="text-center">
-            </label>
+<ion-tabs class="tabs-icon-only tabs-positive">
+    <ion-tab title="Search" ng-controller="exam">
+        <ion-header-bar class="bar-positive">
+            <h1 class="title">Search</h1>
+        </ion-header-bar>
+        <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
+            <div class="bar bar-header item-input-inset">
+                <label class="item-input-wrapper">
+                    <i class="icon ion-ios-search placeholder-icon"></i>
+                    <input type="search" placeholder="Search" class="cloned-text-input">
+                    <input type="search" placeholder="Search" class="previous-input-focus">
+                </label>
+                <button class="button button-theme button-clear">
+                    Cancel
+                </button>
+            </div>
+        </ion-content>
+    </ion-tab>
+    <ion-tab title="Placeholder Labels" ng-controller="exam">
+        <ion-header-bar class="bar-positive">
+            <h1 class="title">Placeholder Labels</h1>
+        </ion-header-bar>
+        <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
+            <ion-list>
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Your Username" class="text-center">
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" placeholder="Your Password" class="text-center">
+                    </label>
+                </div>
+            </ion-list>
+            <div class="text-center">
+                <button class="button button-large button-theme margin-t80">Submit</button>
+            </div>
+        </ion-content>
+    </ion-tab>
+    <ion-tab title="Inline Labels" ng-controller="exam">
+        <ion-header-bar class="bar-positive">
+            <h1 class="title">Inline Labels</h1>
+        </ion-header-bar>
+        <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
+            <ion-list>
+                <div class="list">
+                    <label class="item item-input">
+                        <span class="input-label">Username</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Password</span>
+                        <input type="password">
+                    </label>
+                </div>
+            </ion-list>
+            <div class="text-center">
+                <button class="button button-large button-theme margin-t80">Submit</button>
+            </div>
+        </ion-content>
+    </ion-tab>
+</ion-tabs>
 
-        </div>
-    </ion-list>
-
-    <div class="text-center">
-        <button class="button button-large button-theme margin-t80">Submit</button>
-    </div>
-
-    <br>
-    <ion-list>
-        <ion-item class="text-center">
-            Inline Labels
-        </ion-item>
-
-        <div class="list">
-            <label class="item item-input">
-                <span class="input-label">Username</span>
-                <input type="text">
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Password</span>
-                <input type="password">
-            </label>
-        </div>
-
-
-    </ion-list>
-
-    <div class="text-center">
-        <button class="button button-large button-theme margin-t80">Submit</button>
-    </div>
-    <br>
-
-
-
-</ion-content>
 </body>
 </html>

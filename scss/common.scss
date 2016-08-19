@@ -182,7 +182,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 //覆盖ionic
 .toggle input:checked + .track{@include theme-bg-color;@include theme-border-color;  }
 .toggle .track{height:temSize(50);width: temSize(100); }
-.toggle .handle{height:temSize(44);width: temSize(44);}
+.toggle .handle{height:temSize(44);width: temSize(44); top: 6px;}
 .toggle input:checked + .track .handle {-webkit-transform: translate3d(temSize(50), 0, 0);  transform: translate3d(temSize(50), 0, 0);  background-color: #fff;}
 
 /*单选复选*/
@@ -474,7 +474,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 /*Cards卡片*/
 .cards{
   background-color: #fff; position: relative;
-  .title{min-height: temSize(80);border-bottom: 1px solid #ccc; margin-bottom: -1px;}
+  .header{min-height: temSize(80);border-bottom: 1px solid #ccc; margin-bottom: -1px;}
   .footer{min-height: temSize(80);border-top: 1px solid #ccc; margin-top: -1px;}
   .body{min-height: temSize(160);  }
   &:before{box-shadow: 0 0 temSize(40) rgba(29, 63, 140, 0.7);content: "";width: 96%;height: temSize(50);border-radius:temSize(25);position: absolute;bottom:0;left:2%;z-index: -1;}
