@@ -148,6 +148,17 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
     }
     $scope.init();
 
+    //文字输入框
+    $scope.textInput= function () {
+        $scope.isShow=true;
+        $scope.sure=function(){
+            $scope.isShow=false;
+        }
+        $scope.cancel=function(){
+            $scope.isShow=false;
+        }
+
+    }
 }])
 
 
