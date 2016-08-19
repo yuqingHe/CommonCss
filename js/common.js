@@ -183,6 +183,31 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
         }
 
     }
+
+    //底部选择列表
+    $scope.showComboboxMask=function(){
+        $scope.comboboxData = {
+            isShow: true,
+            viewList: {},
+            info:{}
+        };
+        var dataList = [{ name: "待跟进", value: 1 },
+            { name: "跟进中", value: 2 },
+            { name: "已成交", value: 3 },
+            { name: "已失效", value: 4 },
+            { name: "取消", value: 5 }];
+        var info = "";
+        $scope.comboboxData.info=info;
+        $scope.comboboxData.viewList=dataList;
+        console.log("1");
+    }
+    $scope.hideComboboxMask=function(){
+        $scope.comboboxData = {
+            isShow: false,
+            viewList: {},
+            info:{}
+        };
+    }
 }])
 
 

@@ -633,5 +633,12 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
   .button-cancel-callback,.button-sure-callback{margin-top:0;}
   .button-cancel-callback{color:#ccc;}
 }
-
+//下拉遮罩组件样式
+.lhBtn{width: 100%;height:temSize(80);text-align: center;font-size: temSize(36);line-height: temSize(80);background-color: #F99E28;}
+.ComboboxMask{height: temSize(880);
+  .Select_list span{display:block;width:100%;height:temSize(80);line-height:temSize(80);background:#fff;text-align:center;border-bottom:1px solid #bbb;font-size:temSize(24);}
+  .Select_list span:last-child{border-top: 0.5px solid #cbced7;border-bottom: none;margin-top: 0.5rem;}
+  .Select_list{position:absolute;z-index:200;left:0;bottom:0;width:100%;background:#dfe3ed;}
+  .ComboboxInfo{color:#fff;top:30%;position:absolute;width:temSize(530);left:50%;margin-left:temSize(-265);z-index:200;font-size:temSize(24);letter-spacing:1px;}
+}
 
