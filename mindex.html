@@ -504,12 +504,29 @@
     &lt;/div&gt;
 &lt;/label&gt;</code></pre>
                 <h3>Checkbox - 多选框</h3>
+                <ion-checkbox ng-model="emailNotification"
+                              ng-true-value="'Subscribed'"
+                              ng-false-value="'Unubscribed'" class="margin-lr-21">
+                    Newsletter
+                </ion-checkbox>
                     <pre class="text1"><code>&lt;ion-checkbox ng-model=&quot;emailNotification&quot;
               ng-true-value=&quot;&#x27;Subscribed&#x27;&quot;
               ng-false-value=&quot;&#x27;Unubscribed&#x27;&quot;&gt;
     Newsletter
 &lt;/ion-checkbox&gt;</code></pre>
                 <h3>·Radio Button - 单选框</h3>
+                <ion-radio ng-value="item.value"
+                           ng-model="data.serverSide"
+                           ng-change="serverSideChange(item)"
+                           name="server-side" class="margin-lr-21">
+                    aaa
+                </ion-radio>
+                <ion-radio ng-value="item.value"
+                           ng-model="data.serverSide"
+                           ng-change="serverSideChange(item)"
+                           name="server-side" class="margin-lr-21">
+                    bbb
+                </ion-radio>
                     <pre class="text1"><code>&lt;ion-radio ng-value=&quot;item.value&quot;
            ng-model=&quot;data.serverSide&quot;
            ng-change=&quot;serverSideChange(item)&quot;
@@ -517,6 +534,8 @@
     aaa
 &lt;/ion-radio&gt;</code></pre>
                 <h3>·Time Select - 时间选择</h3>
+                <input ng-model="mydate" type="text" mobiscroll-datetime="setVisitDateTime" readonly="readonly"
+                       mobiscroll-instance="myInstance"/>
                 <pre class="text1"><code>&lt;input ng-model=&quot;mydate&quot; type=&quot;text&quot; mobiscroll-datetime=&quot;setVisitDateTime&quot; readonly=&quot;readonly&quot; mobiscroll-instance=&quot;myInstance&quot;/&gt;</code></pre>
                     <pre class="text1"><code>//配置项
 $scope.mydate = new Date();
@@ -540,10 +559,33 @@ $scope.mydate = new Date();
     };</code></pre>
 
                 <h3>·Input Dialogs - 文字输入框</h3>
+                <div class="text-center" maxlength="20"  ng-click="textInput()">点我呀！！！</div>
+                <div ng-show="isShow">
+                    <div class="lockMask_input" on-swipe="onSwipe($event)"></div>
+                    <div class="mutil_input_wrap" on-swipe="onSwipe($event)">
+                        <div class="mutil_input_box">
+                            <div class="mutil_input_item" ng-repeat="item in viewList">
+                                <span class="mutil_title">123</span>
+                                <input class="mutil_input" ng-model="item.inputModel" />
+                                <span class="editor_text_callback"><label>100</label>&nbsp;&frasl;&nbsp;<label>160</label></span>
+                            </div>
+                        </div>
+                        <button type="button" class="button-cancel-callback" ng-click="cancel()">取消</button>
+                        <button type="button" class="button-sure-callback" ng-click="sure()">确定</button>
+                    </div>
+                </div>
                     <pre class="text1"><code>
                         使用的是项目组件multi_textinput，by吕立
                     </code></pre>
                 <h3>·Footer Select List - 底部选择列表</h3>
+                <div class="lhBtn" maxlength="20"  ng-click="showComboboxMask()">点我呀！！！</div>
+                <div class="ComboboxMask" ng-style="{'display':comboboxData.isShow?'block':'none'}">
+                    <div class="lockMask"></div>
+                    <div class="ComboboxInfo">{{comboboxData.info}}</div>
+                    <div class="Select_list" >
+                        <span ng-repeat="item in comboboxData.viewList" ng-click="hideComboboxMask()">{{item.name}}</span>
+                    </div>
+                </div>
                     <pre class="text1"><code>使用的是项目组件combobox，by周慧娟</code></pre>
             </div>
             <div ng-show="navActive==8">8</div>
