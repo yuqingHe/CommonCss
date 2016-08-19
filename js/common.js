@@ -1,5 +1,5 @@
 var a = angular.module('mainApp', ['ionic', 'mobiscroll-datetime']);
-a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', function ($scope, $ionicPopup, $timeout, $ionicActionSheet) {
+a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet','$ionicSideMenuDelegate', function ($scope, $ionicPopup, $timeout, $ionicActionSheet,$ionicSideMenuDelegate) {
     $scope.nav = [
         {id: 1, en: 'Font', ch: '文字'},
         {id: 2, en: 'Icons', ch: '图标'},
@@ -158,6 +158,14 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
             $scope.dataMove= false;
         }, 3000);
     }
+
+    //mobile 左侧侧栏
+    $scope.toggleLeftSideMenu = function() {
+        $ionicSideMenuDelegate.toggleLeft();
+    };
+
+    $scope.navWidth=parseFloat(angular.element("html").css("font-size"))*9;
+
 
     //初始化
     $scope.init = function () {

@@ -182,7 +182,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 //覆盖ionic
 .toggle input:checked + .track{@include theme-bg-color;@include theme-border-color;  }
 .toggle .track{height:temSize(50);width: temSize(100); }
-.toggle .handle{height:temSize(44);width: temSize(44); top: 6px;}
+.toggle .handle{height:temSize(44);width: temSize(44);}
 .toggle input:checked + .track .handle {-webkit-transform: translate3d(temSize(50), 0, 0);  transform: translate3d(temSize(50), 0, 0);  background-color: #fff;}
 
 /*单选复选*/
@@ -457,7 +457,8 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 .item-120{position: relative;height: temSize(120);width: 100%;margin: -1px; border-color: #ddd; background-color: #fff; padding: temSize(20)  temSize(40);}
 .item-t20 .list{margin-top: temSize(20);}
 .item-button-right{padding-right: temSize(160);height: temSize(100);line-height: temSize(60);
-  .button{display: block;right: temSize(20);top: temSize(20);;font-size: temSize(20);height: temSize(60);min-height: temSize(60);line-height: temSize(60); width: temSize(120);}
+  .button{display: block;right: temSize(20);top: temSize(20);font-size: temSize(20);height: temSize(60);min-height: temSize(60);line-height: temSize(60); width: temSize(120);}
+  .toggle{position: absolute;right: temSize(20);top:temSize(23);}
 }
 .item-photo{padding-right: temSize(76);display: flex;
   .photo{display: inline-block;width: temSize(60);height: temSize(60);line-height: temSize(60);border-radius: temSize(60); margin-right: temSize(20); background-color: rgb(73, 197, 216);color: #fff; font-size: temSize(24); text-align: center;}

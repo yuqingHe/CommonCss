@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>common css</title>
+    <link href="js/mobiscrolldatetime/css/mobiscroll.custom-2.17.0.min.css" rel="stylesheet">
+    <link media="screen and (max-width:900px)" href="css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-animate.min.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/ionic.min.js"></script>
+    <script src="js/ionic.bundle.min.js"></script>
+
+    <script src="js/mobiscrolldatetime/js/mobiscroll.custom-2.17.0.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body ng-controller="exam">
+<ion-header-bar class="m-head">
+    <button class="button button-icon icon ion-navicon" ng-click="toggleLeftSideMenu()"></button>
+    <div class="logo"></div>
+</ion-header-bar>
+<ion-side-menus class="m-body">
+    <!-- 中间内容 -->
+    <ion-side-menu-content >
+    <div ng-show="navActive==1">1</div>
+    <div ng-show="navActive==2">2</div>
+    <div ng-show="navActive==3">3</div>
+    <div ng-show="navActive==4">4</div>
+    <div ng-show="navActive==5">5</div>
+    <div ng-show="navActive==6">6</div>
+    <div ng-show="navActive==7">7</div>
+    <div ng-show="navActive==8">8</div>
+    <div ng-show="navActive==9">9</div>
+    <div ng-show="navActive==10">10</div>
+    <div ng-show="navActive==11">11</div>
+    <div ng-show="navActive==12">12</div>
+
+    </ion-side-menu-content>
+
+    <!-- 左侧菜单 -->
+    <ion-side-menu side="left" class="nav padding-l40" width="{{navWidth}}" >
+        <h1>Components</h1>
+        <ul ng-repeat="list in nav">
+            <li ng-click="showTab(list.id)" ng-class="list.id == navActive?'active':''">
+                {{list.en}}<span class="margin-lr10">{{list.ch}}</span>
+            </li>
+        </ul>
+    </ion-side-menu>
+</ion-side-menus>
+</body>
+</html>

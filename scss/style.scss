@@ -24,13 +24,12 @@
 .bg-gray{background-color: #f5f5f5;}
 
 @media screen and (min-width: 1000px) {
-  /*iframe引入页面内的样式*/
-
 
 }
 @media screen and (max-width: 1000px) {
   .margin-5-10{margin: 5px 10px;}
   h3{font-size: temSize(28);}
+  h1{font-size: temSize(28); font-weight: bold;}
 }
 
 .pc-head{ background-image: url("../img/head-bg.png") ; background-size: 100% auto; height: 160px;
@@ -95,8 +94,21 @@
 
 }
 
-
-
+.m-head{ display: flex;background-image: url("../img/m-head-bg.png");background-size: 100% auto; background-repeat: no-repeat;height: temSize(100);
+  button{font-size: temSize(45);color: #fff;margin-left: temSize(42);margin-right: temSize(50);}
+  .button:hover{color: #fff;}
+  .logo{background-image: url("../img/m-logo.png");background-size: 100% auto; background-repeat: no-repeat; height: temSize(58);width: temSize(337); margin: auto 0;}
+}
+.m-body{margin-top: temSize(100);
+ .nav{background-color: #f6f6f6;
+   h1{margin-top: temSize(65);margin-bottom: temSize(45);}
+   ul li{margin: temSize(25) 0; color:#666;
+     span{color: #aaa; }
+   }
+   .active,.active span{color: #ff6622;}
+   .active{ border-right:5px solid #ff6622; }
+ }
+}
 
 
 
