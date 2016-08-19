@@ -25,24 +25,87 @@
 </ion-header-bar>
 <ion-side-menus class="m-body">
     <!-- 中间内容 -->
-    <ion-side-menu-content >
-    <div ng-show="navActive==1">1</div>
-    <div ng-show="navActive==2">2</div>
-    <div ng-show="navActive==3">3</div>
-    <div ng-show="navActive==4">4</div>
-    <div ng-show="navActive==5">5</div>
-    <div ng-show="navActive==6">6</div>
-    <div ng-show="navActive==7">7</div>
-    <div ng-show="navActive==8">8</div>
-    <div ng-show="navActive==9">9</div>
-    <div ng-show="navActive==10">10</div>
-    <div ng-show="navActive==11">11</div>
-    <div ng-show="navActive==12">12</div>
+    <ion-side-menu-content>
+        <ion-content scroll="true"  class="content">
+            <div ng-show="navActive==1">
+                <h1>Font文字</h1>
+                <div class="row">
+                    <div class="col col-33">
+                        <p class="font-title">校宝秀</p>
+                        <p>.font-title</p>
+                    </div>
+                    <div class="col col-33">
+                        <p class="font-body">校宝秀</p>
+                        <p>.font-body</p>
+                    </div>
+                    <div class="col col-33">
+                        <p class="font-sub">校宝秀</p>
+                        <p>.font-sub</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-33">
+                        <p class="font-help">校宝秀</p>
+                        <p>.font-help</p>
+                    </div>
+                    <div class="col col-33">
+                        <p class="text-shadow">校宝秀</p>
+                        <p>.text-shadow</p>
+                    </div>
+                </div>
+                <h3>用法</h3>
+                <div>
+                    <table cellspacing="0" cellpadding="0">
+                        <thead>
+                        <tr>
+                            <th>类名</th>
+                            <th>样式</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>font-title</td>
+                            <td>font-size: temSize(28); color: #333;</td>
+                        </tr>
+                        <tr>
+                            <td>font-body</td>
+                            <td>font-size: temSize(24); color: #333;</td>
+                        </tr>
+                        <tr>
+                            <td>font-sub</td>
+                            <td>font-size: temSize(28); color: #aaa;</td>
+                        </tr>
+                        <tr>
+                            <td>font-help</td>
+                            <td>font-size: temSize(20); color: #81a2cd;</td>
+                        </tr>
+                        <tr>
+                            <td>text-shadow</td>
+                            <td>text-shadow: 0px 1px 4px #ddd;</td>
+                        </tr>
 
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+            <div ng-show="navActive==2">2</div>
+            <div ng-show="navActive==3">3</div>
+            <div ng-show="navActive==4">4</div>
+            <div ng-show="navActive==5">5</div>
+            <div ng-show="navActive==6">6</div>
+            <div ng-show="navActive==7">7</div>
+            <div ng-show="navActive==8">8</div>
+            <div ng-show="navActive==9">9</div>
+            <div ng-show="navActive==10">10</div>
+            <div ng-show="navActive==11">11</div>
+            <div ng-show="navActive==12">12</div>
+        </ion-content>
     </ion-side-menu-content>
 
     <!-- 左侧菜单 -->
-    <ion-side-menu side="left" class="nav padding-l40" width="{{navWidth}}" >
+    <ion-side-menu side="left" class="nav padding-l40" width="{{navWidth}}">
         <h1>Components</h1>
         <ul ng-repeat="list in nav">
             <li ng-click="showTab(list.id)" ng-class="list.id == navActive?'active':''">

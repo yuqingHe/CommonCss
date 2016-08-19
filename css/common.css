@@ -643,6 +643,9 @@
 .button.button-cancel.active, .button.button-cancel.activated {
   border-right: 1px solid #ddd; }
 
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.7); }
+
 .data_migrationing {
   padding: 0;
   border: 0;
@@ -758,6 +761,11 @@
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+.sencesize {
+  height: 5.5rem;
+  width: 15rem;
+  margin: auto; }
 
 .new_sence_lock {
   padding-top: 2.08rem;
@@ -1033,6 +1041,10 @@
     min-height: 1.5rem;
     line-height: 1.5rem;
     width: 3rem; }
+  .item-button-right .toggle {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.58rem; }
 
 .item-photo {
   padding-right: 1.9rem;
@@ -1084,7 +1096,7 @@
 .cards {
   background-color: #fff;
   position: relative; }
-  .cards .title {
+  .cards .header {
     min-height: 2rem;
     border-bottom: 1px solid #ccc;
     margin-bottom: -1px; }
@@ -1622,3 +1634,100 @@
   background-color: #000;
   -webkit-opacity: 0.7;
   opacity: 0.7; }
+
+.lockMask_editor1 {
+  opacity: 0.7; }
+
+.editor_text_box_callback {
+  resize: none; }
+
+.mutil_input_wrap {
+  width: 100%;
+  min-height: 8.5rem;
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  padding: 0.5rem 0.5rem 0;
+  background: #fff;
+  z-index: 8; }
+  .mutil_input_wrap .mutil_input_box {
+    height: 8.5rem;
+    border: #ccc 1px solid;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0.95rem 0; }
+  .mutil_input_wrap .mutil_input_item {
+    width: 14.5rem;
+    margin: 0.3rem auto;
+    position: relative;
+    height: 1.63rem;
+    line-height: 1.63rem; }
+  .mutil_input_wrap .mutil_title {
+    display: block;
+    width: 4.65rem;
+    text-align: right;
+    font-size: 0.6rem;
+    color: #666;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .mutil_input_wrap .mutil_input {
+    border: #e7e7e7 1px solid;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 6.5rem;
+    height: 1.63rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    position: absolute;
+    left: 5rem; }
+  .mutil_input_wrap .editor_text_callback {
+    position: absolute;
+    width: 1.75rem;
+    right: 0.5rem;
+    margin: 0; }
+  .mutil_input_wrap .button-cancel-callback, .mutil_input_wrap .button-sure-callback {
+    margin-top: 0; }
+  .mutil_input_wrap .button-cancel-callback {
+    color: #ccc; }
+
+.lhBtn {
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  background-color: #F99E28; }
+
+.ComboboxMask {
+  height: 22rem; }
+  .ComboboxMask .Select_list span {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background: #fff;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    font-size: 0.6rem; }
+  .ComboboxMask .Select_list span:last-child {
+    border-top: 0.5px solid #cbced7;
+    border-bottom: none;
+    margin-top: 0.5rem; }
+  .ComboboxMask .Select_list {
+    position: absolute;
+    z-index: 200;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #dfe3ed; }
+  .ComboboxMask .ComboboxInfo {
+    color: #fff;
+    top: 30%;
+    position: absolute;
+    width: 13.25rem;
+    left: 50%;
+    margin-left: -6.62rem;
+    z-index: 200;
+    font-size: 0.6rem;
+    letter-spacing: 1px; }
