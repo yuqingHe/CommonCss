@@ -285,7 +285,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 .button.button-save{@include theme-color;background:transparent;border:none;}
 .button.button-cancel{@include theme-color; background:transparent;border:none;border-right:1px solid #ddd;}
 .button.button-cancel.active,.button.button-cancel.activated{border-right:1px solid #ddd;}
-
+.backdrop{ background-color: rgba(0, 0, 0, 0.7);}//覆盖ionic
 
 // 数据迁移中遮罩
 .data_migrationing{padding: 0;border: 0;vertical-align: baseline;font: inherit;font-size: 100%;
@@ -344,6 +344,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 //}
 //.active_refreze_btn{width: temSize(160);height: temSize(84);margin: 0 auto;margin-top: temSize(83);
 //  background:url("../img/feedback-form-refreze.png");background-size: 100% 100%;}
+.sencesize{height: temSize(220);width: temSize(600);margin: auto;}
 .new_sence_lock{
    padding-top: temSize(83); width:100%; height:100%;background:url("../img/lock.png");background-size: 100% 100%;
 }
@@ -456,7 +457,8 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 .item-120{position: relative;height: temSize(120);width: 100%;margin: -1px; border-color: #ddd; background-color: #fff; padding: temSize(20)  temSize(40);}
 .item-t20 .list{margin-top: temSize(20);}
 .item-button-right{padding-right: temSize(160);height: temSize(100);line-height: temSize(60);
-  .button{display: block;right: temSize(20);top: temSize(20);;font-size: temSize(20);height: temSize(60);min-height: temSize(60);line-height: temSize(60); width: temSize(120);}
+  .button{display: block;right: temSize(20);top: temSize(20);font-size: temSize(20);height: temSize(60);min-height: temSize(60);line-height: temSize(60); width: temSize(120);}
+  .toggle{position: absolute;right: temSize(20);top:temSize(23);}
 }
 .item-photo{padding-right: temSize(76);display: flex;
   .photo{display: inline-block;width: temSize(60);height: temSize(60);line-height: temSize(60);border-radius: temSize(60); margin-right: temSize(20); background-color: rgb(73, 197, 216);color: #fff; font-size: temSize(24); text-align: center;}
@@ -473,7 +475,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 /*Cards卡片*/
 .cards{
   background-color: #fff; position: relative;
-  .title{min-height: temSize(80);border-bottom: 1px solid #ccc; margin-bottom: -1px;}
+  .header{min-height: temSize(80);border-bottom: 1px solid #ccc; margin-bottom: -1px;}
   .footer{min-height: temSize(80);border-top: 1px solid #ccc; margin-top: -1px;}
   .body{min-height: temSize(160);  }
   &:before{box-shadow: 0 0 temSize(40) rgba(29, 63, 140, 0.7);content: "";width: 96%;height: temSize(50);border-radius:temSize(25);position: absolute;bottom:0;left:2%;z-index: -1;}
@@ -620,5 +622,24 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 .lockMask_btn1{border: none;;width:temSize(222); height:temSize(108);background:url("../img/tips_btn1.png") no-repeat center center;background-size:100% 100%; position:absolute; left:50%; margin-left:temSize(-111); bottom:temSize(202); z-index:110;}
 .lockMask {  position: absolute;  z-index: 110;  left: 0;  top: 0;  right: 0;  bottom: 0;  width: 100%;  height: 100%;  background-color: #000;  -webkit-opacity: 0.7;opacity: 0.7;}
 
-
+//文字输入框
+.lockMask_editor1{opacity: 0.7;}
+.editor_text_box_callback{resize: none;}
+.mutil_input_wrap{width:100%; min-height:8.5rem; position:absolute; top:0rem; left:0;padding:0.5rem 0.5rem 0; background:#fff; z-index:8;
+  .mutil_input_box{height:temSize(340);border:#ccc 1px solid; @include border-radius-basic(5px);padding:0.95rem 0;}
+  .mutil_input_item{width:14.5rem;margin:0.3rem auto;position:relative;height:temSize(65);line-height:temSize(65);}
+  .mutil_title{display:block;width:4.65rem;text-align:right;font-size:0.6rem;color:#666;position:absolute;left:0;top:0;}
+  .mutil_input{border:#e7e7e7 1px solid; @include border-radius-basic(5px);width:temSize(260);height:temSize(65);text-align:right;padding-right:temSize(20);position:absolute;left:temSize(200);}
+  .editor_text_callback{position:absolute;width:temSize(70);right:temSize(20);margin:0;}
+  .button-cancel-callback,.button-sure-callback{margin-top:0;}
+  .button-cancel-callback{color:#ccc;}
+}
+//下拉遮罩组件样式
+.lhBtn{width: 100%;height:temSize(80);text-align: center;font-size: temSize(36);line-height: temSize(80);background-color: #F99E28;}
+.ComboboxMask{height: temSize(880);
+  .Select_list span{display:block;width:100%;height:temSize(80);line-height:temSize(80);background:#fff;text-align:center;border-bottom:1px solid #bbb;font-size:temSize(24);}
+  .Select_list span:last-child{border-top: 0.5px solid #cbced7;border-bottom: none;margin-top: 0.5rem;}
+  .Select_list{position:absolute;z-index:200;left:0;bottom:0;width:100%;background:#dfe3ed;}
+  .ComboboxInfo{color:#fff;top:30%;position:absolute;width:temSize(530);left:50%;margin-left:temSize(-265);z-index:200;font-size:temSize(24);letter-spacing:1px;}
+}
 

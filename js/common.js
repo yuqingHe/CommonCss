@@ -1,5 +1,5 @@
 var a = angular.module('mainApp', ['ionic', 'mobiscroll-datetime']);
-a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', function ($scope, $ionicPopup, $timeout, $ionicActionSheet) {
+a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet','$ionicSideMenuDelegate', function ($scope, $ionicPopup, $timeout, $ionicActionSheet,$ionicSideMenuDelegate) {
     $scope.nav = [
         {id: 1, en: 'Font', ch: '文字'},
         {id: 2, en: 'Icons', ch: '图标'},
@@ -14,9 +14,9 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
         {id: 11, en: 'Dialogs', ch: '模拟框'},
         {id: 12, en: 'Others', ch: '其他一些组件'}
     ]
-    $scope.navActive=1;
-    $scope.showTab=function (id) {
-        $scope.navActive=id;
+    $scope.navActive = 1;
+    $scope.showTab = function (id) {
+        $scope.navActive = id;
     }
 
 
@@ -133,7 +133,89 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet', 
 
     };
 
+    //遮罩显示
+    $scope.successAlert1 = function () {
+        $scope.successAlert1Box = true;
+        $timeout(function () {
+            $scope.successAlert1Box= false;
+        }, 3000);
+    }
+    $scope.successAlert2 = function () {
+        $scope.successAlert2Box = true;
+        $timeout(function () {
+            $scope.successAlert2Box= false;
+        }, 3000);
+    }
+    $scope.showLoading = function () {
+        $scope.loading = true;
+        $timeout(function () {
+            $scope.loading= false;
+        }, 3000);
+    }
+    $scope.showDataMove = function () {
+        $scope.dataMove = true;
+        $timeout(function () {
+            $scope.dataMove= false;
+        }, 3000);
+    }
 
+    //mobile 左侧侧栏
+    $scope.toggleLeftSideMenu = function() {
+        $ionicSideMenuDelegate.toggleLeft();
+    };
+
+    $scope.navWidth=parseFloat(angular.element("html").css("font-size"))*9;
+
+
+    //初始化
+    $scope.init = function () {
+        $scope.lockMask_btn1 = false;
+
+        //dialogs
+        $scope.successAlert1Box = false;
+        $scope.successAlert2Box = false;
+        $scope.loading = false;
+        $scope.dataMove = false;
+
+    }
+    $scope.init();
+
+    //文字输入框
+    $scope.textInput= function () {
+        $scope.isShow=true;
+        $scope.sure=function(){
+            $scope.isShow=false;
+        }
+        $scope.cancel=function(){
+            $scope.isShow=false;
+        }
+
+    }
+
+    //底部选择列表
+    $scope.showComboboxMask=function(){
+        $scope.comboboxData = {
+            isShow: true,
+            viewList: {},
+            info:{}
+        };
+        var dataList = [{ name: "待跟进", value: 1 },
+            { name: "跟进中", value: 2 },
+            { name: "已成交", value: 3 },
+            { name: "已失效", value: 4 },
+            { name: "取消", value: 5 }];
+        var info = "";
+        $scope.comboboxData.info=info;
+        $scope.comboboxData.viewList=dataList;
+        console.log("1");
+    }
+    $scope.hideComboboxMask=function(){
+        $scope.comboboxData = {
+            isShow: false,
+            viewList: {},
+            info:{}
+        };
+    }
 }])
 
 

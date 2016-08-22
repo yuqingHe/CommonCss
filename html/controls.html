@@ -30,12 +30,17 @@
         </ion-header-bar>
 
         <ion-content has-tabs="true" on-refresh="onRefresh()" class="bg-gray i-buttons">
-            <br>
-            <label class="toggle"><input type="checkbox">
-                <div class="track">
-                    <div class="handle"></div>
-                </div>
-            </label>
+            <ion-list class="item-t20">
+                <ion-item class="item-button-right">
+                    Hello
+                    <label class="toggle"><input type="checkbox">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </ion-item>
+            </ion-list>
+
 
         </ion-content>
     </ion-tab>
@@ -86,15 +91,37 @@
             <h1 class="title">Input Dialogs - 文字输入框</h1>
         </ion-header-bar>
         <ion-content has-header="true" class="bg-gray i-buttons">
-            <button class="button button-theme button-clear">主题色</button>
+            <div class="text-center" maxlength="20"  ng-click="textInput()">点我呀！！！</div>
+            <div ng-show="isShow">
+                <div class="lockMask_input" on-swipe="onSwipe($event)"></div>
+                <div class="mutil_input_wrap" on-swipe="onSwipe($event)">
+                    <div class="mutil_input_box">
+                        <div class="mutil_input_item" ng-repeat="item in viewList">
+                            <span class="mutil_title">123</span>
+                            <input class="mutil_input" ng-model="item.inputModel" />
+                            <span class="editor_text_callback"><label>100</label>&nbsp;&frasl;&nbsp;<label>160</label></span>
+                        </div>
+                    </div>
+                    <button type="button" class="button-cancel-callback" ng-click="cancel()">取消</button>
+                    <button type="button" class="button-sure-callback" ng-click="sure()">确定</button>
+                </div>
+            </div>
+
         </ion-content>
     </ion-tab>
     <ion-tab title="底部选择列表">
         <ion-header-bar class="bar-positive">
             <h1 class="title">Footer Select List - 底部选择列表</h1>
         </ion-header-bar>
-        <ion-content has-header="true" class="bg-gray i-buttons">
-            <button class="button button-small4 button-theme" ng-model="selectList" ng-click="showSelectList()">{{selectList}}</button>
+        <ion-content  class="bg-gray i-buttons">
+            <div class="lhBtn" maxlength="20"  ng-click="showComboboxMask()">点我呀！！！</div>
+            <div class="ComboboxMask" ng-style="{'display':comboboxData.isShow?'block':'none'}">
+                <div class="lockMask"></div>
+                <div class="ComboboxInfo">{{comboboxData.info}}</div>
+                <div class="Select_list" >
+                    <span ng-repeat="item in comboboxData.viewList" ng-click="hideComboboxMask()">{{item.name}}</span>
+                </div>
+            </div>
         </ion-content>
     </ion-tab>
 
