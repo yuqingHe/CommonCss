@@ -5,7 +5,7 @@
  */
 
 //==============================================================
-//功能：rem+scale 布局实现自适应（适配retina）
+//功能：rem+scale 布局实现自适应（适配retina,改编自手淘flexible）
 //
 //说明：历史原因，默认按照iphone 5s （640宽度）进行开发并适应其他屏幕
 //
@@ -14,74 +14,106 @@
 //#  option{
 //      designWidth: 设计稿宽度，必须
 //      designHeight: 设计稿高度，不传的话则比例按照宽度来计算，可选
-//      designFontSize: 设计稿宽高下用于计算的字体大小，默认20，可选
+//      designFontSize: 设计稿宽高下用于计算的字体大小，默认40，可选
 //      callback: 字体计算之后的回调函数，可选
 //    }
 //
 // ps:请尽量第一时间运行此js计算字体
 //==============================================================
 
+"use strict";
 
-!function(win, option) {
-    var count = 0,
-        designWidth = option.designWidth,
-        designHeight = option.designHeight || 0,
-        designFontSize = option.designFontSize || 20,
-        callback = option.callback || null,
-        root = document.documentElement,
-        body = document.body,
-        rootWidth,
-        newSize,
-        t,
-        self;
+!(function (win, option) {
+    var doc = win.document;
+    var docEl = doc.documentElement;
+    var metaEl = doc.querySelector('meta[name="viewport"]');
+    var dpr = 0;
+    var scale = 0;
+    var designWidth = option.designWidth;
+    var designFontSize = option.designFontSize;
+    var callback = option.callback || {};
+    var timer;
 
-//返回root元素字体计算结果
-    function _getNewFontSize() {
-        var scale = designHeight !== 0 ? Math.min(win.innerWidth / designWidth, win.innerHeight / designHeight) : win.innerWidth / designWidth;
-        return parseInt(scale * 10000 * designFontSize) / 10000;
+    if (metaEl) {
+        console.warn('将根据已有的meta标签来设置缩放比例');
+        var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
+        if (match) {
+            scale = parseFloat(match[1]);
+            dpr = parseInt(1 / scale);
+        }
     }
 
-    win.changeFontSizeNewMicoSite = function() {
-        rootWidth = root.getBoundingClientRect().width;
-        self = self ? self : arguments.callee;
-        //如果此时屏幕宽度不准确，就尝试再次获取分辨率，只尝试20次，否则使用win.innerWidth计算
-        if (rootWidth !== win.innerWidth && count < 20) {
-            win.setTimeout(function() {
-                count++;
-                self();
-            }, 0);
+    if (!dpr && !scale) {
+        var isAndroid = win.navigator.appVersion.match(/android/gi);
+        var isIphone = win.navigator.appVersion.match(/iphone/gi);
+        var devicePixelRatio = win.devicePixelRatio;
+        if (isIphone) {
+            // iOS下，对于2和3的屏，用2倍、3倍的方案，其余的用1倍方案
+            if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+                dpr = 3;
+            } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+                dpr = 2;
+            } else {
+                dpr = 1;
+            }
         } else {
-            newSize = _getNewFontSize();
-            //如果css已经兼容当前分辨率就不管了
-            if (newSize + "px" !== getComputedStyle(root)["font-size"]) {
-                root.style.fontSize = newSize + "px";
-                return callback && callback(newSize);
-            };
-        };
-    };
+            dpr = 1;
+        }
+        scale = 1 / dpr;
+    }
+    
+    docEl.setAttribute('data-dpr',dpr);
 
-    win.changefontSize = function () {
-        var docEl = document.documentElement;
-        var clientWidth = docEl.clientWidth;
-        if (!clientWidth) return;
-        if (20 * (clientWidth / 320) + "px" !== getComputedStyle(root)["font-size"]) {
-            docEl.style.fontSize = 20 * (clientWidth / 320) + "px";
-        };
+    if(!metaEl){
+        metaEl = doc.createElement('meta');
+        metaEl.setAttribute('name','viewport');
+        metaEl.setAttribute('content','initial-scale='+scale+', maximum-scale='+scale+ ', user-scalable=no');
+        docEl.firstElementChild.appendChild(metaEl);
     }
 
-    win.changeFontSizeNewMicoSite();
-    //横竖屏切换的时候改变fontSize，根据需要选择使用
-//    win.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
-//        clearTimeout(t);
-//        t = setTimeout(function () {
-//            self();
-//        }, 200);
-//    }, false);
-}(window, {
-    designWidth: 640,
-    designHeight: 1008,
-    designFontSize: 40,
-    callback: function(argument) {
-//        console.timeEnd("test");
+    function refreshRem(){
+        var width = docEl.getBoundingClientRect().width;
+        if(width/dpr > 540){//限制最大宽度，超出这个范围建议跳转至桌面站点
+            // window.location.href = "http://www.xxx.com";
+            width = 540 * dpr;
+        }
+        var rem = designWidth / designFontSize;//基准rem值
+        docEl.style.fontSize =  width / rem + 'px';
     }
-});
+
+    win.addEventListener('resize',function(){
+        clearTimeout(timer);
+        timer = setTimeout(refreshRem, 300);
+    },false);
+
+    // win.addEventListener('pageshow',function(e){// onpageshow事件在每次加载页面时触发，区别于onload
+    //     if(e.persisted){//event.persisted判断页面是否从缓存中读取，是则返回true
+    //         clearTimeout(timer);
+    //         timer = setTimeout(refreshRem,300);
+    //     }
+    // },false);
+
+    //字体初始化，防止跟着root Fontsize变动
+     if (doc.readyState === 'complete') {
+        doc.body.style.fontSize = 12 * dpr + 'px';
+    } else {
+        doc.addEventListener('DOMContentLoaded', function(e) {
+            doc.body.style.fontSize = 12 * dpr + 'px';
+        }, false);
+    }
+
+    refreshRem();
+
+    callback({
+      //return sth..
+    })
+
+
+})(//配置项
+    window, {
+        designWidth: 640,
+        designFontSize: 40,
+        callback: function (msg) { 
+            // console.log(msg)
+        }
+    })
