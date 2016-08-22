@@ -288,6 +288,7 @@
                 </table>
 
                 <div class="text1">2.遮罩背景色：rgba(0,0,0,0.7)</div>
+                <div class="text1">3.列表等灰色背景色：#dee4ed</div>
                 <h2>推荐使用颜色：</h2>
                 <div class="color-body bg-gray">
                     <div class="text1"><span class="color color-theme"></span>theme #ff6622</div>
@@ -311,6 +312,7 @@
             </div>
             <div ng-if="navActive==4">
                 <h1>Layout布局</h1>
+                <div class="text1">定义了常用的margin（目前只有20、40、80 ，位置：全部 上下 左右 上 下 左 右）和padding（目前只有20、40、80 位置：全部 上下 左右 上 下 左 右）的值;文字位置ionic中已经定义了</div>
                 <div class="layout-bg"></div>
             </div>
             <div ng-if="navActive==5">
@@ -447,7 +449,10 @@
     aaa
 &lt;/ion-radio&gt;</code></pre>
                     <h3>·Time Select - 时间选择</h3>
+                    <div class="text1">点击位置</div>
                     <pre class="text1"><code>&lt;input ng-model=&quot;mydate&quot; type=&quot;text&quot; mobiscroll-datetime=&quot;setVisitDateTime&quot; readonly=&quot;readonly&quot; mobiscroll-instance=&quot;myInstance&quot;/&gt;</code></pre>
+                    <div class="text1">时间选择面板放的位置</div>
+                    <pre class="text1"><code>&lt;div class=&quot;date-time&quot; style=&quot;height:100%;width:100%; position:absolute; top:0;&quot;&gt;&lt;/div&gt;</code></pre>
                     <pre class="text1"><code>//配置项
 $scope.mydate = new Date();
     var now = new Date();
@@ -466,15 +471,16 @@ $scope.mydate = new Date();
         clearText: &#x27;删除回访提醒&#x27;,
         minWidth: 50,
         headerText: dateTitle,
-        rows: 3
+        rows: 3,
+        context:'.date-time'
     };</code></pre>
 
                     <h3>·Input Dialogs - 文字输入框</h3>
-                    <pre class="text1"><code>
+                    <div class="text1">
                         使用的是项目组件multi_textinput，by吕立
-                    </code></pre>
+                    </div>
                     <h3>·Footer Select List - 底部选择列表</h3>
-                    <pre class="text1"><code>使用的是项目组件combobox，by周慧娟</code></pre>
+                    <div class="text1">使用的是项目组件combobox，by周慧娟</div>
 
 
                 </div>
