@@ -1,0 +1,43 @@
+// @charset "UTF-8";
+
+// /*sass汇总文档
+// ----------------------
+// 作者：陈天宇
+// 时间：2016年7月9日
+// 邮箱：tianyu.chen@greedyint.cn
+// 说明：改文档将sass各组件进行了拆分，目的在于减少冗余，增加利用率，为了便于识别和review，sass嵌套不宜超过三层。
+// ---------------------- */
+
+
+// //工具和帮助类（helpers）
+// @import "helpers/variables";
+// @import "helpers/functions";
+// @import "helpers/mixins";
+
+// //基础部分(base)
+// @import "base/reset";
+
+// //组件部分(components)
+// @import "componets/icons";//图标
+// @import "componets/button";//按钮
+// @import "componets/radio";//单选按钮
+// @import "componets/mask";//遮罩
+// @import "componets/pop";//弹出窗
+// @import "componets/toggle";//仿iphone toggle
+// @import "componets/chart";//图标组件
+
+
+// //局部布局（layout）
+// @import "layout/wrap";//包裹各部分组件的包裹层
+// @import "layout/header";//头部固定层
+// @import "layout/main";//中间滚动内容区域
+// @import "layout/footer";//底部固定成
+// @import "layout/table";//表格布局
+// @import "layout/grids";//网格布局系统
+
+
+
+// //具体页面（pages）
+
+// //调整（根据页面灵活添加的行内样式，属于基础类，放在最后保证其权重）
+// @import "initial"

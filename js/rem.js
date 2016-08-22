@@ -1,42 +1,27 @@
 /**
  * Created by greedy on 2016/8/8.
+ * modified by tianyu.chen on 2016-8-16.
+ * mail:tianyu.chen@xiaobao100.com | cty8998@163.com
  */
-/**
- * Created on 2015/9/12.
- */
-// rem+js 布局 实现自适应
 
-//window.changefontSize=function() {
-//    var docEl = document.documentElement;
-//    var clientWidth = docEl.clientWidth;
-//    if (!clientWidth) return;
-//    docEl.style.fontSize = 20 * (clientWidth / 320) + "px";
-//}
-
-//(function (doc, win) {
-//    var docEl = doc.documentElement,
-//        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+//==============================================================
+//功能：rem+scale 布局实现自适应（适配retina）
 //
-//    if (!doc.addEventListener) return;
-//    win.addEventListener(resizeEvt, changefontSize, false);
-//    doc.addEventListener('DOMContentLoaded', changefontSize, false);
-//})(document, window);
+//说明：历史原因，默认按照iphone 5s （640宽度）进行开发并适应其他屏幕
+//
+//参数：
+//#  win 窗口window对象
+//#  option{
+//      designWidth: 设计稿宽度，必须
+//      designHeight: 设计稿高度，不传的话则比例按照宽度来计算，可选
+//      designFontSize: 设计稿宽高下用于计算的字体大小，默认20，可选
+//      callback: 字体计算之后的回调函数，可选
+//    }
+//
+// ps:请尽量第一时间运行此js计算字体
+//==============================================================
 
 
-/*
- # 按照宽高比例设定html字体, width=device-width initial-scale=1版
- # @pargam win 窗口window对象
- # @pargam option{
- designWidth: 设计稿宽度，必须
- designHeight: 设计稿高度，不传的话则比例按照宽度来计算，可选
- designFontSize: 设计稿宽高下用于计算的字体大小，默认20，可选
- callback: 字体计算之后的回调函数，可选
- }
- # return Boolean;
- # xiaoweili@tencent.com
- # ps:请尽量第一时间运行此js计算字体
- */
-//console.time("test");
 !function(win, option) {
     var count = 0,
         designWidth = option.designWidth,
