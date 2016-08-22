@@ -329,7 +329,6 @@
             </div>
             <div ng-show="navActive==4">
                 <h1>Layout布局</h1>
-
             </div>
             <div ng-show="navActive==5">
                 <h1>Buttons按钮</h1>
@@ -448,7 +447,7 @@
                 <div class="text1">为了确保可读性，每项文字字数建议为2-4个汉字。字号为24px，色值 #333。</div>
                 <h2>用法</h2>
                 <h3>·2项内容</h3>
-                <div class="nav-top-tabs margin-lr-21">
+                <div class="nav-top-tabs ">
                     <div class="nav-tab margin-lr20 active">咨询跟进</div>
                     <div class="nav-tab margin-lr20">全部咨询</div>
                 </div>
@@ -457,7 +456,7 @@
     &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;全部咨询&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <h3>·3项内容</h3>
-                <div class="nav-top-tabs margin-lr-21">
+                <div class="nav-top-tabs ">
                     <div class="nav-tab margin-lr40 active">全部</div>
                     <div class="nav-tab margin-lr40">邀请用户</div>
                     <div class="nav-tab margin-lr40">VIP码</div>
@@ -468,7 +467,7 @@
     &lt;div class=&quot;nav-tab margin-lr40&quot;&gt;VIP码&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <h3>·4项内容</h3>
-                <div class="nav-top-tabs display-flex margin-lr-21">
+                <div class="nav-top-tabs display-flex ">
                     <div class="nav-tab margin-lr20 active">全部</div>
                     <div class="nav-tab margin-lr20">微官网</div>
                     <div class="nav-tab margin-lr20">微海报</div>
@@ -489,7 +488,7 @@
                 <h2>用法</h2>
                 <h3>·Toggle - 开关</h3>
                 <ion-list class="item-t20 ">
-                    <ion-item class="item-button-right margin-lr-21">
+                    <ion-item class="item-button-right ">
                         Hello
                         <label class="toggle"><input type="checkbox">
                             <div class="track">
@@ -506,7 +505,7 @@
                 <h3>Checkbox - 多选框</h3>
                 <ion-checkbox ng-model="emailNotification"
                               ng-true-value="'Subscribed'"
-                              ng-false-value="'Unubscribed'" class="margin-lr-21">
+                              ng-false-value="'Unubscribed'" class="">
                     Newsletter
                 </ion-checkbox>
                     <pre class="text1"><code>&lt;ion-checkbox ng-model=&quot;emailNotification&quot;
@@ -518,13 +517,13 @@
                 <ion-radio ng-value="item.value"
                            ng-model="data.serverSide"
                            ng-change="serverSideChange(item)"
-                           name="server-side" class="margin-lr-21">
+                           name="server-side" class="">
                     aaa
                 </ion-radio>
                 <ion-radio ng-value="item.value"
                            ng-model="data.serverSide"
                            ng-change="serverSideChange(item)"
-                           name="server-side" class="margin-lr-21">
+                           name="server-side" class="">
                     bbb
                 </ion-radio>
                     <pre class="text1"><code>&lt;ion-radio ng-value=&quot;item.value&quot;
@@ -559,40 +558,477 @@ $scope.mydate = new Date();
     };</code></pre>
 
                 <h3>·Input Dialogs - 文字输入框</h3>
-                <div class="text-center" maxlength="20"  ng-click="textInput()">点我呀！！！</div>
-                <div ng-show="isShow">
-                    <div class="lockMask_input" on-swipe="onSwipe($event)"></div>
-                    <div class="mutil_input_wrap" on-swipe="onSwipe($event)">
-                        <div class="mutil_input_box">
-                            <div class="mutil_input_item" ng-repeat="item in viewList">
-                                <span class="mutil_title">123</span>
-                                <input class="mutil_input" ng-model="item.inputModel" />
-                                <span class="editor_text_callback"><label>100</label>&nbsp;&frasl;&nbsp;<label>160</label></span>
-                            </div>
-                        </div>
-                        <button type="button" class="button-cancel-callback" ng-click="cancel()">取消</button>
-                        <button type="button" class="button-sure-callback" ng-click="sure()">确定</button>
-                    </div>
+                <button class="button button-small4 button-theme" ng-click="textInput()">点我呀！！！</button>
+                <div class="text1">
+                    使用的是项目组件multi_textinput，by吕立
                 </div>
-                    <pre class="text1"><code>
-                        使用的是项目组件multi_textinput，by吕立
-                    </code></pre>
                 <h3>·Footer Select List - 底部选择列表</h3>
-                <div class="lhBtn" maxlength="20"  ng-click="showComboboxMask()">点我呀！！！</div>
-                <div class="ComboboxMask" ng-style="{'display':comboboxData.isShow?'block':'none'}">
-                    <div class="lockMask"></div>
-                    <div class="ComboboxInfo">{{comboboxData.info}}</div>
-                    <div class="Select_list" >
-                        <span ng-repeat="item in comboboxData.viewList" ng-click="hideComboboxMask()">{{item.name}}</span>
+                <button class="button button-small4 button-theme" ng-click="showComboboxMask()">点我呀！！！</button>
+                <pre class="text1"><code>使用的是项目组件combobox，by周慧娟</code></pre>
+            </div>
+            <div ng-show="navActive==8">
+                <h1>List列表</h1>
+                <h2>说明</h2>
+                <div class="text1">1px的边还没添加。默认高度80px</div>
+                <h2>用法</h2>
+                <h3>·空白列表</h3>
+
+                <div class="bg-gray">
+                    <ion-list>
+                        <ion-item class="text-center">
+                            a.空白列表
+                        </ion-item>
+                        <br>
+                        <div class="item-100 text-center border-bottom-1 border-top-1">
+                            b.height=100px
+                        </div>
+                        <br>
+                        <div class="item-120 text-center border-bottom-1 border-top-1">
+                            c.height=120px
+                        </div>
+                    </ion-list>
+                    <br>
+                </div>
+                 <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        a.空白列表
+    &lt;/ion-item&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;item-100 text-center&quot;&gt;
+        b.height=100px
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;item-120 text-center&quot;&gt;
+        c.height=120px
+    &lt;/div&gt;
+&lt;/ion-list&gt;</code></pre>
+                <h3>·带说明文案的分割</h3>
+
+                <ion-list>
+                    <ion-item class="text-center">
+                        d.带说明文案的分割
+                    </ion-item>
+                    <ion-item class=" item-divider">
+                        d.Hello
+                    </ion-item>
+                    <ion-item ng-repeat="item in items">
+                        Hello, {{item.id}}!
+                    </ion-item>
+                    <ion-item class=" item-divider">
+                        d.Hello
+                    </ion-item>
+                    <ion-item ng-repeat="item in items">
+                        Hello, {{item.id}}!
+                    </ion-item>
+                </ion-list>
+                <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        d.带说明文案的分割
+    &lt;/ion-item&gt;
+    &lt;ion-item class=&quot; item-divider&quot;&gt;
+        d.Hello
+    &lt;/ion-item&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+    &lt;ion-item class=&quot; item-divider&quot;&gt;
+        d.Hello
+    &lt;/ion-item&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
+                <h3>·无文案分割</h3>
+
+                <div class="bg-gray">
+                    <ion-list class="item-t20">
+                        <ion-item ng-repeat="item in items">
+                            e.Hello, {{item.id}}!
+                        </ion-item>
+                    </ion-list>
+                    <ion-list class="item-t20">
+                        <ion-item ng-repeat="item in items">
+                            e.Hello, {{item.id}}!
+                        </ion-item>
+                    </ion-list>
+                </div>
+                <pre class="text1"><code>&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        e.Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;
+&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        e.Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
+                <h3>·列表按钮</h3>
+
+                <ion-list class="item-t20">
+                    <ion-item class="text-center">
+                        f.列表按钮
+                    </ion-item>
+                    <ion-item class="item-button-right">
+                        f.Hello
+                        <button class="button button-small1 button-theme">aaa</button>
+                    </ion-item>
+                </ion-list>
+                <pre class="text1"><code>&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        f.列表按钮
+    &lt;/ion-item&gt;
+    &lt;ion-item class=&quot;item-button-right&quot;&gt;
+        f.Hello
+        &lt;button class=&quot;button button-small1 button-theme&quot;&gt;aaa&lt;/button&gt;
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
+                <h3>·头像列表</h3>
+
+                <ion-list class="item-t20">
+                    <ion-item class="text-center">
+                        e.头像列表
+                    </ion-item>
+                    <div class="item-100 item-photo border-bottom-1 border-top-1">
+                        <span class="photo">校</span>
+                        <div class="item-photo-text">校宝秀</div>
+                        <span class="item-star"></span>
+                    </div>
+                </ion-list>
+                <pre class="text1"><code>&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        e.头像列表
+    &lt;/ion-item&gt;
+    &lt;div class=&quot;item-100 item-photo&quot;&gt;
+        &lt;span class=&quot;photo&quot;&gt;校&lt;/span&gt;
+        &lt;div class=&quot;item-photo-text&quot;&gt;校宝秀&lt;/div&gt;
+        &lt;span class=&quot;item-star&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/ion-list&gt;</code></pre>
+
+            </div>
+            <div ng-show="navActive==9">
+                <h1>Cards卡片</h1>
+                <h2>说明</h2>
+                <div class="text1">1px的边还没添加。圆角只需添加border-radius-20</div>
+                <div class="text1">项目中使用：首页、咨询本跟进列表<br>文件：micro-index-app<br>micro-registrationbook-ongoing-app.html
+                </div>
+                <h2>用法</h2>
+                <h3>·直角</h3>
+                <div class="padding-tb20">
+                    <div class="cards margin-20 ">
+                        <div class="header text-center">Card Header</div>
+                        <div class="body">Card Content</div>
+                        <div class="footer text-center">Card Footer</div>
+                    </div>
+                    <div class="cards margin-20 ">
+                        <div class="header text-center">Card Header</div>
+                        <div class="body">Card Content</div>
+                    </div>
+                    <div class="cards margin-20 ">
+                        <div class="body">Card Content</div>
+                        <div class="footer text-center">Card Footer</div>
+                    </div>
+                    <div class="cards margin-20 ">
+                        <div class="body">Card Content</div>
+                    </div>
+
+                </div>
+                <pre class="text1"><code>&lt;div class=&quot;cards margin-20 &quot;&gt;
+    &lt;div class=&quot;header text-center&quot;&gt;Card Header&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;Card Content&lt;/div&gt;
+    &lt;div class=&quot;footer text-center&quot;&gt;Card Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·圆角</h3>
+                <div class="text1"></div>
+                <div class=" padding-tb20">
+                    <div class="cards margin-20 border-radius-20">
+                        <div class="header text-center">Card Header</div>
+                        <div class="body">Card Content</div>
+                        <div class="footer text-center">Card Footer</div>
+                    </div>
+                    <div class="cards margin-20 border-radius-20">
+                        <div class="header text-center">Card Header</div>
+                        <div class="body">Card Content</div>
+                    </div>
+                    <div class="cards border-radius-20 margin-20">
+                        <div class="body">Card Content</div>
+                        <div class="footer text-center">Card Footer</div>
+                    </div>
+                    <div class="cards margin-20 border-radius-20">
+                        <div class="body">Card Content</div>
+                    </div>
+
+                </div>
+                <pre class="text1"><code>&lt;div class=&quot;cards margin-20 border-radius-20&quot;&gt;
+    &lt;div class=&quot;header text-center&quot;&gt;Card Header&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;Card Content&lt;/div&gt;
+    &lt;div class=&quot;footer text-center&quot;&gt;Card Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                </ion-tabs>
+            </div>
+            <div ng-show="navActive==10">
+                <h1>Forms表单</h1>
+                <h2>说明</h2>
+                <div class="text1">这些都是组件形式的，项目中的样式不动。</div>
+                <h2>用法</h2>
+                <h3>·Search</h3>
+                <div class="text1">项目中使用：咨询本搜索页<br>文件：micro-registrationbook-search-app.html</div>
+                <div class="bar bar-header item-input-inset">
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-ios-search placeholder-icon"></i>
+                        <input type="search" placeholder="Search" class="cloned-text-input">
+                        <input type="search" placeholder="Search" class="previous-input-focus">
+                    </label>
+                    <button class="button button-theme button-clear">
+                        Cancel
+                    </button>
+                </div>
+                <h3>·Placeholder Labels</h3>
+                <ion-list>
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" placeholder="Your Username" class="text-center">
+                        </label>
+                        <label class="item item-input">
+                            <input type="text" placeholder="Your Password" class="text-center">
+                        </label>
+                    </div>
+                </ion-list>
+                <div class="text-center">
+                    <button class="button button-large button-theme margin-t80">Submit</button>
+                </div>
+                    <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;div class=&quot;list&quot;&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Your Username&quot; class=&quot;text-center&quot;&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Your Password&quot; class=&quot;text-center&quot;&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/ion-list&gt;
+&lt;div class=&quot;text-center&quot;&gt;
+    &lt;button class=&quot;button button-large button-theme margin-t80&quot;&gt;Submit&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·Inline Labels</h3>
+                <ion-list>
+                    <div class="list">
+                        <label class="item item-input">
+                            <span class="input-label">Username</span>
+                            <input type="text">
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">Password</span>
+                            <input type="password">
+                        </label>
+                    </div>
+                </ion-list>
+                <div class="text-center">
+                    <button class="button button-large button-theme margin-t80">Submit</button>
+                </div>
+                    <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;div class=&quot;list&quot;&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+            &lt;span class=&quot;input-label&quot;&gt;Username&lt;/span&gt;
+            &lt;input type=&quot;text&quot;&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+            &lt;span class=&quot;input-label&quot;&gt;Password&lt;/span&gt;
+            &lt;input type=&quot;password&quot;&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/ion-list&gt;
+&lt;div class=&quot;text-center&quot;&gt;
+    &lt;button class=&quot;button button-large button-theme margin-t80&quot;&gt;Submit&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div ng-show="navActive==11">
+                <h1>Dialogs模拟框</h1>
+                <h2>说明</h2>
+                <div class="text1">
+                    使用ionic弹框，双按钮使用show、confirm，单按钮使用alert；按钮type类型确定button-save，取消button-cancel；内容垂直居中的话直接在template添加内容，其他样式需求，自己添加标签;1px的边还没添加。
+                </div>
+                <h2>用法</h2>
+                <h3>·双按钮带标题</h3>
+                <button class="button button-small3 button-theme" ng-click="showPopup()">
+                    带标题
+                </button>
+                    <pre class="text1"><code> $scope.showPopup = function () {
+        $scope.data = {}
+        var myPopup = $ionicPopup.show({
+            template: &#x27;&lt;div class=&quot;font-popbody&quot;&gt; aaaaa&lt;/div&gt;&#x27;,
+            title: &#x27;Enter Wi-Fi Password&#x27;,
+
+            scope: $scope,
+            buttons: [
+                {
+                    text: &#x27;取消&#x27;,
+                    type: &#x27;button-cancel&#x27;
+                },
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        });
+    };</code></pre>
+                <h3>·双按钮不带标题</h3>
+                <button class="button button-small3 button-theme" ng-click="showConfirm()">
+                    不带标题
+                </button>
+                    <pre class="text1"><code>$scope.showConfirm = function () {
+        var confirmPopup = $ionicPopup.confirm({
+            template: &#x27;Are you sure you want to eat this ice cream?&#x27;,
+            buttons: [
+                {
+                    text: &#x27;取消&#x27;,
+                    type: &#x27;button-cancel&#x27;
+                },
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        });
+    };</code></pre>
+                <h3>·单按钮表带标题</h3>
+                <button class="button button-small3 button-theme" ng-click="showAlert1()">
+                    带标题
+                </button>
+                    <pre class="text1"><code>$scope.showAlert1 = function () {
+        var alertPopup = $ionicPopup.alert({
+            title: &#x27;Don\&#x27;t eat that!&#x27;,
+            template: &#x27;&lt;div class=&quot;font-poplink&quot;&gt; aaaaa&lt;/div&gt;&#x27;,
+            buttons: [
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        })
+    };</code></pre>
+                <h3>·单按钮不带标题</h3>
+                <button class="button button-small3 button-theme" ng-click="showAlert2()">
+                    不带标题
+                </button>
+                    <pre class="text1"><code>$scope.showAlert2 = function () {
+        var alertPopup = $ionicPopup.alert({
+
+            template: &#x27;&lt;div class=&quot;poplink&quot;&gt; http://dev.xbx100.cn/GameViewShare?p=activity/oldandnewview?Id=1278&lt;/div&gt;&#x27;,
+            buttons: [
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        });
+    };</code></pre>
+
+                <h3>·成功提示（最多显示两行文字）</h3>
+                <button class="button button-small3 button-theme" ng-click="successAlert1()">
+                    迁移成功（一行文案）
+                </button>
+                <button class="button button-small3 button-theme" ng-click="successAlert2()">
+                    迁移成功（两行文案）
+                </button>
+                    <pre class="text1"><code>&lt;div class=&quot;data_migrationing&quot; ng-show=&quot;successAlert1Box&quot;  style=&quot;height: 100%&quot;&gt;
+    &lt;div class=&quot;mask_lock&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;mask_bg&quot;&gt;
+        &lt;div class=&quot;migration_box&quot;&gt;
+            &lt;div class=&quot;migration_success&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;load_reminds2&quot;&gt;
+                迁移成功
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·loading</h3>
+                <button class="button button-small3 button-theme" ng-click="showLoading()">
+                    loading
+                </button>
+                    <pre class="text1"><code>&lt;div class=&quot;data_migrationing&quot; ng-show=&quot;loading&quot;&gt;
+    &lt;div class=&quot;mask_lock&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;mask_bg&quot;&gt;
+        &lt;div class=&quot;migration_box&quot;&gt;
+            &lt;div class=&quot;short_loading&quot;&gt;&lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·data move</h3>
+                <button class="button button-small3 button-theme" ng-click="showDataMove()">
+                    数据迁移
+                </button>
+                    <pre class="text1"><code>&lt;div class=&quot;data_migrationing&quot; ng-show=&quot;dataMove&quot;&gt;
+    &lt;div class=&quot;mask_lock&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;mask_bg&quot;&gt;
+        &lt;div class=&quot;migration_box&quot;&gt;
+            &lt;div class=&quot;data_migrationline&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;load_reminds2&quot;&gt;
+                正在迁移
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div ng-show="navActive==12">
+                <h1>Others其他一些组件</h1>
+                <h2>说明</h2>
+                <div class="text1">这些都是组件形式的，项目中的样式不动。</div>
+                <h2>用法</h2>
+                <h3>·场景提示样式</h3>
+                <div class="text1">项目中使用：首页<br>文件：micro-index-app</div>
+                <h3>场景冻结</h3>
+                <div class="sencesize">
+                    <div class="new_sence_lock">
+                        <div class="active_refreze_btn"></div>
                     </div>
                 </div>
-                    <pre class="text1"><code>使用的是项目组件combobox，by周慧娟</code></pre>
+                <h3>场景已截止</h3>
+                <div class="sencesize">
+                    <div class="sence_timeout">
+
+                    </div>
+                </div>
+                <h3>·遮罩提示</h3>
+                <div class="text1">项目中使用：遮罩层<br>文件：mask</div>
+                <h3>·错误页面</h3>
+                <div class="text1">项目中使用：报错<br>文件：Error.cshtml;<br>TemplateError.cshtml;<br>TemplateFreeze.cshtml</div>
+                <h3>·音乐播放图标</h3>
+                <div class="text1">
+                    项目中使用：模板页<br>文件：micro-preview-app.html;<br>micro-activity-oldandnew-view-app.html;<br>
+                    micro-activity-oldandnew-preview-app.html;<br>
+                    micro-activity-grassgrow-app.html;<br>micro-activity-grassavatar-app.html;<br>micro-activity-grassavatar-app.html
+                </div>
+
+                <h3>·顶部提示</h3>
+                <div class="text1">项目中使用：顶部信息提示<br>文件：error_remind</div>
+                <h3>中性提示</h3>
+                <div class="top-alert-warn">
+                    你的网络环境不佳，请在wifi下打开
+                </div>
+                <br>
+                <div class="top-alert-warn">
+                    <div class="alert-close">你的网络环境不佳，请在wifi下打开</div>
+                </div>
+                <h3>错误提示</h3>
+                <div class="top-alert-error">
+                    您的微官网包含敏感词汇，请重新修改！
+                </div>
+                <br>
+                <div class="top-alert-error">
+                    <div class="alert-close">您的微官网包含敏感词汇，请重新修改！</div>
+                </div>
+                <h3>成功提示</h3>
+                <div class="top-alert-success">
+                    操作成功！
+                </div>
+                <br>
+                <div class="top-alert-success">
+                    <div class="alert-close">操作成功！</div>
+                </div>
             </div>
-            <div ng-show="navActive==8">8</div>
-            <div ng-show="navActive==9">9</div>
-            <div ng-show="navActive==10">10</div>
-            <div ng-show="navActive==11">11</div>
-            <div ng-show="navActive==12">12</div>
         </ion-content>
     </ion-side-menu-content>
 
@@ -606,5 +1042,75 @@ $scope.mydate = new Date();
         </ul>
     </ion-side-menu>
 </ion-side-menus>
+
+
+<!--编辑框-->
+<div class="ComboboxMask" ng-style="{'display':comboboxData.isShow?'block':'none'}">
+    <div class="lockMask"></div>
+    <div class="ComboboxInfo">{{comboboxData.info}}</div>
+    <div class="Select_list">
+                        <span ng-repeat="item in comboboxData.viewList"
+                              ng-click="hideComboboxMask()">{{item.name}}</span>
+    </div>
+</div>
+<!--底部下拉选项-->
+<div ng-show="isShow">
+    <div class="lockMask_input" on-swipe="onSwipe($event)"></div>
+    <div class="mutil_input_wrap" on-swipe="onSwipe($event)">
+        <div class="mutil_input_box">
+            <div class="mutil_input_item" ng-repeat="item in viewList">
+                <span class="mutil_title">123</span>
+                <input class="mutil_input" ng-model="item.inputModel"/>
+                <span class="editor_text_callback"><label>100</label>&nbsp;&frasl;&nbsp;<label>160</label></span>
+            </div>
+        </div>
+        <button type="button" class="button-cancel-callback" ng-click="cancel()">取消</button>
+        <button type="button" class="button-sure-callback" ng-click="sure()">确定</button>
+    </div>
+</div>
+<!--模拟框html-->
+<div class="data_migrationing" ng-show="successAlert1Box" style="height: 100%">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="migration_success"></div>
+            <div class="load_reminds2">
+                迁移成功
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="data_migrationing" ng-show="successAlert2Box">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="migration_success"></div>
+            <div class="load_reminds2">
+                迁移成功<br>迁移成功迁移成功
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data_migrationing" ng-show="loading">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="short_loading"></div>
+
+        </div>
+    </div>
+</div>
+<div class="data_migrationing" ng-show="dataMove">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="data_migrationline"></div>
+            <div class="load_reminds2">
+                正在迁移
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

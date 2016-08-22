@@ -128,10 +128,11 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 .margin-b80{margin-bottom: temSize(80);}
 
 /*1px边 在安卓下可能有问题*/
+.border-bottom-1,.border-right-1,.border-top-1,.border-left-1{position: relative;}
 .border-bottom-1::after { width: 500%; content: ""; position: absolute; bottom: 0; height: 1px; background: #ddd; left: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 bottom; transform: scale(0.5); transform-origin: 0 bottom;}
 .border-right-1::after { width: 1px; content: ""; position: absolute; right: 0; height: 500%; background: #ddd; top: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 top; transform: scale(0.5); transform-origin: 0 top;}
-.border-top-1::after { width: 500%; content: ""; position: absolute; top: 0; height: 1px; background: #ddd; top: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 top; transform: scale(0.5); transform-origin: 0 top;}
-.border-left-1::after { width: 1px; content: ""; position: absolute; left: 0; height: 500%; background: #ddd; top: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 top; transform: scale(0.5); transform-origin: 0 top;}
+.border-top-1::before { width: 500%; content: ""; position: absolute; left: 0; height: 1px; background: #ddd; top: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 top; transform: scale(0.5); transform-origin: 0 top;}
+.border-left-1::before { width: 1px; content: ""; position: absolute; left: 0; height: 500%; background: #ddd; top: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 top; transform: scale(0.5); transform-origin: 0 top;}
 
 
 
@@ -452,7 +453,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
 
 /*list列表*/
 
-.item-divider{ background-color: #dfe3ed; height: temSize(50);line-height: temSize(50); font-size: temSize(20); color: #aaa; padding: 0 temSize(40);}
+.item-divider{ background-color: #dfe3ed; height: temSize(50);min-height: temSize(50);line-height: temSize(50); font-size: temSize(20); color: #aaa; padding: 0 temSize(40);}
 .item-100{position: relative;height: temSize(100);width: 100%;margin: -1px; border-color: #ddd; background-color: #fff; padding: temSize(20)  temSize(40);}
 .item-120{position: relative;height: temSize(120);width: 100%;margin: -1px; border-color: #ddd; background-color: #fff; padding: temSize(20)  temSize(40);}
 .item-t20 .list{margin-top: temSize(20);}
@@ -478,7 +479,7 @@ $img-pozB:no-repeat center bottom; //图片不重复+定位方式
   .header{min-height: temSize(80);border-bottom: 1px solid #ccc; margin-bottom: -1px;}
   .footer{min-height: temSize(80);border-top: 1px solid #ccc; margin-top: -1px;}
   .body{min-height: temSize(160);  }
-  &:before{box-shadow: 0 0 temSize(40) rgba(29, 63, 140, 0.7);content: "";width: 96%;height: temSize(50);border-radius:temSize(25);position: absolute;bottom:0;left:2%;z-index: -1;}
+  &:before{box-shadow: 0 0 temSize(40) rgba(29, 63, 140, 0.7);content: "";width: calc(100% - 1rem);height: temSize(50);border-radius:temSize(25);position: absolute;bottom:0;left:0.5rem;z-index: -1;}
 }
 .border-radius-20{border-radius: temSize(20);}
 
