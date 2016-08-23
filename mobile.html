@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>common css</title>
+    <link href="js/mobiscrolldatetime/css/mobiscroll.custom-2.17.0.min.css" rel="stylesheet">
+    <link href="css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="js/rem.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-animate.min.js"></script>
+    <script src="js/ionic.min.js"></script>
+    <script src="js/ionic.bundle.min.js"></script>
+    <script src="js/mobiscrolldatetime/js/mobiscroll.custom-2.17.0.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body ng-controller="exam">
+<ion-header-bar class="m-head">
+    <button class="button button-icon icon ion-navicon" ng-click="toggleLeftSideMenu()"></button>
+    <div class="logo"></div>
+</ion-header-bar>
+<ion-side-menus class="m-body">
+    <!-- 中间内容 -->
+    <ion-side-menu-content>
+        <ion-content scroll="true" class="content">
+            <div ng-show="navActive==1">
+                <h1>Font文字</h1>
+                <div class="row">
+                    <div class="col col-33" style="border-top:1px solid #000;">
+                        <p class="font-title">校宝秀</p>
+                        <p>.font-title</p>
+                    </div>
+                    <div class="col col-33">
+                        <p class="font-body">校宝秀</p>
+                        <p>.font-body</p>
+                    </div>
+                    <div class="col col-33">
+                        <p class="font-sub">校宝秀</p>
+                        <p>.font-sub</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-33">
+                        <p class="font-help">校宝秀</p>
+                        <p>.font-help</p>
+                    </div>
+                    <div class="col col-33">
+                        <p class="text-shadow">校宝秀</p>
+                        <p>.text-shadow</p>
+                    </div>
+                </div>
+                <h2>用法</h2>
+                <div>
+                    <table cellspacing="0" cellpadding="0">
+                        <thead>
+                        <tr>
+                            <th>类名</th>
+                            <th>样式</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>font-title</td>
+                            <td>font-size: temSize(28); color: #333;</td>
+                        </tr>
+                        <tr>
+                            <td>font-body</td>
+                            <td>font-size: temSize(24); color: #333;</td>
+                        </tr>
+                        <tr>
+                            <td>font-sub</td>
+                            <td>font-size: temSize(28); color: #aaa;</td>
+                        </tr>
+                        <tr>
+                            <td>font-help</td>
+                            <td>font-size: temSize(20); color: #81a2cd;</td>
+                        </tr>
+                        <tr>
+                            <td>text-shadow</td>
+                            <td>text-shadow: 0px 1px 4px #ddd;</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div ng-show="navActive==2">
+                <h1>Icons图标</h1>
+                <h2>用法</h2>
+                <div class="text1">自制的图标目前是图片形式，尺寸为40*40</div>
+                <pre class="text1"><code>&lt;i class=&quot;icon-size-40 icon-invite&quot;&gt;&lt;/i&gt;</code></pre>
+                <h2>图标列表</h2>
+                <div>
+                    <div class="preview-icon">
+                        <div class="icon-row content bg-gray" style="display: flex;flex-wrap:wrap; ">
+                            <div>
+                                <i class="icon-size-40 icon-invite"></i>
+                                <p>icon-invite</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-vip"></i>
+                                <p>icon-vip</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-info"></i>
+                                <p>icon-info</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-help"></i>
+                                <p>icon-help</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-terms"></i>
+                                <p>icon-terms</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-ip"></i>
+                                <p>icon-ip</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-bind"></i>
+                                <p>icon-bind</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-erp"></i>
+                                <p>icon-erp</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-login"></i>
+                                <p>icon-login</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-set"></i>
+                                <p>icon-set</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-organization"></i>
+                                <p>icon-organization</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-user"></i>
+                                <p>icon-user</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-psd"></i>
+                                <p>icon-psd</p>
+                            </div>
+
+                            <div>
+                                <i class="icon-size-40 icon-suggest"></i>
+                                <p>icon-suggest</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-logout"></i>
+                                <p>icon-logout</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-myscene"></i>
+                                <p>icon-myscene</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-rbook"></i>
+                                <p>icon-rbook</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-usercenter"></i>
+                                <p>icon-usercenter</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-edit"></i>
+                                <p>icon-edit</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-nextpage"></i>
+                                <p>icon-nextpage</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-backpage"></i>
+                                <p>icon-backpage</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-project"></i>
+                                <p>icon-project</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-save"></i>
+                                <p>icon-save</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-preview"></i>
+                                <p>icon-preview</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-music"></i>
+                                <p>icon-music</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-bg"></i>
+                                <p>icon-bg</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-statistics"></i>
+                                <p>icon-statistics</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-lbook"></i>
+                                <p>icon-lbook</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-share"></i>
+                                <p>icon-share</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-other"></i>
+                                <p>icon-other</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-ydiamond"></i>
+                                <p>icon-ydiamond</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon-bdiamond"></i>
+                                <p>icon-bdiamond</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_write"></i>
+                                <p>icon_write</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_bshare"></i>
+                                <p>icon_bshare</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_reflash"></i>
+                                <p>icon_reflash</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_download"></i>
+                                <p>icon_download</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_more"></i>
+                                <p>icon_more</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_pdown"></i>
+                                <p>icon_pdown</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_phone"></i>
+                                <p>icon_phone</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_shield"></i>
+                                <p>icon_shield</p>
+                            </div>
+                            <div>
+                                <i class="icon-size-40 icon_lock"></i>
+                                <p>icon_lock</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div ng-show="navActive==3"><h1>Color颜色</h1>
+                <h2>常用样式颜色</h2>
+                <div class="text1">1.1px灰色边：1px solid #ddd;在手机上显示1px，利用transform: scale(0.5)缩放，父元素需要添加position:
+                    relative，该方法兼容性有待验证，目前使用的方法class如下：
+                </div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>类型</th>
+                        <th>类名</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>上边</td>
+                        <td>border-top-1</td>
+                    </tr>
+                    <tr>
+                        <td>右边</td>
+                        <td>border-right-1</td>
+                    </tr>
+                    <tr>
+                        <td>下边</td>
+                        <td>border-bottom-1</td>
+                    </tr>
+                    <tr>
+                        <td>左边</td>
+                        <td>border-left-1</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="text1">2.遮罩背景色：rgba(0,0,0,0.7)</div>
+                <h2>推荐使用颜色：</h2>
+                <div class="color-body bg-gray">
+                    <div class="text1"><span class="color color-theme"></span><br>theme #ff6622</div>
+                    <div class="text1"><span class="color color-white"></span><br>white #ffffff</div>
+                    <div class="text1"><span class="color color-light"></span><br>light #dddddd</div>
+                    <div class="text1"><span class="color color-stable"></span><br>stable #cccccc</div>
+                    <div class="text1"><span class="color color-positive"></span><br>positive #2a97ec</div>
+                    <div class="text1"><span class="color color-alert"></span><br>alert #f7424f</div>
+                    <div class="text1"><span class="color color-energized"></span><br>energized #f7424f</div>
+                    <div class="text1"><span class="color color-dark"></span><br>dark #333333</div>
+                </div>
+                <h2>头像默认背景色</h2>
+                <div class="photobg bg-gray">
+                    <div class="text1"><span class="photo-color-1"></span>
+                        <p>#ff6e48</p></div>
+                    <div class="text1"><span class="photo-color-2"></span>
+                        <p>#e3547f</p></div>
+                    <div class="text1"><span class="photo-color-3"></span>
+                        <p>#6090cd</p></div>
+                    <div class="text1"><span class="photo-color-4"></span>
+                        <p>#fec42c</p></div>
+                    <div class="text1"><span class="photo-color-5"></span>
+                        <p>#49c5d8</p></div>
+                    <div class="text1"><span class="photo-color-6"></span>
+                        <p>#90d355</p></div>
+                </div>
+            </div>
+            <div ng-show="navActive==4">
+                <h1>Layout布局</h1>
+            </div>
+            <div ng-show="navActive==5">
+                <h1>Buttons按钮</h1>
+                <h2>用法(颜色尺寸参考下表)</h2>
+                <h3>·实心按钮</h3>
+                <pre class="text1"><code>&lt;button class=&quot;button button-small1 button-theme&quot;&gt;主题色&lt;/button&gt;</code></pre>
+
+                <h3>·线框按钮</h3>
+                <pre class="text1"><code>&lt;button class=&quot;button button-small1 button-theme button-outline&quot;&gt;主题色&lt;/button&gt;</code></pre>
+
+                <h3>·全宽按钮</h3>
+                <pre class="text1"><code>&lt;button class=&quot;button  button-theme button-full&quot;&gt;主题色&lt;/button&gt;</code></pre>
+
+                <h3>·纯文字按钮</h3>
+                <pre class="text1"><code>&lt;button class=&quot;button button-theme button-clear&quot;&gt;主题色&lt;/button&gt;</code></pre>
+                <div>
+                    <table cellspacing="0" cellpadding="0">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>类名</th>
+                            <th>样式</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td rowspan="5">尺寸</td>
+                            <td>button-small1</td>
+                            <td>font-size: 20px; width: 120; height:60;</td>
+                        </tr>
+                        <tr>
+                            <td>button-small2</td>
+                            <td>font-size: 20px; width: 140; height:60;</td>
+                        </tr>
+                        <tr>
+                            <td>button-small3</td>
+                            <td>font-size: 24px; width: 160; height:60;</td>
+                        </tr>
+                        <tr>
+                            <td>button-small4</td>
+                            <td>font-size: 24px; width: 200; height:60;</td>
+                        </tr>
+                        <tr>
+                            <td>button-large</td>
+                            <td>font-size: 28px; width: 480; height:90;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">颜色</td>
+                            <td>button-theme</td>
+                            <td>background-color: #ff6622; color: #fff;</td>
+                        </tr>
+                        <tr>
+                            <td>button-themeGray</td>
+                            <td>background-color: #ddd; color: #fff;</td>
+                        </tr>
+                        <tr>
+                            <td>button-white</td>
+                            <td>background-color: #fff; color: #ff6622;</td>
+                        </tr>
+                        <tr>
+                            <td>button-whiteGray</td>
+                            <td>background-color: #fff; color: #ccc;</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-gray">
+                    <h4 class="font-title">小按钮</h4>
+                    <button class="margin-5-10 button button-small1 button-theme">主题色</button>
+                    <button class="margin-5-10 button button-small2 button-theme">主题色</button>
+                    <button class="margin-5-10 button button-small3 button-theme">主题色</button>
+                    <button class="margin-5-10 button button-small4 button-theme">主题色</button>
+                    <br>
+                    <div class="margin-5-10 button button-small1 button-themeGray">主题色-置灰</div>
+                    <div class="margin-5-10 button button-small2 button-themeGray">主题色-置灰</div>
+                    <div class="margin-5-10 button button-small3 button-themeGray">主题色-置灰</div>
+                    <div class="margin-5-10 button button-small4 button-themeGray">主题色-置灰</div>
+                    <br>
+                    <i class="margin-5-10 button button-small1 button-white">白色</i>
+                    <i class="margin-5-10 button button-small2 button-white">白色</i>
+                    <i class="margin-5-10 button button-small3 button-white">白色</i>
+                    <i class="margin-5-10 button button-small4 button-white">白色</i>
+                    <br>
+                    <a class="margin-5-10 button button-small1 button-whiteGray">白色-置灰</a>
+                    <a class="margin-5-10 button button-small2 button-whiteGray">白色-置灰</a>
+                    <a class="margin-5-10 button button-small3 button-whiteGray">白色-置灰</a>
+                    <a class="margin-5-10 button button-small4 button-whiteGray">白色-置灰</a>
+
+                    <h4 class="font-title">大按钮</h4>
+                    <div class="text-center">
+                        <button class="margin-5-10 button button-large button-theme ">主题色</button>
+                        <div class="margin-5-10 button button-large button-themeGray ">主题色-置灰</div>
+                        <i class="margin-5-10 button button-large button-white ">白色</i>
+                        <a class="margin-5-10 button button-large button-whiteGray ">白色-置灰</a>
+                    </div>
+
+                    <h4 class="font-title">线框按钮</h4>
+                    <button class="button button-small1 button-theme button-outline">主题色</button>
+                    <button class="button button-small2 button-theme button-outline">主题色</button>
+                    <div class="button button-small3 button-themeGray button-outline">主题色-置灰</div>
+                    <i class="button button-small4 button-white button-outline">白色</i>
+                    <h4 class="font-title">全宽按钮</h4>
+                    <button class="button  button-theme button-full">主题色</button>
+                    <div class="button  button-themeGray button-full">主题色-置灰</div>
+                    <button class="button  button-white button-block button-full">主题色</button>
+                    <div class="button  button-whiteGray button-block button-full">主题色-置灰</div>
+                    <h4 class="font-title">纯文字按钮</h4>
+                    <button class="button button-theme button-clear">主题色</button>
+                </div>
+
+            </div>
+            <div ng-show="navActive==6">
+                <h1>Tabs导航条</h1>
+                <h2>说明</h2>
+                <div class="text1">为了确保可读性，每项文字字数建议为2-4个汉字。字号为24px，色值 #333。</div>
+                <h2>用法</h2>
+                <h3>·2项内容</h3>
+                <div class="nav-top-tabs ">
+                    <div class="nav-tab margin-lr20 active">咨询跟进</div>
+                    <div class="nav-tab margin-lr20">全部咨询</div>
+                </div>
+                    <pre class="text1"><code>&lt;div class=&quot;nav-top-tabs&quot;&gt;
+    &lt;div class=&quot;nav-tab margin-lr20 active&quot;&gt;咨询跟进&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;全部咨询&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·3项内容</h3>
+                <div class="nav-top-tabs ">
+                    <div class="nav-tab margin-lr40 active">全部</div>
+                    <div class="nav-tab margin-lr40">邀请用户</div>
+                    <div class="nav-tab margin-lr40">VIP码</div>
+                </div>
+                    <pre class="text1"><code>&lt;div class=&quot;nav-top-tabs&quot;&gt;
+    &lt;div class=&quot;nav-tab margin-lr40 active&quot;&gt;全部&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr40&quot;&gt;邀请用户&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr40&quot;&gt;VIP码&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·4项内容</h3>
+                <div class="nav-top-tabs display-flex ">
+                    <div class="nav-tab margin-lr20 active">全部</div>
+                    <div class="nav-tab margin-lr20">微官网</div>
+                    <div class="nav-tab margin-lr20">微海报</div>
+                    <div class="nav-tab margin-lr20">微助力</div>
+                </div>
+                    <pre class="text1"><code>&lt;div class=&quot;nav-top-tabs display-flex&quot;&gt;
+    &lt;div class=&quot;nav-tab margin-lr20 active&quot;&gt;全部&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;微官网&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;微海报&lt;/div&gt;
+    &lt;div class=&quot;nav-tab margin-lr20&quot;&gt;微助力&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </div>
+            <div ng-show="navActive==7">
+                <h1>Controls控件</h1>
+                <h2>说明</h2>
+                <div class="text1">为了确保可读性，每项文字字数建议为2-4个汉字。字号为24px，色值 #333。</div>
+                <h2>用法</h2>
+                <h3>·Toggle - 开关</h3>
+                <ion-list class="item-t20 ">
+                    <ion-item class="item-button-right ">
+                        Hello
+                        <label class="toggle"><input type="checkbox">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+                    </ion-item>
+                </ion-list>
+                    <pre class="text1"><code>&lt;label class=&quot;toggle&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;
+    &lt;div class=&quot;track&quot;&gt;
+        &lt;div class=&quot;handle&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/label&gt;</code></pre>
+                <h3>Checkbox - 多选框</h3>
+                <ion-checkbox ng-model="emailNotification"
+                              ng-true-value="'Subscribed'"
+                              ng-false-value="'Unubscribed'" class="">
+                    Newsletter
+                </ion-checkbox>
+                    <pre class="text1"><code>&lt;ion-checkbox ng-model=&quot;emailNotification&quot;
+              ng-true-value=&quot;&#x27;Subscribed&#x27;&quot;
+              ng-false-value=&quot;&#x27;Unubscribed&#x27;&quot;&gt;
+    Newsletter
+&lt;/ion-checkbox&gt;</code></pre>
+                <h3>·Radio Button - 单选框</h3>
+                <ion-radio ng-value="item.value"
+                           ng-model="data.serverSide"
+                           ng-change="serverSideChange(item)"
+                           name="server-side" class="">
+                    aaa
+                </ion-radio>
+                <ion-radio ng-value="item.value"
+                           ng-model="data.serverSide"
+                           ng-change="serverSideChange(item)"
+                           name="server-side" class="">
+                    bbb
+                </ion-radio>
+                    <pre class="text1"><code>&lt;ion-radio ng-value=&quot;item.value&quot;
+           ng-model=&quot;data.serverSide&quot;
+           ng-change=&quot;serverSideChange(item)&quot;
+           name=&quot;server-side&quot;&gt;
+    aaa
+&lt;/ion-radio&gt;</code></pre>
+                <h3>·Time Select - 时间选择</h3>
+                <input ng-model="mydate" type="text" mobiscroll-datetime="setVisitDateTime" readonly="readonly"
+                       mobiscroll-instance="myInstance"/>
+                <pre class="text1"><code>&lt;input ng-model=&quot;mydate&quot; type=&quot;text&quot; mobiscroll-datetime=&quot;setVisitDateTime&quot; readonly=&quot;readonly&quot; mobiscroll-instance=&quot;myInstance&quot;/&gt;</code></pre>
+                    <pre class="text1"><code>//配置项
+$scope.mydate = new Date();
+    var now = new Date();
+    var dateTitle = &quot;&lt;p&gt;一旦有人助力/报名，截止时间不能再改了哦！&lt;/p&gt;&quot;
+    $scope.setVisitDateTime = {
+        animate: &#x27;fade&#x27;,
+        theme: &#x27;material&#x27;,      // 样式
+        lang: &#x27;zh&#x27;,    // 语言
+        mode: &#x27;mixed&#x27;,
+        display: &#x27;bottom&#x27;,  // 显示位置
+        buttons: [
+            &#x27;clear&#x27;,
+            &#x27;set&#x27;,
+            &#x27;cancel&#x27;
+        ],
+        clearText: &#x27;删除回访提醒&#x27;,
+        minWidth: 50,
+        headerText: dateTitle,
+        rows: 3
+    };</code></pre>
+
+                <h3>·Input Dialogs - 文字输入框</h3>
+                <button class="button button-small4 button-theme" ng-click="textInput()">点我呀！！！</button>
+                <div class="text1">
+                    使用的是项目组件multi_textinput，by吕立
+                </div>
+                <h3>·Footer Select List - 底部选择列表</h3>
+                <button class="button button-small4 button-theme" ng-click="showComboboxMask()">点我呀！！！</button>
+                <pre class="text1"><code>使用的是项目组件combobox，by周慧娟</code></pre>
+            </div>
+            <div ng-show="navActive==8">
+                <h1>List列表</h1>
+                <h2>说明</h2>
+                <div class="text1">1px的边还没添加。默认高度80px</div>
+                <h2>用法</h2>
+                <h3>·空白列表</h3>
+
+                <div class="bg-gray">
+                    <ion-list>
+                        <ion-item class="text-center">
+                            a.空白列表
+                        </ion-item>
+                        <br>
+                        <div class="item-100 text-center border-bottom-1 border-top-1">
+                            b.height=100px
+                        </div>
+                        <br>
+                        <div class="item-120 text-center border-bottom-1 border-top-1">
+                            c.height=120px
+                        </div>
+                    </ion-list>
+                    <br>
+                </div>
+                 <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        a.空白列表
+    &lt;/ion-item&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;item-100 text-center&quot;&gt;
+        b.height=100px
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;item-120 text-center&quot;&gt;
+        c.height=120px
+    &lt;/div&gt;
+&lt;/ion-list&gt;</code></pre>
+                <h3>·带说明文案的分割</h3>
+
+                <ion-list>
+                    <ion-item class="text-center">
+                        d.带说明文案的分割
+                    </ion-item>
+                    <ion-item class=" item-divider">
+                        d.Hello
+                    </ion-item>
+                    <ion-item ng-repeat="item in items">
+                        Hello, {{item.id}}!
+                    </ion-item>
+                    <ion-item class=" item-divider">
+                        d.Hello
+                    </ion-item>
+                    <ion-item ng-repeat="item in items">
+                        Hello, {{item.id}}!
+                    </ion-item>
+                </ion-list>
+                <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        d.带说明文案的分割
+    &lt;/ion-item&gt;
+    &lt;ion-item class=&quot; item-divider&quot;&gt;
+        d.Hello
+    &lt;/ion-item&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+    &lt;ion-item class=&quot; item-divider&quot;&gt;
+        d.Hello
+    &lt;/ion-item&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
+                <h3>·无文案分割</h3>
+
+                <div class="bg-gray">
+                    <ion-list class="item-t20">
+                        <ion-item ng-repeat="item in items">
+                            e.Hello, {{item.id}}!
+                        </ion-item>
+                    </ion-list>
+                    <ion-list class="item-t20">
+                        <ion-item ng-repeat="item in items">
+                            e.Hello, {{item.id}}!
+                        </ion-item>
+                    </ion-list>
+                </div>
+                <pre class="text1"><code>&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        e.Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;
+&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item ng-repeat=&quot;item in items&quot;&gt;
+        e.Hello, {{item.id}}!
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
+                <h3>·列表按钮</h3>
+
+                <ion-list class="item-t20">
+                    <ion-item class="text-center">
+                        f.列表按钮
+                    </ion-item>
+                    <ion-item class="item-button-right">
+                        f.Hello
+                        <button class="button button-small1 button-theme">aaa</button>
+                    </ion-item>
+                </ion-list>
+                <pre class="text1"><code>&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        f.列表按钮
+    &lt;/ion-item&gt;
+    &lt;ion-item class=&quot;item-button-right&quot;&gt;
+        f.Hello
+        &lt;button class=&quot;button button-small1 button-theme&quot;&gt;aaa&lt;/button&gt;
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
+                <h3>·头像列表</h3>
+
+                <ion-list class="item-t20">
+                    <ion-item class="text-center">
+                        e.头像列表
+                    </ion-item>
+                    <div class="item-100 item-photo border-bottom-1 border-top-1">
+                        <span class="photo">校</span>
+                        <div class="item-photo-text">校宝秀</div>
+                        <span class="item-star"></span>
+                    </div>
+                </ion-list>
+                <pre class="text1"><code>&lt;ion-list class=&quot;item-t20&quot;&gt;
+    &lt;ion-item class=&quot;text-center&quot;&gt;
+        e.头像列表
+    &lt;/ion-item&gt;
+    &lt;div class=&quot;item-100 item-photo&quot;&gt;
+        &lt;span class=&quot;photo&quot;&gt;校&lt;/span&gt;
+        &lt;div class=&quot;item-photo-text&quot;&gt;校宝秀&lt;/div&gt;
+        &lt;span class=&quot;item-star&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/ion-list&gt;</code></pre>
+
+            </div>
+            <div ng-show="navActive==9">
+                <h1>Cards卡片</h1>
+                <h2>说明</h2>
+                <div class="text1">1px的边还没添加。圆角只需添加border-radius-20</div>
+                <div class="text1">项目中使用：首页、咨询本跟进列表<br>文件：micro-index-app<br>micro-registrationbook-ongoing-app.html
+                </div>
+                <h2>用法</h2>
+                <h3>·直角</h3>
+                <div class="padding-tb20">
+                    <div class="cards margin-20 ">
+                        <div class="header text-center">Card Header</div>
+                        <div class="body">Card Content</div>
+                        <div class="footer text-center">Card Footer</div>
+                    </div>
+                    <div class="cards margin-20 ">
+                        <div class="header text-center">Card Header</div>
+                        <div class="body">Card Content</div>
+                    </div>
+                    <div class="cards margin-20 ">
+                        <div class="body">Card Content</div>
+                        <div class="footer text-center">Card Footer</div>
+                    </div>
+                    <div class="cards margin-20 ">
+                        <div class="body">Card Content</div>
+                    </div>
+
+                </div>
+                <pre class="text1"><code>&lt;div class=&quot;cards margin-20 &quot;&gt;
+    &lt;div class=&quot;header text-center&quot;&gt;Card Header&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;Card Content&lt;/div&gt;
+    &lt;div class=&quot;footer text-center&quot;&gt;Card Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·圆角</h3>
+                <div class="text1"></div>
+                <div class=" padding-tb20">
+                    <div class="cards margin-20 border-radius-20">
+                        <div class="header text-center">Card Header</div>
+                        <div class="body">Card Content</div>
+                        <div class="footer text-center">Card Footer</div>
+                    </div>
+                    <div class="cards margin-20 border-radius-20">
+                        <div class="header text-center">Card Header</div>
+                        <div class="body">Card Content</div>
+                    </div>
+                    <div class="cards border-radius-20 margin-20">
+                        <div class="body">Card Content</div>
+                        <div class="footer text-center">Card Footer</div>
+                    </div>
+                    <div class="cards margin-20 border-radius-20">
+                        <div class="body">Card Content</div>
+                    </div>
+
+                </div>
+                <pre class="text1"><code>&lt;div class=&quot;cards margin-20 border-radius-20&quot;&gt;
+    &lt;div class=&quot;header text-center&quot;&gt;Card Header&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;Card Content&lt;/div&gt;
+    &lt;div class=&quot;footer text-center&quot;&gt;Card Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                </ion-tabs>
+            </div>
+            <div ng-show="navActive==10">
+                <h1>Forms表单</h1>
+                <h2>说明</h2>
+                <div class="text1">这些都是组件形式的，项目中的样式不动。</div>
+                <h2>用法</h2>
+                <h3>·Search</h3>
+                <div class="text1">项目中使用：咨询本搜索页<br>文件：micro-registrationbook-search-app.html</div>
+                <div class="bar bar-header item-input-inset">
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-ios-search placeholder-icon"></i>
+                        <input type="search" placeholder="Search" class="cloned-text-input">
+                        <input type="search" placeholder="Search" class="previous-input-focus">
+                    </label>
+                    <button class="button button-theme button-clear">
+                        Cancel
+                    </button>
+                </div>
+                <h3>·Placeholder Labels</h3>
+                <ion-list>
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" placeholder="Your Username" class="text-center">
+                        </label>
+                        <label class="item item-input">
+                            <input type="text" placeholder="Your Password" class="text-center">
+                        </label>
+                    </div>
+                </ion-list>
+                <div class="text-center">
+                    <button class="button button-large button-theme margin-t80">Submit</button>
+                </div>
+                    <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;div class=&quot;list&quot;&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Your Username&quot; class=&quot;text-center&quot;&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Your Password&quot; class=&quot;text-center&quot;&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/ion-list&gt;
+&lt;div class=&quot;text-center&quot;&gt;
+    &lt;button class=&quot;button button-large button-theme margin-t80&quot;&gt;Submit&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·Inline Labels</h3>
+                <ion-list>
+                    <div class="list">
+                        <label class="item item-input">
+                            <span class="input-label">Username</span>
+                            <input type="text">
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">Password</span>
+                            <input type="password">
+                        </label>
+                    </div>
+                </ion-list>
+                <div class="text-center">
+                    <button class="button button-large button-theme margin-t80">Submit</button>
+                </div>
+                    <pre class="text1"><code>&lt;ion-list&gt;
+    &lt;div class=&quot;list&quot;&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+            &lt;span class=&quot;input-label&quot;&gt;Username&lt;/span&gt;
+            &lt;input type=&quot;text&quot;&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+            &lt;span class=&quot;input-label&quot;&gt;Password&lt;/span&gt;
+            &lt;input type=&quot;password&quot;&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/ion-list&gt;
+&lt;div class=&quot;text-center&quot;&gt;
+    &lt;button class=&quot;button button-large button-theme margin-t80&quot;&gt;Submit&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div ng-show="navActive==11">
+                <h1>Dialogs模拟框</h1>
+                <h2>说明</h2>
+                <div class="text1">
+                    使用ionic弹框，双按钮使用show、confirm，单按钮使用alert；按钮type类型确定button-save，取消button-cancel；内容垂直居中的话直接在template添加内容，其他样式需求，自己添加标签;1px的边还没添加。
+                </div>
+                <h2>用法</h2>
+                <h3>·双按钮带标题</h3>
+                <button class="button button-small3 button-theme" ng-click="showPopup()">
+                    带标题
+                </button>
+                    <pre class="text1"><code> $scope.showPopup = function () {
+        $scope.data = {}
+        var myPopup = $ionicPopup.show({
+            template: &#x27;&lt;div class=&quot;font-popbody&quot;&gt; aaaaa&lt;/div&gt;&#x27;,
+            title: &#x27;Enter Wi-Fi Password&#x27;,
+
+            scope: $scope,
+            buttons: [
+                {
+                    text: &#x27;取消&#x27;,
+                    type: &#x27;button-cancel&#x27;
+                },
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        });
+    };</code></pre>
+                <h3>·双按钮不带标题</h3>
+                <button class="button button-small3 button-theme" ng-click="showConfirm()">
+                    不带标题
+                </button>
+                    <pre class="text1"><code>$scope.showConfirm = function () {
+        var confirmPopup = $ionicPopup.confirm({
+            template: &#x27;Are you sure you want to eat this ice cream?&#x27;,
+            buttons: [
+                {
+                    text: &#x27;取消&#x27;,
+                    type: &#x27;button-cancel&#x27;
+                },
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        });
+    };</code></pre>
+                <h3>·单按钮表带标题</h3>
+                <button class="button button-small3 button-theme" ng-click="showAlert1()">
+                    带标题
+                </button>
+                    <pre class="text1"><code>$scope.showAlert1 = function () {
+        var alertPopup = $ionicPopup.alert({
+            title: &#x27;Don\&#x27;t eat that!&#x27;,
+            template: &#x27;&lt;div class=&quot;font-poplink&quot;&gt; aaaaa&lt;/div&gt;&#x27;,
+            buttons: [
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        })
+    };</code></pre>
+                <h3>·单按钮不带标题</h3>
+                <button class="button button-small3 button-theme" ng-click="showAlert2()">
+                    不带标题
+                </button>
+                    <pre class="text1"><code>$scope.showAlert2 = function () {
+        var alertPopup = $ionicPopup.alert({
+
+            template: &#x27;&lt;div class=&quot;poplink&quot;&gt; http://dev.xbx100.cn/GameViewShare?p=activity/oldandnewview?Id=1278&lt;/div&gt;&#x27;,
+            buttons: [
+                {
+                    text: &#x27;&lt;b&gt;确认&lt;/b&gt;&#x27;,
+                    type: &#x27;button-save&#x27;
+                }
+            ]
+        });
+    };</code></pre>
+
+                <h3>·成功提示（最多显示两行文字）</h3>
+                <button class="button button-small3 button-theme" ng-click="successAlert1()">
+                    迁移成功（一行文案）
+                </button>
+                <button class="button button-small3 button-theme" ng-click="successAlert2()">
+                    迁移成功（两行文案）
+                </button>
+                    <pre class="text1"><code>&lt;div class=&quot;data_migrationing&quot; ng-show=&quot;successAlert1Box&quot;  style=&quot;height: 100%&quot;&gt;
+    &lt;div class=&quot;mask_lock&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;mask_bg&quot;&gt;
+        &lt;div class=&quot;migration_box&quot;&gt;
+            &lt;div class=&quot;migration_success&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;load_reminds2&quot;&gt;
+                迁移成功
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·loading</h3>
+                <button class="button button-small3 button-theme" ng-click="showLoading()">
+                    loading
+                </button>
+                    <pre class="text1"><code>&lt;div class=&quot;data_migrationing&quot; ng-show=&quot;loading&quot;&gt;
+    &lt;div class=&quot;mask_lock&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;mask_bg&quot;&gt;
+        &lt;div class=&quot;migration_box&quot;&gt;
+            &lt;div class=&quot;short_loading&quot;&gt;&lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h3>·data move</h3>
+                <button class="button button-small3 button-theme" ng-click="showDataMove()">
+                    数据迁移
+                </button>
+                    <pre class="text1"><code>&lt;div class=&quot;data_migrationing&quot; ng-show=&quot;dataMove&quot;&gt;
+    &lt;div class=&quot;mask_lock&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;mask_bg&quot;&gt;
+        &lt;div class=&quot;migration_box&quot;&gt;
+            &lt;div class=&quot;data_migrationline&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;load_reminds2&quot;&gt;
+                正在迁移
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div ng-show="navActive==12">
+                <h1>Others其他一些组件</h1>
+                <h2>说明</h2>
+                <div class="text1">这些都是组件形式的，项目中的样式不动。</div>
+                <h2>用法</h2>
+                <h3>·场景提示样式</h3>
+                <div class="text1">项目中使用：首页<br>文件：micro-index-app</div>
+                <h3>场景冻结</h3>
+                <div class="sencesize">
+                    <div class="new_sence_lock">
+                        <div class="active_refreze_btn"></div>
+                    </div>
+                </div>
+                <h3>场景已截止</h3>
+                <div class="sencesize">
+                    <div class="sence_timeout">
+
+                    </div>
+                </div>
+                <h3>·遮罩提示</h3>
+                <div class="text1">项目中使用：遮罩层<br>文件：mask</div>
+                <h3>·错误页面</h3>
+                <div class="text1">项目中使用：报错<br>文件：Error.cshtml;<br>TemplateError.cshtml;<br>TemplateFreeze.cshtml</div>
+                <h3>·音乐播放图标</h3>
+                <div class="text1">
+                    项目中使用：模板页<br>文件：micro-preview-app.html;<br>micro-activity-oldandnew-view-app.html;<br>
+                    micro-activity-oldandnew-preview-app.html;<br>
+                    micro-activity-grassgrow-app.html;<br>micro-activity-grassavatar-app.html;<br>micro-activity-grassavatar-app.html
+                </div>
+
+                <h3>·顶部提示</h3>
+                <div class="text1">项目中使用：顶部信息提示<br>文件：error_remind</div>
+                <h3>中性提示</h3>
+                <div class="top-alert-warn">
+                    你的网络环境不佳，请在wifi下打开
+                </div>
+                <br>
+                <div class="top-alert-warn">
+                    <div class="alert-close">你的网络环境不佳，请在wifi下打开</div>
+                </div>
+                <h3>错误提示</h3>
+                <div class="top-alert-error">
+                    您的微官网包含敏感词汇，请重新修改！
+                </div>
+                <br>
+                <div class="top-alert-error">
+                    <div class="alert-close">您的微官网包含敏感词汇，请重新修改！</div>
+                </div>
+                <h3>成功提示</h3>
+                <div class="top-alert-success">
+                    操作成功！
+                </div>
+                <br>
+                <div class="top-alert-success">
+                    <div class="alert-close">操作成功！</div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-side-menu-content>
+
+    <!-- 左侧菜单 -->
+    <ion-side-menu side="left" class="nav padding-l40" width="{{navWidth}}">
+        <h1>Components</h1>
+        <ul ng-repeat="list in nav">
+            <li ng-click="showTab(list.id)" ng-class="list.id == navActive?'active':''">
+                {{list.en}}<span class="margin-lr10">{{list.ch}}</span>
+            </li>
+        </ul>
+    </ion-side-menu>
+</ion-side-menus>
+
+
+<!--编辑框-->
+<div class="ComboboxMask" ng-style="{'display':comboboxData.isShow?'block':'none'}">
+    <div class="lockMask"></div>
+    <div class="ComboboxInfo">{{comboboxData.info}}</div>
+    <div class="Select_list">
+                        <span ng-repeat="item in comboboxData.viewList"
+                              ng-click="hideComboboxMask()">{{item.name}}</span>
+    </div>
+</div>
+<!--底部下拉选项-->
+<div ng-show="isShow">
+    <div class="lockMask_input" on-swipe="onSwipe($event)"></div>
+    <div class="mutil_input_wrap" on-swipe="onSwipe($event)">
+        <div class="mutil_input_box">
+            <div class="mutil_input_item" ng-repeat="item in viewList">
+                <span class="mutil_title">123</span>
+                <input class="mutil_input" ng-model="item.inputModel"/>
+                <span class="editor_text_callback"><label>100</label>&nbsp;&frasl;&nbsp;<label>160</label></span>
+            </div>
+        </div>
+        <button type="button" class="button-cancel-callback" ng-click="cancel()">取消</button>
+        <button type="button" class="button-sure-callback" ng-click="sure()">确定</button>
+    </div>
+</div>
+<!--模拟框html-->
+<div class="data_migrationing" ng-show="successAlert1Box" style="height: 100%">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="migration_success"></div>
+            <div class="load_reminds2">
+                迁移成功
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="data_migrationing" ng-show="successAlert2Box">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="migration_success"></div>
+            <div class="load_reminds2">
+                迁移成功<br>迁移成功迁移成功
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data_migrationing" ng-show="loading">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="short_loading"></div>
+
+        </div>
+    </div>
+</div>
+<div class="data_migrationing" ng-show="dataMove">
+    <div class="mask_lock"></div>
+    <div class="mask_bg">
+        <div class="migration_box">
+            <div class="data_migrationline"></div>
+            <div class="load_reminds2">
+                正在迁移
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

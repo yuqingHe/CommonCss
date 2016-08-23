@@ -4,13 +4,19 @@
  *时间：2016-8-18
  *邮箱：tianyu.chen@xiaobao100.com | cty8998@163.com
 **/
+var shiningStarStatistics = shiningStarStatistics || {};
+
+shiningStarStatistics.goToMobile = function () {
+    var timer;
+    if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
+        window.location.href = '/mobile.html';
+    }
+}
+
+//初始化
+function init() {
+    shiningStarStatistics.goToMobile();
+}
+init();
 
 
-
-function init(){
-    //判断是否为移动设备
-     if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
-            window.location.href = 'http://m.baidu.com';
-        }
-}   
-init();   
