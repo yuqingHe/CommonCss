@@ -1,0 +1,17 @@
+//定义变量与函数
+/* px to rem */
+@function temSize($num) {
+  @return ceil($num /40*100)/100*1rem;
+}
+//导航条
+.nav-top-tabs{ height: temSize(80);line-height: temSize(80);text-align: center;background-color: #fff;border-bottom: 1px solid #ccc;
+  .nav-tab{width: temSize(120); text-align: center; font-size: temSize(24);color: #333; display: inline-block;position: relative;}
+  .active:before{content: '';position: absolute;bottom: 0;left:0;margin-left: temSize(10);width: temSize(100);border: 2px solid #ff6622; }
+}
+.display-flex{display: flex;}
+
+.nav-footer-tabs{ height: temSize(90);text-align: center;background-color: #fff;border-bottom: 1px solid #ccc;
+  .nav-tab{width: temSize(120); text-align: center; font-size: temSize(20);color: #333; display: inline-block;position: relative;padding: temSize(10) 0;}
+  .nav-text{font-size: temSize(20);color: #333;}
+  .icon-size-40{display: block; margin:0 auto;}
+}

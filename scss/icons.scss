@@ -1,0 +1,50 @@
+//定义变量与函数
+/* px to rem */
+@function temSize($num) {
+  @return ceil($num /40*100)/100*1rem;
+}
+/*图标尺寸 ionic是ion开头命名*/
+.icon-size-40{width: temSize(40);height: temSize(40);background-size:100%;background-repeat: no-repeat;display: inline-block;}
+.icon-size-36{width: temSize(36);height: temSize(36);background-size:100%;background-repeat: no-repeat;display: inline-block;}
+//具体icon
+.icon-invite{background-image: url("../img/icon_invite.png");}
+.icon-vip{background-image: url("../img/icon_vip.png");}
+.icon-info{background-image: url("../img/icon_info.png");}
+.icon-help{background-image: url("../img/icon_help.png");}
+.icon-terms{background-image: url("../img/icon_terms.png");}
+.icon-ip{background-image: url("../img/icon_ip.png");}
+.icon-bind{background-image: url("../img/icon_bind.png");}
+.icon-erp{background-image: url("../img/icon_erp.png");}
+.icon-login{background-image: url("../img/icon_login.png");}
+.icon-set{background-image: url("../img/icon_set.png");}
+.icon-organization{background-image: url("../img/icon_organization.png");}
+.icon-user{background-image: url("../img/icon_user.png");}
+.icon-psd{background-image: url("../img/icon_psd.png");}
+.icon-suggest{background-image: url("../img/icon_suggest.png");}
+.icon-logout{background-image: url("../img/icon_logout.png");}
+.icon-myscene{background-image: url("../img/icon_myscene.png");}
+.icon-rbook{background-image: url("../img/icon_rbook.png");}
+.icon-usercenter{background-image: url("../img/icon_usercenter.png");}
+.icon-edit{background-image: url("../img/icon_edit.png");}
+.icon-nextpage{background-image: url("../img/icon_nextpage.png");}
+.icon-backpage{background-image: url("../img/icon_backpage.png");}
+.icon-project{background-image: url("../img/icon_project.png");}
+.icon-save{background-image: url("../img/icon_save.png");}
+.icon-preview{background-image: url("../img/icon_preview.png");}
+.icon-music{background-image: url("../img/icon_music.png");}
+.icon-bg{background-image: url("../img/icon_bg.png");}
+.icon-statistics{background-image: url("../img/icon_statistics.png");}
+.icon-lbook{background-image: url("../img/icon_lbook.png");}
+.icon-share{background-image: url("../img/icon_share.png");}
+.icon-other{background-image: url("../img/icon_other.png");}
+.icon-ydiamond{background-image: url("../img/icon_ydiamond.png");}
+.icon-bdiamond{background-image: url("../img/icon_bdiamond.png");}
+.icon_write{background-image: url("../img/icon_write.png");}
+.icon_bshare{background-image: url("../img/icon_bshare.png");}
+.icon_reflash{background-image: url("../img/icon_reflash.png");}
+.icon_download{background-image: url("../img/icon_download.png");}
+.icon_more{background-image: url("../img/icon_more.png");}
+.icon_pdown{background-image: url("../img/icon_pdown.png");}
+.icon_phone{background-image: url("../img/icon_phone.png");}
+.icon_shield{background-image: url("../img/icon_shield.png");}
+.icon_lock{background-image: url("../img/icon_lock.png");}

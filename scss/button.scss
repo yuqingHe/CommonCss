@@ -1,0 +1,37 @@
+//定义变量与函数
+/* px to rem */
+@function temSize($num) {
+  @return ceil($num /40*100)/100*1rem;
+}
+/* 按钮 */
+//覆盖ionic
+.button{overflow: hidden;}
+//自定义尺寸
+.button-small1{font-size: temSize(20);height: temSize(60);min-height: temSize(60);line-height: temSize(60); width: temSize(120); border-radius: temSize(60); }
+.button-small2{font-size: temSize(20);height: temSize(60);min-height: temSize(60);line-height: temSize(60); width: temSize(140); border-radius: temSize(60); }
+.button-small3{font-size: temSize(24);height: temSize(60);min-height: temSize(60);line-height: temSize(60); width: temSize(160); border-radius: temSize(60); }
+.button-small4{font-size: temSize(24);height: temSize(60);min-height: temSize(60);line-height: temSize(60); width: temSize(200); border-radius: temSize(60); }
+.button-large{padding: 0 ;font-size: temSize(28);height: temSize(90);min-height: temSize(90);line-height: temSize(90); width: temSize(480); border-radius: temSize(90); }
+//自定义按钮颜色 需覆盖ionic默认点击 hover的颜色
+.button-theme{@include theme-bg-color; color: #fff;}
+.button-themeGray{background-color: #ddd;color: #fff;}
+.button-white{background-color: #fff;@include theme-color;}
+.button-whiteGray{background-color: #fff;color: #ccc;}
+
+.button.button-theme:hover{color: #fff;}
+.button.button-themeGray:hover{color: #fff;}
+.button.button-white:hover{@include theme-color;}
+.button.button-whiteGray:hover{color: #ccc;}
+
+.button.button-theme.activated{@include theme-bg-color;  border-color: transparent;}
+.button.button-themeGray.activated{background-color: #ddd; border-color: transparent;}
+.button.button-white.activated{background-color: #fff;border-color: transparent;}
+.button.button-whiteGray.activated{background-color: #fff;border-color: transparent;}
+//直角全宽按钮
+.button.button-full{border-radius: 0; width: 100%;font-size: temSize(28);height: temSize(100);;min-height: temSize(100); line-height: temSize(100);}
+//线框按钮
+.button.button-theme.button-outline{  @include theme-border-color;border-width: 2px; background: transparent; @include theme-color; line-height: temSize(56);}
+.button.button-themeGray.button-outline{border-color: #ddd;background: transparent;color: #ddd;line-height: temSize(56);}
+.button.button-white.button-outline{border-color: #fff;background: transparent; color: #fff;line-height: temSize(56);}
+//纯文字按钮
+.button.button-theme.button-clear { border-color: transparent; background: none; box-shadow: none; @include theme-color;}

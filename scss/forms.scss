@@ -1,0 +1,9 @@
+//定义变量与函数
+/* px to rem */
+@function temSize($num) {
+  @return ceil($num /40*100)/100*1rem;
+}
+/*forms表单*/
+.item-input input[type="text"]{padding: 0 ; font-size: temSize(24); color: #333; }
+.input-label{width: temSize(95); padding-right: temSize(25); color: #aaa;font-size: temSize(20);}
+.item-input-wrapper{background-color: #fff; border: 1px #ccc solid; border-radius: 6px;}

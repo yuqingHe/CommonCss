@@ -1,0 +1,78 @@
+//定义变量与函数
+/* px to rem */
+@function temSize($num) {
+  @return ceil($num /40*100)/100*1rem;
+}
+/*项目中剥离出来*/
+//加载框样式，修改过
+.popup-container.active .popup,.popup-container .popup{background:#fff; border-radius: temSize(20);width:temSize(560);min-height: temSize(290)}
+.popup-head { border: none; padding: 0;}
+.popup-title{font-size: temSize(28);line-height: temSize(110); color: #333;}
+//.popup-body{ min-height: temSize(130);padding: temSize(40);padding-top: 0; }
+.popup-buttons{min-height: temSize(80); padding:0;border-top:1px solid #ddd;}
+.popup-body,.popup-body2{min-height: temSize(170);  font-size:.8rem; display: table; width:100%;padding: temSize(40); padding-top: 0;
+  span{text-align:center;display:table-cell;vertical-align:middle; line-height: 1.5;height: temSize(200); font-size: temSize(28);color: #333; padding-top: temSize(40);}
+}
+.popup-body .poplink{ display:table-cell;vertical-align:middle; line-height: 1.5;height: temSize(200); font-size: temSize(24);color: #1e7dff; padding-top: temSize(40);}
+
+.popup-body .confirm_title{font-size:0.7rem;color:#333;}
+.popup-body .confirm_content{font-size:0.5rem;color:#666;margin-top:0.5rem;}
+
+.popup-buttons .button {margin:0; font-size:temSize(24); min-height: temSize(80); @include theme-color;background:none; }
+.popup-buttons .button.active,.popup-buttons .button.activated{border:none; background:none;}
+.button.button-save{@include theme-color;background:transparent;border:none;}
+.button.button-cancel{@include theme-color; background:transparent;border:none;border-right:1px solid #ddd;}
+.button.button-cancel.active,.button.button-cancel.activated{border-right:1px solid #ddd;}
+.backdrop{ background-color: rgba(0, 0, 0, 0.7);}//覆盖ionic
+
+// 数据迁移中遮罩
+.data_migrationing{padding: 0;border: 0;vertical-align: baseline;font: inherit;font-size: 100%;
+  .mask_lock{opacity: 0.8;position: absolute;z-index: 110;left: 0;top: 0;right: 0;bottom: 0;width: 100%;height: 100%;background-color: #000;}
+  .mask_bg{height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 130;
+    .migration_box{
+      width:temSize(320);min-height:temSize(240);background-color: white;border-radius:temSize(20);top:50%;
+      position: relative;margin: 0 auto;margin-top:temSize(-120);
+      .data_migrationline{height:temSize(22);width:temSize(240);margin: 0 auto;top:temSize(80);position: relative;background-color: #ffd02f;border-radius:temSize(10);background-size:temSize(40) temSize(40);
+        background-image: linear-gradient(45deg, transparent temSize(0), transparent temSize(9), #ffc120 temSize(9), #ffc120 temSize(29), transparent temSize(29), transparent temSize(38), #ffc120 temSize(39));
+        -webkit-animation: warning-animation 500ms infinite linear;
+        -moz-animation: warning-animation 500ms infinite linear;
+        animation: warning-animation 500ms infinite linear;
+      }
+      .load_reminds{position: relative;top: temSize(118);font-size: temSize(24);text-align: center;}
+      .migration_success{position: relative;top: temSize(66);margin: 0 auto;width:temSize(72);height:temSize(52);background:url("../img/migration_success.png") $img-pozC;@include background-size100;}
+      .load_reminds2{font-size: temSize(24);text-align: center;position: relative;top: temSize(92);color: #333333; line-height: 1.5;}
+      .short_loading{ position: relative;top: temSize(66);margin: 0 auto;width:temSize(120);height:temSize(120);background:url("../img/shortLoading-icon.png") $img-pozC;@include background-size100;
+        -webkit-animation: circle 1s infinite linear;
+        -moz-animation: circle 1s infinite linear;
+        animation: circle 1s infinite linear;
+      }
+
+
+    }
+  }
+}
+@-webkit-keyframes warning-animation {
+  0% {background-position: temSize(0) temSize(0);}
+  100% {background-position: temSize(40) temSize(0);}
+}
+@-moz-keyframes warning-animation {
+  0% {background-position: 0 0;}
+  100% {background-position: temSize(40) temSize(0);}
+}
+@keyframes warning-animation {
+  0% {background-position: 0 0;}
+  100% {background-position: temSize(40) temSize(0);}
+}
+@-webkit-keyframes circle{
+  0%{ transform:rotate(0deg); }
+  100%{ transform:rotate(360deg); }
+}
+@-moz-keyframes circle{
+  0%{ transform:rotate(0deg); }
+  100%{ transform:rotate(360deg); }
+}
+@keyframes circle {
+  0%{ transform:rotate(0deg); }
+  100%{ transform:rotate(360deg); }
+}
+

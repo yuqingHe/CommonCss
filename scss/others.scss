@@ -1,0 +1,113 @@
+//定义变量与函数
+/* px to rem */
+@function temSize($num) {
+  @return ceil($num /40*100)/100*1rem;
+}
+//场景样式
+//.new_sence_lock{
+//  position: absolute; top:0; left:0; width:100%; height:100%;background:url("../img/lock.png");background-size: 100% 100%;
+//}
+//.active_refreze_btn{width: temSize(160);height: temSize(84);margin: 0 auto;margin-top: temSize(83);
+//  background:url("../img/feedback-form-refreze.png");background-size: 100% 100%;}
+.sencesize{height: temSize(220);width: temSize(600);margin: auto;}
+.new_sence_lock{
+  padding-top: temSize(83); width:100%; height:100%;background:url("../img/lock.png");background-size: 100% 100%;
+}
+.active_refreze_btn{width: temSize(160);height: temSize(84);margin: 0 auto;;
+  background:url("../img/feedback-form-refreze.png");background-size: 100% 100%;}
+
+.sence_timeout{
+  padding-top: temSize(83); width:100%; height:100%;background: rgba(0, 0, 0, 0.7);
+  &:before{content: "";  width: 1.75rem;  height: 1.75rem;  display: block;background: url("../img/icon15.png") no-repeat;  -webkit-background-size: 100% 100%;  background-size: 100% 100%;  position: relative; left: 50%;  margin-left: -.875rem;}
+}
+//报错
+.error_page,.error_page2 {
+  height: 100%;
+  width: 100%;
+  background: url(../img/error_page.jpg) no-repeat center center;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  position: relative; }
+.error_page2{  background: url(../img/error_page2.jpg) no-repeat center center;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;}
+.error_page_text1 {
+  color: #202c30;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 5.38rem;
+  left: 3.5rem; }
+.error_page_text2 {
+  color: #fff;
+  width:9.35rem;height:2.25rem;background:#5a5a5a; border:#000 2px solid; line-height:2.25rem; text-align:center;
+  font-size: 0.75rem;
+  position: absolute;
+  top: 1.35rem;
+  left: .9rem; }
+.error_page_text3 {
+  color: #202c30;
+  width:10.5rem;height:6.5rem;background: url("../img/error_page2_textbg.png") no-repeat center center;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  line-height:1.5; text-align:center;
+  font-size: 0.7rem; padding-top:1.5rem;
+  position: absolute;
+  top: 8.85rem;
+  left: 50%; margin-left:-5.25rem; }
+.back_to_homepage {
+  height: 2.05rem;
+  line-height: 2.05rem;
+  width: 8.81rem;
+  font-size: 0.7rem;
+  background: #ff8711;
+  border: 0.1rem solid #6b7b80;
+  color: #fff;
+  text-align: center;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  margin-left: -4.4rem;
+  bottom: 3.65rem; }
+
+
+/*顶部提示*/
+.top-alert-warn{width: temSize(640); height: temSize(80);  background-color: #feda13; font-size: temSize(24);color: #333;padding: temSize(25) temSize(40); text-align: center;}
+.top-alert-error{width: temSize(640); height: temSize(80);  background-color: #f7424f; font-size: temSize(24);color: #fff;padding: temSize(25) temSize(40); text-align: center;}
+.top-alert-success{width: temSize(640); height: temSize(80);  background-color: #3990e1; font-size: temSize(24);color: #fff;padding: temSize(25) temSize(40); text-align: center;}
+.alert-close{padding-right: temSize(40);position: relative;text-align: left;
+  &:after{content: "";width: temSize(30);height: temSize(30); display: block;position: absolute;top: 50%;right: 0;margin-top: temSize(-15);background: url("../img/top-alert-close-icon.png") no-repeat center center;@include background-size100;}
+}
+
+/*音乐播放图标位置-项目来*/
+.btnGroup3{position:absolute; top:.49rem; left:0; z-index: 999}
+.btnG3_edit,.btnG3_publish{margin-left:.5rem; width:2.16rem; height:2.16rem; @include face-radius;}
+.btnG3_music,.btnG3_musicon{width:1.5rem; height:1.5rem; @include face-radius; border: none;}
+.btnG3_edit{background:rgba(0,0,0,.5) url("../img/icon1_edit.png") no-repeat $img-pozC;@include background-size100;}
+.btnG3_music{background:rgba(0,0,0,.5) url("../img/site_edit_music_no.png") no-repeat $img-pozC;@include background-size100;}
+.btnG3_musicon{background:rgba(0,0,0,.5) url("../img/site_edit_music.png") no-repeat $img-pozC;@include background-size100;animation: 2s linear 0s normal none infinite rotate-s1;-webkit-animation:2s linear 0s normal none infinite rotate-s1;}
+.btnG3_publish{background:rgba(0,0,0,.5) url("../img/icon1_publish.png") no-repeat $img-pozC;@include background-size100;}
+.btnGroup3 button span{display: block; width:2.16rem; text-align: center; position: absolute; color:#394e53; margin-top:1.3rem; font-size:.75rem;}
+
+.audio_pos{position:absolute;}
+.audio_upper_left{left:temSize(20);top:temSize(40);}
+.audio_upper_right{right:temSize(20);top:temSize(40);}
+.audio_bottom_left{left:temSize(20);bottom:temSize(40);}
+.audio_bottom_right{right:temSize(20);bottom:temSize(40);}
+
+//音乐旋转动画 {
+@keyframes rotate-s1{
+  from{-webkit-transform:rotate(0deg);}
+  to{-webkit-transform:rotate(360deg);}
+}
+@-webkit-keyframes rotate-s1{
+  from{-webkit-transform:rotate(0deg);}
+  to{-webkit-transform:rotate(360deg);}
+}
