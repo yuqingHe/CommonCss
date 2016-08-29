@@ -17,6 +17,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'css/style.css': 'scss/main.scss',
+                    'css/ionic.css': 'scss/ionic-modify.scss'
                 },
                 options: {
                     sourcemap: 'true'
