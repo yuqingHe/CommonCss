@@ -39,6 +39,7 @@ pre{ background-color:#f5f5f5;border-left: 5px solid #D7DBE4; padding: 0 10px; m
 .photo-color-5{background-color: #49c5d8;}
 .photo-color-6{background-color: #90d355;}
 
+
 .pc-head{ background-image: url("../img/head-bg.png") ; background-size: 100% auto; height: 160px;
   .head-content{width: 1000px; height: 100%;margin: auto; position: relative;}
   .logo{ background-image: url("../img/xbx-logo.png");  margin-top: 50px;width: 219px;height: 69px;background-size: 100% auto;display: inline-block;}
@@ -97,31 +98,9 @@ pre{ background-color:#f5f5f5;border-left: 5px solid #D7DBE4; padding: 0 10px; m
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .icon-row{
   div{margin: temSize(20);}
 }
 
-@media screen and (max-width: 800px) {
-  .show-pc{display: none;}
-}
-@media screen and (min-width: 800px) {
-  .show-mobile{display: none;}
-}
 //布局
 .layout-bg{width:700px;height:1500px;background-image: url("../img/layout.png") ; background-size: 100% auto;}
