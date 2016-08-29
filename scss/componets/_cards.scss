@@ -1,8 +1,4 @@
-//定义变量与函数
-/* px to rem */
-@function temSize($num) {
-  @return ceil($num /40*100)/100*1rem;
-}
+
 /*Cards卡片*/
 .cards{
   background-color: #fff; position: relative;

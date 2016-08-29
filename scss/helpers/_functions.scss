@@ -1,0 +1,7 @@
+//定义变量与函数
+/* px to rem 
+   1rem = 40px 
+*/
+@function temSize($num) {
+  @return ceil($num /40*100)/100*1rem;
+}

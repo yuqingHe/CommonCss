@@ -1,0 +1,187 @@
+//sass 通用文档
+//----------------------
+//作者：陈天宇
+//时间：2016年8月25日
+//邮箱：tianyu.chen@xiaobao100.com | cty8998@163.com
+//说明：预定义一些通用的样式，需要时直接调用 refrence by  https://github.com/zhangxinxu/zxx.lib.css
+//----------------------
+
+
+/* ---------------------single CSS----------------------- */
+/* display */
+.dn{display:none;}
+.di{display:inline;}
+.db{display:block;}
+.dib{display:inline-block;} /* if the element is block level(eg. div, li), using 'inline_any' instead */
+/* height */
+
+/* width */
+/* fixed width value */
+
+/* percent width value */
+
+/* line-height */
+
+
+/* margin */
+.margin-10{margin: temSize(10);}
+.margin-lr10{margin-left: temSize(10);margin-right: temSize(10);}
+.margin-tb10{margin-top: temSize(10);margin-bottom: temSize(10);}
+.margin-t10{margin-top: temSize(10);}
+.margin-l10{margin-left: temSize(10);}
+.margin-r10{margin-right: temSize(10);}
+.margin-b10{margin-bottom: temSize(10);}
+
+.margin-20{margin: temSize(20);}
+.margin-lr20{margin-left: temSize(20);margin-right: temSize(20);}
+.margin-tb20{margin-top: temSize(20);margin-bottom: temSize(20);}
+.margin-t20{margin-top: temSize(20);}
+.margin-l20{margin-left: temSize(20);}
+.margin-r20{margin-right: temSize(20);}
+.margin-b20{margin-bottom: temSize(20);}
+
+.margin-40{margin: temSize(40);}
+.margin-lr40{margin-left: temSize(40);margin-right: temSize(40);}
+.margin-tb40{margin-top: temSize(40);margin-bottom: temSize(40);}
+.margin-t40{margin-top: temSize(40);}
+.margin-l40{margin-left: temSize(40);}
+.margin-r40{margin-right: temSize(40);}
+.margin-b40{margin-bottom: temSize(40);}
+
+.margin-80{margin: temSize(80);}
+.margin-lr80{margin-left: temSize(80);margin-right: temSize(80);}
+.margin-tb80{margin-top: temSize(80);margin-bottom: temSize(80);}
+.margin-t80{margin-top: temSize(80);}
+.margin-l80{margin-left: temSize(80);}
+.margin-r80{margin-right: temSize(80);}
+.margin-b80{margin-bottom: temSize(80);}
+/* margin negative */
+
+/* padding */
+.padding-20{padding: temSize(20);}
+.padding-lr20{padding-left: temSize(20);padding-right: temSize(20);}
+.padding-tb20{padding-top: temSize(20);padding-bottom: temSize(20);}
+.padding-t20{padding-top: temSize(20);}
+.padding-l20{padding-left: temSize(20);}
+.padding-r20{padding-right: temSize(20);}
+.padding-b20{padding-bottom: temSize(20);}
+
+.padding-40{padding: temSize(40);}
+.padding-lr40{padding-left: temSize(40);padding-right: temSize(40);}
+.padding-tb40{padding-top: temSize(40);padding-bottom: temSize(40);}
+.padding-t40{padding-top: temSize(40);}
+.padding-l40{padding-left: temSize(40);}
+.padding-r40{padding-right: temSize(40);}
+.padding-b40{padding-bottom: temSize(40);}
+
+.padding-80{padding: temSize(80);}
+.padding-lr80{padding-left: temSize(80);padding-right: temSize(80);}
+.padding-tb80{padding-top: temSize(80);padding-bottom: temSize(80);}
+.padding-t80{padding-top: temSize(80);}
+.padding-l80{padding-left: temSize(80);}
+.padding-r80{padding-right: temSize(80);}
+.padding-b80{padding-bottom: temSize(80);}
+
+/* border-color*/
+
+/* background-color name rule: bg - (key word/Hex color) |-> All colors are safe color */
+
+/* font-size */
+
+/* font-family */
+
+/* font-style */
+.n{font-weight:normal; font-style:normal;}
+.b{font-weight:bold;}
+.i{font-style:italic;}
+/* text-align */
+.tc{text-align:center;}
+.tr{text-align:right;}
+.tl{text-align:left;}
+.tj{text-align:justify;}
+/* text-decoration */
+.tdl{text-decoration:underline;}
+.tdn,.tdn:hover,.tdn a:hover,a.tdl:hover{text-decoration:none;}
+/* letter-spacing */
+.lt-1{letter-spacing:-1px;}
+.lt0{letter-spacing:0;}
+.lt1{letter-spacing:1px;}
+/* white-space */
+.nowrap{white-space:nowrap;}
+/* word-wrap */
+.bk{word-wrap:break-word;}
+/* vertical-align */
+.vm{vertical-align:middle;}
+.vtb{vertical-align:text-bottom;}
+.vb{vertical-align:bottom;}
+.vt{vertical-align:top;}
+.vn{vertical-align:-2px;}
+/* float */
+.l{float:left;}
+.r{float:right;}
+/* clear */
+.cl{clear:both;}
+/* position */
+.rel{position:relative;}
+.abs{position:absolute;}
+/*z-index*/
+.zx1{z-index:1;}
+.zx2{z-index:2;}
+/* overflow */
+.ovh{overflow:hidden;}
+.ova{overflow:auto;}
+/* visibility */
+.vh{visibility:hidden;}
+.vv{visibility:visible;}
+/* zoom */
+.z{*zoom:1;}
+
+/* background-color */
+.color-theme{background-color: #ff6622;}
+.color-white{background-color: #fff;}
+.color-light{background-color: #ddd;}
+.color-stable{background-color: #ccc;}
+.color-positive{background-color: #2a97ec;}
+.color-alert{background-color: #f7424f;}
+.color-energized{background-color: #feda13;}
+.color-dark{background-color: #333;}
+
+.photo-color-1{background-color: #ff6e48;}
+.photo-color-2{background-color: #e3547f;}
+.photo-color-3{background-color: #6090cd;}
+.photo-color-4{background-color: #fec42c;}
+.photo-color-5{background-color: #49c5d8;}
+.photo-color-6{background-color: #90d355;}
+
+
+/* ------------------- multiply CSS ------------------ */
+// 对齐居中
+.auto{margin-left:auto; margin-right:auto;}
+//清除浮动
+.fix{*zoom:1;}
+.fix:after{display:table; content:''; clear:both;}
+//单行文字超出省略
+.ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+//表格布局
+.cell{display:table-cell; *display:inline-block; width:2000px; *width:auto;}
+.cell_bk{display:table; width:100%; table-layout:fixed; word-wrap:break-word;}
+
+//===========================
+//          项目中
+//===========================
+
+/* 文字样式 */
+.font-title{font-size: temSize(28); color: #333;}
+.font-body{font-size: temSize(24); color: #333;}
+.font-sub{font-size: temSize(28); color: #aaa;}
+.font-help{font-size: temSize(20); color: #81a2cd;}
+.text-shadow{text-shadow: 0 1px 4px #ddd; -webkit-text-shadow: 0 1px 4px #ddd; }
+.font-popbody{font-size: temSize(20);color: #666;}
+
+
+/*1px边 在安卓下可能有问题*/
+.border-bottom-1,.border-right-1,.border-top-1,.border-left-1{position: relative;}
+.border-bottom-1::after { width: 500%; content: ""; position: absolute; bottom: 0; height: 1px; background: #ddd; left: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 bottom; transform: scale(0.5); transform-origin: 0 bottom;}
+.border-right-1::after { width: 1px; content: ""; position: absolute; right: 0; height: 500%; background: #ddd; top: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 top; transform: scale(0.5); transform-origin: 0 top;}
+.border-top-1::before { width: 500%; content: ""; position: absolute; left: 0; height: 1px; background: #ddd; top: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 top; transform: scale(0.5); transform-origin: 0 top;}
+.border-left-1::before { width: 1px; content: ""; position: absolute; left: 0; height: 500%; background: #ddd; top: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 top; transform: scale(0.5); transform-origin: 0 top;}

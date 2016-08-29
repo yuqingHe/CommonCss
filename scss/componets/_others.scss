@@ -1,8 +1,4 @@
-//定义变量与函数
-/* px to rem */
-@function temSize($num) {
-  @return ceil($num /40*100)/100*1rem;
-}
+
 //场景样式
 //.new_sence_lock{
 //  position: absolute; top:0; left:0; width:100%; height:100%;background:url("../img/lock.png");background-size: 100% 100%;
@@ -90,10 +86,10 @@
 .btnGroup3{position:absolute; top:.49rem; left:0; z-index: 999}
 .btnG3_edit,.btnG3_publish{margin-left:.5rem; width:2.16rem; height:2.16rem; @include face-radius;}
 .btnG3_music,.btnG3_musicon{width:1.5rem; height:1.5rem; @include face-radius; border: none;}
-.btnG3_edit{background:rgba(0,0,0,.5) url("../img/icon1_edit.png") no-repeat $img-pozC;@include background-size100;}
-.btnG3_music{background:rgba(0,0,0,.5) url("../img/site_edit_music_no.png") no-repeat $img-pozC;@include background-size100;}
-.btnG3_musicon{background:rgba(0,0,0,.5) url("../img/site_edit_music.png") no-repeat $img-pozC;@include background-size100;animation: 2s linear 0s normal none infinite rotate-s1;-webkit-animation:2s linear 0s normal none infinite rotate-s1;}
-.btnG3_publish{background:rgba(0,0,0,.5) url("../img/icon1_publish.png") no-repeat $img-pozC;@include background-size100;}
+.btnG3_edit{background:rgba(0,0,0,.5) url("../img/icon1_edit.png") no-repeat no-repeat center center;@include background-size100;}
+.btnG3_music{background:rgba(0,0,0,.5) url("../img/site_edit_music_no.png") no-repeat no-repeat center center;@include background-size100;}
+.btnG3_musicon{background:rgba(0,0,0,.5) url("../img/site_edit_music.png") no-repeat no-repeat center center;@include background-size100;animation: 2s linear 0s normal none infinite rotate-s1;-webkit-animation:2s linear 0s normal none infinite rotate-s1;}
+.btnG3_publish{background:rgba(0,0,0,.5) url("../img/icon1_publish.png") no-repeat no-repeat center center;@include background-size100;}
 .btnGroup3 button span{display: block; width:2.16rem; text-align: center; position: absolute; color:#394e53; margin-top:1.3rem; font-size:.75rem;}
 
 .audio_pos{position:absolute;}

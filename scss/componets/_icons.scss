@@ -1,8 +1,4 @@
-//定义变量与函数
-/* px to rem */
-@function temSize($num) {
-  @return ceil($num /40*100)/100*1rem;
-}
+
 /*图标尺寸 ionic是ion开头命名*/
 .icon-size-40{width: temSize(40);height: temSize(40);background-size:100%;background-repeat: no-repeat;display: inline-block;}
 .icon-size-36{width: temSize(36);height: temSize(36);background-size:100%;background-repeat: no-repeat;display: inline-block;}

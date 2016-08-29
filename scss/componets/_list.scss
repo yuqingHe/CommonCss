@@ -1,8 +1,4 @@
-//定义变量与函数
-/* px to rem */
-@function temSize($num) {
-  @return ceil($num /40*100)/100*1rem;
-}
+
 /*列表*/
 //覆盖ionic
 .item{ padding: temSize(20) temSize(40); height: temSize(80);color: #333;}

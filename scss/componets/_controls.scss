@@ -1,11 +1,7 @@
-//定义变量与函数
-/* px to rem */
-@function temSize($num) {
-  @return ceil($num /40*100)/100*1rem;
-}
+
 /*toggle*/
 //覆盖ionic
-.toggle input:checked + .track{@include theme-bg-color;@include theme-border-color;  }
+.toggle input:checked + .track{background: $theme-color ;border: $theme-color ;  }
 .toggle .track{height:temSize(50);width: temSize(100); }
 .toggle .handle{height:temSize(44);width: temSize(44);}
 .toggle input:checked + .track .handle {-webkit-transform: translate3d(temSize(50), 0, 0);  transform: translate3d(temSize(50), 0, 0);  background-color: #fff;}
@@ -13,7 +9,7 @@
 /*单选复选*/
 //覆盖ionic
 .checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
-  @include theme-bg-color;@include theme-border-color;
+  background: $theme-color ;border: $theme-color ;
 }
 .checkbox input, .checkbox-icon{ width: temSize(40);height: temSize(40);}
 .checkbox input:before, .checkbox-icon:before{border-radius: temSize(20);}
@@ -41,7 +37,7 @@
   width: 100%;
   height: 100%;
   border-radius: temSize(40);
-  @include theme-bg-color;
+  background: $theme-color ;
   position: absolute;
   top:0;
 
@@ -78,7 +74,7 @@
 .mbsc-material .dw-li{color: #bbb;font-size: temSize(24)}
 .dw-li.dw-v.dw-sel{font-size: temSize(28);color: #333;}
 .mbsc-material .dwb{color: #333; font-size: temSize(20);font-weight: normal;text-align: center; height: temSize(100);line-height: temSize(100)}
-.dwbw.dwb-s>div{@include theme-color;}
+.dwbw.dwb-s>div{color: $theme-color ;}
 .mbsc-material .dwbw{float: none; border-bottom: 1px solid #ddd;}
 .mbsc-material .dwbc{padding: 0;}
 .dwbw.dwb-c{border-top:temSize(20) solid #dfe3ed;}
@@ -95,8 +91,8 @@
 .editor_icon{font-size:.55rem; color:#666;width:4rem; text-align:left;
   em{width:1.05rem; height:1.05rem; margin-right: .25rem; display: inline-block; vertical-align: middle;}
 }
-.editor_icon.icon1 em{background:url("../img/icon7_1.png") $img-pozC;@include background-size100;}
-.editor_icon.icon2 em{background:url("../img/icon7_2.png") $img-pozC;@include background-size100;}
+.editor_icon.icon1 em{background:url("../img/icon7_1.png") center center;@include background-size100;}
+.editor_icon.icon2 em{background:url("../img/icon7_2.png") center center;@include background-size100;}
 .editor_text{color:#aaa; font-size:.7rem; width:5rem; text-align:right; margin-left:2.3rem;}
 .editor_text_callback{color:#aaa; font-size:.5rem; width:5rem;position:absolute;right:50%; text-align:center; margin-right:-2.5rem;}
 .button-sure{color:#28a6ff;float:right;height:1.75rem; width: 3rem;padding-left: .5rem; margin:-.5rem -.5rem 0 0;}
@@ -111,13 +107,13 @@
 .editor_fontStyle_box{
   .editor_fontStyle_item{float:left; margin-left:.625rem; width:1.6rem; height:1.6rem; @include face-radius; border:#666 1px solid;}
   .editor_fontStyle_item:first-child{margin-left:0;}
-  .icon_textL{background:url("../img/icon8_1.png") $img-pozC;@include background-size100;}
-  .icon_textC{background:url("../img/icon8_2.png") $img-pozC;@include background-size100;}
-  .icon_textR{background:url("../img/icon8_3.png") $img-pozC;@include background-size100;}
-  .icon_textI{background:url("../img/icon8_4.png") $img-pozC;@include background-size100;}
-  .icon_textB{background:url("../img/icon8_5.png") $img-pozC;@include background-size100;}
-  .icon_textS{background:url("../img/icon8_6.png") $img-pozC;@include background-size100;}
-  .icon_textBig{background:url("../img/icon8_7.png") $img-pozC;@include background-size100;}
+  .icon_textL{background:url("../img/icon8_1.png") center center;@include background-size100;}
+  .icon_textC{background:url("../img/icon8_2.png") center center;@include background-size100;}
+  .icon_textR{background:url("../img/icon8_3.png") center center;@include background-size100;}
+  .icon_textI{background:url("../img/icon8_4.png") center center;@include background-size100;}
+  .icon_textB{background:url("../img/icon8_5.png") center center;@include background-size100;}
+  .icon_textS{background:url("../img/icon8_6.png") center center;@include background-size100;}
+  .icon_textBig{background:url("../img/icon8_7.png") center center;@include background-size100;}
 }
 .lockMask_input{
   position: absolute;

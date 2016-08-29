@@ -1,8 +1,4 @@
-//定义变量与函数
-/* px to rem */
-@function temSize($num) {
-  @return ceil($num /40*100)/100*1rem;
-}
+
 /*项目中剥离出来*/
 //加载框样式，修改过
 .popup-container.active .popup,.popup-container .popup{background:#fff; border-radius: temSize(20);width:temSize(560);min-height: temSize(290)}
@@ -18,10 +14,10 @@
 .popup-body .confirm_title{font-size:0.7rem;color:#333;}
 .popup-body .confirm_content{font-size:0.5rem;color:#666;margin-top:0.5rem;}
 
-.popup-buttons .button {margin:0; font-size:temSize(24); min-height: temSize(80); @include theme-color;background:none; }
+.popup-buttons .button {margin:0; font-size:temSize(24); min-height: temSize(80); color:$theme-color;background:none; }
 .popup-buttons .button.active,.popup-buttons .button.activated{border:none; background:none;}
-.button.button-save{@include theme-color;background:transparent;border:none;}
-.button.button-cancel{@include theme-color; background:transparent;border:none;border-right:1px solid #ddd;}
+.button.button-save{color:$theme-color;background:transparent;border:none;}
+.button.button-cancel{color:$theme-color; background:transparent;border:none;border-right:1px solid #ddd;}
 .button.button-cancel.active,.button.button-cancel.activated{border-right:1px solid #ddd;}
 .backdrop{ background-color: rgba(0, 0, 0, 0.7);}//覆盖ionic
 
@@ -39,9 +35,9 @@
         animation: warning-animation 500ms infinite linear;
       }
       .load_reminds{position: relative;top: temSize(118);font-size: temSize(24);text-align: center;}
-      .migration_success{position: relative;top: temSize(66);margin: 0 auto;width:temSize(72);height:temSize(52);background:url("../img/migration_success.png") $img-pozC;@include background-size100;}
+      .migration_success{position: relative;top: temSize(66);margin: 0 auto;width:temSize(72);height:temSize(52);background:url("../img/migration_success.png") no-repeat center center;@include background-size100;}
       .load_reminds2{font-size: temSize(24);text-align: center;position: relative;top: temSize(92);color: #333333; line-height: 1.5;}
-      .short_loading{ position: relative;top: temSize(66);margin: 0 auto;width:temSize(120);height:temSize(120);background:url("../img/shortLoading-icon.png") $img-pozC;@include background-size100;
+      .short_loading{ position: relative;top: temSize(66);margin: 0 auto;width:temSize(120);height:temSize(120);background:url("../img/shortLoading-icon.png") no-repeat center center;@include background-size100;
         -webkit-animation: circle 1s infinite linear;
         -moz-animation: circle 1s infinite linear;
         animation: circle 1s infinite linear;
