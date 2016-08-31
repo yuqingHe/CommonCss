@@ -167,19 +167,6 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet','
     $scope.navWidth=parseFloat(angular.element("html").css("font-size"))*9;
 
 
-    //初始化
-    $scope.init = function () {
-        $scope.lockMask_btn1 = false;
-
-        //dialogs
-        $scope.successAlert1Box = false;
-        $scope.successAlert2Box = false;
-        $scope.loading = false;
-        $scope.dataMove = false;
-
-    }
-    $scope.init();
-
     //文字输入框
     $scope.textInput= function () {
         $scope.isShow=true;
@@ -216,6 +203,20 @@ a.controller("exam", ['$scope', '$ionicPopup', '$timeout', '$ionicActionSheet','
             info:{}
         };
     }
+
+
+    //初始化
+    $scope.init = function () {
+        $scope.lockMask_btn1 = false;
+
+        //dialogs
+        $scope.successAlert1Box = false;
+        $scope.successAlert2Box = false;
+        $scope.loading = false;
+        $scope.dataMove = false;
+
+    }
+    $scope.init();
 }])
 
 
