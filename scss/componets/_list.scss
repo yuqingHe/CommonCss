@@ -19,3 +19,12 @@
   .item-star{position: absolute;right: temSize(20);top: 50%;margin-top: temSize(-18);width:temSize(38); height: temSize(36);  background: url("../img/book_icon.png") no-repeat center center;    background-size: temSize(38) temSize(36);}
   .item-star.current{ background-image: url("../img/book_icon_current.png"); }
 }
+//list 试验
+
+.list-box{padding:temSize(0);}
+.list-divide-20{width:100%;height:temSize(20);background-color:#dee4ed;position: relative;}
+.list-divide-50{width:100%;height:temSize(50);font-size:temSize(20);background-color:#dee4ed;position: relative;}
+.list-content-80{width:100%;height:temSize(80);position: relative;padding:temSize(20);line-height:temSize(40);}
+.list-content-100{width:100%;height:temSize(100);position: relative;padding:temSize(20);line-height:temSize(60);}
+.list-content-120{width:100%;height:temSize(120);position: relative;padding:temSize(20);line-height:temSize(80);}
+.border-bottom-1::after { width: 500%; content: ""; position: absolute; bottom: 0; height: 1px; background: #ddd; left: 0;z-index: 0; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 bottom; transform: scale(0.5); transform-origin: 0 bottom;}
